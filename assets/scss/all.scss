@@ -1,0 +1,10 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import"./helpers/variables"; //匯入
+@import "../../node_modules/bootstrap";
+@import"./helpers/utilities"; //匯入
+
+
+@import './layout/header.scss';
+@import './layout/footer.scss';
+
+@import './pages/index.scss';
