@@ -752,15 +752,29 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 
 $line-height-base:            1.5 !default;
-$line-height-sm:              1.25 !default;
+// 自訂行高
+$line-height-sm:              1.2 !default;
+// $line-height-sm:              1.25 !default; //原本行高設定
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+
+// 自訂字體大小
+$h1-font-size:                $font-size-base * 3.8125 !default;
+$h2-font-size:                $font-size-base * 3.0625 !default;
+$h3-font-size:                $font-size-base * 2.4375 !default;
+$h4-font-size:                $font-size-base * 1.9375 !default;
+$h5-font-size:                $font-size-base * 1.5625 !default;
+$h6-font-size:                $font-size-base * 1.25 !default;
+$h7-font-size:                $font-size-base !default;
+$h8-font-size:                $font-size-base * 0.8125 !default;
+
+ //原本字體大小設定
+// $h1-font-size:                $font-size-base * 2.5 !default;
+// $h2-font-size:                $font-size-base * 2 !default;
+// $h3-font-size:                $font-size-base * 1.75 !default;
+// $h4-font-size:                $font-size-base * 1.5 !default;
+// $h5-font-size:                $font-size-base * 1.25 !default;
+// $h6-font-size:                $font-size-base !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -770,7 +784,9 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  7: $h7-font-size,
+  8: $h8-font-size
 ) !default;
 // scss-docs-end font-sizes
 
