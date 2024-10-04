@@ -794,7 +794,9 @@ $font-sizes: (
 $headings-margin-bottom:      $spacer * .5 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
+//自訂字重400
+$headings-font-weight:        400 !default;
+// $headings-font-weight:        500 !default; //原本的字重
 $headings-line-height:        1.2 !default;
 $headings-color:              inherit !default;
 // scss-docs-end headings-variables
