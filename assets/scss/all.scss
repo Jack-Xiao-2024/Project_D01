@@ -2,8 +2,11 @@
 @import"./helpers/variables"; //匯入
 @import"./helpers/variables-dark"; //匯入
 @import "../../node_modules/bootstrap";
-@import"./helpers/utilities"; //匯入
 
+@import"./helpers/utilities"; //匯入
+@import "../../node_modules/bootstrap/scss/utilities/api"; //匯入
+
+@import './base/base'; //匯入
 
 
 @import './layout/header.scss';

@@ -482,7 +482,9 @@ $enable-grid-classes:         true !default;
 $enable-container-classes:    true !default;
 $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
-$enable-rfs:                  true !default;
+// 自訂移除rfs效果
+$enable-rfs:                  false !default;
+// $enable-rfs:                  true !default; //原本設定
 $enable-validation-icons:     true !default;
 $enable-negative-margins:     false !default;
 $enable-deprecation-messages: true !default;
@@ -752,15 +754,29 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 
 $line-height-base:            1.5 !default;
-$line-height-sm:              1.25 !default;
+// 自訂行高
+$line-height-sm:              1.2 !default;
+// $line-height-sm:              1.25 !default; //原本行高設定
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+
+// 自訂字體大小
+$h1-font-size:                $font-size-base * 3.8125 !default;
+$h2-font-size:                $font-size-base * 3.0625 !default;
+$h3-font-size:                $font-size-base * 2.4375 !default;
+$h4-font-size:                $font-size-base * 1.9375 !default;
+$h5-font-size:                $font-size-base * 1.5625 !default;
+$h6-font-size:                $font-size-base * 1.25 !default;
+$h7-font-size:                $font-size-base !default;
+$h8-font-size:                $font-size-base * 0.8125 !default;
+
+ //原本字體大小設定
+// $h1-font-size:                $font-size-base * 2.5 !default;
+// $h2-font-size:                $font-size-base * 2 !default;
+// $h3-font-size:                $font-size-base * 1.75 !default;
+// $h4-font-size:                $font-size-base * 1.5 !default;
+// $h5-font-size:                $font-size-base * 1.25 !default;
+// $h6-font-size:                $font-size-base !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -770,7 +786,9 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  7: $h7-font-size,
+  8: $h8-font-size
 ) !default;
 // scss-docs-end font-sizes
 
@@ -778,7 +796,9 @@ $font-sizes: (
 $headings-margin-bottom:      $spacer * .5 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
+//自訂字重400
+$headings-font-weight:        400 !default;
+// $headings-font-weight:        500 !default; //原本的字重
 $headings-line-height:        1.2 !default;
 $headings-color:              inherit !default;
 // scss-docs-end headings-variables
