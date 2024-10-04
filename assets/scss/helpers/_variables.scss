@@ -482,7 +482,9 @@ $enable-grid-classes:         true !default;
 $enable-container-classes:    true !default;
 $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
-$enable-rfs:                  true !default;
+// 自訂移除rfs效果
+$enable-rfs:                  false !default;
+// $enable-rfs:                  true !default; //原本設定
 $enable-validation-icons:     true !default;
 $enable-negative-margins:     false !default;
 $enable-deprecation-messages: true !default;
