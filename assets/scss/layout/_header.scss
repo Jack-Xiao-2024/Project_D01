@@ -1,4 +1,16 @@
 .header{
-  background: #69F0AE;
-  font-size: 64px;
+  .navbar-nav {
+    --bs-nav-link-color: #000000;
+    --bs-nav-link-hover-color: var(--bs-secondary-60);
+    --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
+    // display: flex;
+    // flex-direction: column;
+    // padding-left: 0;
+    // margin-bottom: 0;
+    // list-style: none;
+    transition: all 0.3s;
+    .nav-link:hover{
+      border-bottom: 3px solid var(--bs-secondary-60);
+    }
+  }
 }
