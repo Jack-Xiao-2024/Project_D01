@@ -32,3 +32,8 @@ h5{
 h6{
   line-height: 1.5;
 }
+
+// 把 p 標籤預設的 margin-bottom 歸零
+p{
+  margin-bottom: 0;
+}
