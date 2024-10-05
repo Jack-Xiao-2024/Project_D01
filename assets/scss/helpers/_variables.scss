@@ -671,11 +671,20 @@ $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem !default;
-$border-radius-sm:            .25rem !default;
-$border-radius-lg:            .5rem !default;
-$border-radius-xl:            1rem !default;
-$border-radius-xxl:           2rem !default;
+// 自訂圓角大小
+$border-radius:               .75rem !default; //rounded-2
+$border-radius-sm:            .3125rem !default; //rounded-1
+$border-radius-lg:            .625rem !default; //rounded-3
+$border-radius-xl:            3.125rem !default; //rounded-4
+$border-radius-xxl:           4rem !default; //rounded-5
+
+// 原本的圓角大小
+// $border-radius:               .375rem !default;
+// $border-radius-sm:            .25rem !default;
+// $border-radius-lg:            .5rem !default;
+// $border-radius-xl:            1rem !default;
+// $border-radius-xxl:           2rem !default;
+
 $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
 // fusv-disable
