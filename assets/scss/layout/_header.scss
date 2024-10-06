@@ -1,17 +1,59 @@
 .header{
-  background-color: #ffc266;
-  .navbar-nav {
-    --bs-nav-link-color: #000000;
-    --bs-nav-link-hover-color: var(--bs-secondary-60);
-    --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
-    // display: flex;
-    // flex-direction: column;
-    // padding-left: 0;
-    // margin-bottom: 0;
-    // list-style: none;
-    transition: all 0.3s;
-    .nav-link:hover{
-      border-bottom: 3px solid var(--bs-secondary-60);
+  .navbar {
+    // --bs-navbar-padding-x: 0;
+    // --bs-navbar-padding-y: 0.5rem;
+    --bs-navbar-color: #000000;
+    --bs-navbar-hover-color: var(--bs-secondary-40);
+    // --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+    --bs-navbar-active-color: var(--bs-secondary-40);
+    // --bs-navbar-brand-padding-y: 0.3125rem;
+    // --bs-navbar-brand-margin-end: 1rem;
+    // --bs-navbar-brand-font-size: 1.25rem;
+    // --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    // --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    // --bs-navbar-nav-link-padding-x: 0.5rem;
+    // --bs-navbar-toggler-padding-y: 0.25rem;
+    // --bs-navbar-toggler-padding-x: 0.75rem;
+    --bs-navbar-toggler-font-size: 2.25rem;
+    // --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+    // --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
+    --bs-navbar-toggler-border-radius: none;
+    --bs-navbar-toggler-focus-width: 0;
+  }
+  .navbar-toggler:hover{
+    color: var(--bs-secondary-40);
+  }
+  .navbar-toggler.close{
+    color: var(--bs-secondary-40);
+    &:hover{
+      background: linear-gradient(to left,rgba(200,63,0,0.01),rgba(200,63,0,0.057),rgba(200,63,0,0.069),rgba(200,63,0,0.082),rgba(200,63,0,0.1));
+      border-bottom: 0;
+      box-shadow: 1px 1px 5px #a03200 inset;
+    }
+  }
+  .nav-link {
+    padding: 12px 0;
+    &:hover{
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--bs-secondary-40);
+    }
+  }
+}
+
+.header .nav-link:active,
+.header .nav-link.active{
+  padding-bottom: 9px;
+  border-bottom: 3px solid var(--bs-secondary-40);
+}
+
+@media (max-width: 992px) {
+  .header .nav-link{
+    padding: 28px 32px;
+    &:hover{
+      padding-bottom: 28px;
+      background: linear-gradient(to left,rgba(200,63,0,0.01),rgba(200,63,0,0.057),rgba(200,63,0,0.069),rgba(200,63,0,0.082),rgba(200,63,0,0.1));
+      border-bottom: 0;
+      box-shadow: 1px 1px 5px #a03200 inset;
     }
   }
 }
