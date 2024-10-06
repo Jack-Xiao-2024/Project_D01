@@ -663,6 +663,7 @@ $utilities: map-merge(
     // scss-docs-start utils-bg-color
     "background-color": (
       property: background-color,
+      responsive: true, //自訂開啟bg的rwd設定
       class: bg,
       local-vars: (
         "bg-opacity": 1
@@ -876,6 +877,14 @@ $utilities: map-merge(
     "font-size":
       map-merge(
         map-get($utilities, "font-size"),
+        (
+          responsive: true,
+        )
+      ),
+    // 新增bg的rwd設定因為header手機版需要
+    "background-color":
+      map-merge(
+        map-get($utilities, "background-color"),
         (
           responsive: true,
         )
