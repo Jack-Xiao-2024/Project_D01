@@ -1,0 +1,14 @@
+.footer{
+  background: #33240E;
+  .navbar-nav {
+    --bs-nav-link-color: #ffffff;
+    --bs-nav-link-hover-color: #ffffff;
+    .nav-link {
+      padding: 8px 0;
+      &:hover{
+        padding-bottom: 7px;
+        border-bottom: 1px solid #ffffff;
+      }
+    }
+  }
+}
