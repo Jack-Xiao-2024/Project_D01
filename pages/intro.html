@@ -8,6 +8,10 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <!-- <%- include('./layout/header'); -%> -->
@@ -56,7 +60,11 @@
                 </div>
             </div>
             <!-- header -->
-            <div class="container pt-lg-14 pb-lg-14 pb-11 pt-0">
+            <div
+                class="container pt-lg-14 pb-lg-14 pb-11 pt-0"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+            >
                 <!-- banner -->
                 <div class="d-flex gap-2 d-none d-lg-flex">
                     <div>
@@ -163,7 +171,12 @@
                         ＊入住者年齡限制：0~59 歲
                     </div>
                     <div class="row g-7">
-                        <div class="col-lg-4">
+                        <div
+                            class="col-lg-4"
+                            data-aos="flip-left"
+                            data-aos-duration="500"
+                            data-aos-offset="500"
+                        >
                             <div
                                 class="card w-100 pt-9 pb-10 px-7 rounded-2 border-0 h-100"
                             >
@@ -185,7 +198,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div
+                            class="col-lg-4"
+                            data-aos="flip-left"
+                            data-aos-duration="500"
+                            data-aos-offset="500"
+                        >
                             <div
                                 class="card w-100 pt-9 pb-10 px-7 rounded-2 border-0 h-100"
                             >
@@ -207,7 +225,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div
+                            class="col-lg-4"
+                            data-aos="flip-left"
+                            data-aos-duration="500"
+                            data-aos-offset="500"
+                        >
                             <div
                                 class="card w-100 pt-9 pb-10 px-7 rounded-2 border-0 h-100"
                             >
@@ -235,7 +258,12 @@
             </div>
 
             <!-- 房型費用 start-->
-            <div class="container pt-lg-14 pb-lg-11 pt-12 pb-12">
+            <div
+                class="container pt-lg-14 pb-lg-11 pt-12 pb-12"
+                data-aos="fade-right"
+                data-aos-offset="700"
+                data-aos-easing="ease-in-sine"
+            >
                 <h4 class="mb-1">房型費用</h4>
                 <div class="fs-8 text-secondary-90 mb-7">
                     ＊房型費用不含保證金、耗材及其他相關費用。價格以服務契約為準。
@@ -344,7 +372,13 @@
 
             <!-- 機構評價 -->
             <div class="bg-primary-80">
-                <div class="container pt-lg-14 pb-lg-11 pt-12 pb-12">
+                <div
+                    class="container pt-lg-14 pb-lg-11 pt-12 pb-12"
+                    data-aos="fade-left"
+                    data-aos-offset="700"
+                    data-aos-easing="ease-in-sine"
+                    data-aos-duration="500"
+                >
                     <h4 class="mb-9 text-primary-10">機構評價</h4>
                     <div class="row g-7">
                         <div class="col-md-4 col-12">
@@ -465,7 +499,7 @@
                     "https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Interact%20Icon/Like-01.png?raw=true"; // 初始圖片
                 const likedImage =
                     "https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Interact%20Icon/Like-02.png?raw=true"; // 按讚後的圖片
-        
+
                 likeIcon.addEventListener("click", () => {
                     // 切換圖片
                     if (likeIcon.src.includes(initialImage)) {
@@ -477,6 +511,10 @@
             });
         </script>
         <!-- <%- include('./layout/footer'); -%> -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
         <script type="module" src="../main.js"></script>
     </body>
 </html>
