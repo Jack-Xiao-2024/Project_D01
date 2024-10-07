@@ -1,4 +1,22 @@
 
+
+//reset
+
+ol, ul {
+	list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+
+
 .banner{
     background-image: url(https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Cover.png?raw=true);
     background-repeat: no-repeat; /* 避免圖片重複 */
@@ -9,4 +27,16 @@
 
 .banner_text{
     max-width: 507px;
+}
+
+
+.content{
+    background-color: #FFFCF8;
+}
+
+.card_img{
+    width: 100%; /* 設定容器寬度 */
+    height: 298px; /* 設定容器高度 */
+    position: relative; /* 確保內部元素可相對定位 */
+    overflow: hidden; /* 隱藏超出容器範圍的圖片部分 */
 }
