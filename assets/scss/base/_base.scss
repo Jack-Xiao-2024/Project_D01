@@ -1,0 +1,39 @@
+// 匯入字體來源：https://github.com/max32002/FakePearl
+@font-face {
+  font-family: "FakePearl-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff") format("woff");
+}
+
+// 設定整體字體為自訂字體：FakePearl-Regular，若有些系統無法使用則改為用BS設定在variables檔案的原訂字體
+body{
+  font-family: "FakePearl-Regular", $font-family-sans-serif;
+}
+
+// 圖片RWD調整
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+// a連結調整
+a{
+  color: inherit; // 讓文字顏色繼承父層設定
+  display: inline-block;
+}
+
+// 依照guideline調整h2和h5標籤預設的字距、h5和h6行高
+h2{
+  letter-spacing: 0.12em;
+}
+h5{
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+h6{
+  line-height: 1.5;
+}
+
+// 移除 h1~h6 及 p 預設的 margin-bottom
+h1,h2,h3,h4,h5,h6,p{
+  margin-bottom: 0;
+}

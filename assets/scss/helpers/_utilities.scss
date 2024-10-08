@@ -504,9 +504,11 @@ $utilities: map-merge(
       class: font,
       values: (monospace: var(--#{$prefix}font-monospace))
     ),
+    // 自訂移除rfs開啟rwd設定
     "font-size": (
-      rfs: true,
+      // rfs: true, //移除原本rfs設定
       property: font-size,
+      responsive: true, //新增開啟rwd的設定
       class: fs,
       values: $font-sizes
     ),
@@ -661,6 +663,7 @@ $utilities: map-merge(
     // scss-docs-start utils-bg-color
     "background-color": (
       property: background-color,
+      responsive: true, //自訂開啟bg的rwd設定
       class: bg,
       local-vars: (
         "bg-opacity": 1
@@ -720,10 +723,6 @@ $utilities: map-merge(
         4: var(--#{$prefix}border-radius-xl),
         5: var(--#{$prefix}border-radius-xxl),
         circle: 50%,
-        6: 5px,
-        7: 10px,
-        8: 12px,
-        9: 50px,
         pill: var(--#{$prefix}border-radius-pill)
       )
     ),
@@ -787,6 +786,68 @@ $utilities: map-merge(
         pill: var(--#{$prefix}border-radius-pill)
       )
     ),
+    // 自訂通用樣式：用於調整單一圓角大小
+    "rounded-top-start": (
+      property: border-top-left-radius,
+      class: rounded-top-start,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius),
+        3: var(--#{$prefix}border-radius-lg),
+        4: var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-xxl),
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill)
+      )
+    ),
+    "rounded-top-end": (
+      property: border-top-right-radius,
+      class: rounded-top-end,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius),
+        3: var(--#{$prefix}border-radius-lg),
+        4: var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-xxl),
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill)
+      )
+    ),
+    "rounded-bottom-start": (
+      property: border-bottom-left-radius,
+      class: rounded-bottom-start,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius),
+        3: var(--#{$prefix}border-radius-lg),
+        4: var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-xxl),
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill)
+      )
+    ),
+    "rounded-bottom-end": (
+      property: border-bottom-right-radius,
+      class: rounded-bottom-end,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius),
+        3: var(--#{$prefix}border-radius-lg),
+        4: var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-xxl),
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill)
+      )
+    ),
+
     // scss-docs-end utils-border-radius
     // scss-docs-start utils-visibility
     "visibility": (
@@ -807,4 +868,26 @@ $utilities: map-merge(
     // scss-docs-end utils-zindex
   ),
   $utilities
+);
+
+// 自訂要開啟rwd的通用樣式，開啟後可以用lg、md、sm來控制，讓不同斷點改成不同樣式
+$utilities: map-merge(
+  $utilities,
+  (
+    "font-size":
+      map-merge(
+        map-get($utilities, "font-size"),
+        (
+          responsive: true,
+        )
+      ),
+    // 新增bg的rwd設定因為header手機版需要
+    "background-color":
+      map-merge(
+        map-get($utilities, "background-color"),
+        (
+          responsive: true,
+        )
+      ),
+  )
 );

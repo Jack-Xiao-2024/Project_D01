@@ -1,12 +1,19 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 @import "../../node_modules/bootstrap/scss/functions";
 @import"./helpers/variables"; //匯入
 @import"./helpers/variables-dark"; //匯入
 @import "../../node_modules/bootstrap";
-@import"./helpers/utilities"; //匯入
 
+@import"./helpers/utilities"; //匯入
+@import "../../node_modules/bootstrap/scss/utilities/api"; //匯入
+
+@import './base/base'; //匯入
 
 
 @import './layout/header.scss';
 @import './layout/footer.scss';
 
 @import './pages/index.scss';
+@import './pages/intro.scss';
+

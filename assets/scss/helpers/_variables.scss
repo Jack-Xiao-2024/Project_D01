@@ -323,6 +323,8 @@ $primary-70 :  #bf8935;
 $primary-80 : #996d2b;
 $primary-90 : #735220;
 $primary-100 : #594019;
+$primary-110 : #ffc266; //補上header顏色 
+
 
 //Secondary副色
 
@@ -386,6 +388,7 @@ $theme-colors: (
   "primary-80":$primary-80,
   "primary-90":$primary-90,
   "primary-100":$primary-100,
+  "primary-110":$primary-110, //補上header顏色 
 
   "secondary-10":$secondary-10,
   "secondary-20":$secondary-20,
@@ -482,7 +485,9 @@ $enable-grid-classes:         true !default;
 $enable-container-classes:    true !default;
 $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
-$enable-rfs:                  true !default;
+// 自訂移除rfs效果
+$enable-rfs:                  false !default;
+// $enable-rfs:                  true !default; //原本設定
 $enable-validation-icons:     true !default;
 $enable-negative-margins:     false !default;
 $enable-deprecation-messages: true !default;
@@ -669,11 +674,20 @@ $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem !default;
-$border-radius-sm:            .25rem !default;
-$border-radius-lg:            .5rem !default;
-$border-radius-xl:            1rem !default;
-$border-radius-xxl:           2rem !default;
+// 自訂圓角大小
+$border-radius:               .75rem !default; //rounded-2
+$border-radius-sm:            .3125rem !default; //rounded-1
+$border-radius-lg:            .625rem !default; //rounded-3
+$border-radius-xl:            3.125rem !default; //rounded-4
+$border-radius-xxl:           10rem !default; //rounded-5
+
+// 原本的圓角大小
+// $border-radius:               .375rem !default;
+// $border-radius-sm:            .25rem !default;
+// $border-radius-lg:            .5rem !default;
+// $border-radius-xl:            1rem !default;
+// $border-radius-xxl:           2rem !default;
+
 $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
 // fusv-disable
@@ -752,15 +766,29 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 
 $line-height-base:            1.5 !default;
-$line-height-sm:              1.25 !default;
+// 自訂行高
+$line-height-sm:              1.2 !default;
+// $line-height-sm:              1.25 !default; //原本行高設定
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+
+// 自訂字體大小
+$h1-font-size:                $font-size-base * 3.8125 !default;
+$h2-font-size:                $font-size-base * 3.0625 !default;
+$h3-font-size:                $font-size-base * 2.4375 !default;
+$h4-font-size:                $font-size-base * 1.9375 !default;
+$h5-font-size:                $font-size-base * 1.5625 !default;
+$h6-font-size:                $font-size-base * 1.25 !default;
+$h7-font-size:                $font-size-base !default;
+$h8-font-size:                $font-size-base * 0.8125 !default;
+
+ //原本字體大小設定
+// $h1-font-size:                $font-size-base * 2.5 !default;
+// $h2-font-size:                $font-size-base * 2 !default;
+// $h3-font-size:                $font-size-base * 1.75 !default;
+// $h4-font-size:                $font-size-base * 1.5 !default;
+// $h5-font-size:                $font-size-base * 1.25 !default;
+// $h6-font-size:                $font-size-base !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -770,7 +798,9 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  7: $h7-font-size,
+  8: $h8-font-size
 ) !default;
 // scss-docs-end font-sizes
 
@@ -778,7 +808,9 @@ $font-sizes: (
 $headings-margin-bottom:      $spacer * .5 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
+//自訂字重400
+$headings-font-weight:        400 !default;
+// $headings-font-weight:        500 !default; //原本的字重
 $headings-line-height:        1.2 !default;
 $headings-color:              inherit !default;
 // scss-docs-end headings-variables

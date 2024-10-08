@@ -1,0 +1,12 @@
+
+.banner{
+    background-image: url(https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Cover.png?raw=true);
+    background-repeat: no-repeat; /* 避免圖片重複 */
+    background-position: center;  /* 將圖片置中 */
+    background-size: cover;       /* 確保圖片覆蓋整個元素 */
+    height: 427px;
+}
+
+.banner_text{
+    max-width: 507px;
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-Tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>guideline</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+    <!-- 測試variable自訂字體大小有沒有套成功 -->
+    <h1 class="fs-1">fs-1字體大小61px</h1>
+    <h2 class="fs-2">fs-2標題字體大小49px</h2>
+    <h3 class="fs-3">fs-3標題字體大小39px</h3>
+    <h4 class="fs-4">fs-4標題字體大小31px</h4>
+    <h5 class="fs-5">fs-5標題字體大小25px</h5>
+    <h6 class="fs-6">fs-6標題字體大小20px</h6>
+    <p class="fs-7">fs-7字體大小16px</p>
+    <p class="fs-8">fs-8字體大小13px</p>
+
+    <hr>
+    
+    <!-- 測試variable自訂行高有沒有套成功 -->
+    <p class="lh-sm">lh-sm行高1.2(19.2px)</p>
+    <h4 class="lh-base">lh-base行高1.5(46.5px)</h4>
+
+    <hr>
+
+    <!-- 測試以下標籤預設字體設定是多少 -->
+    <p>p標籤預設大小16px、行高1.5(24px)、字重400</p>
+
+    <ul>
+      <li>li標籤預設大小16px、行高1.5(24px)、字重400</li>
+      <li>li標籤預設大小16px、行高1.5(24px)、字重400</li>
+    </ul>
+
+    <h1>h1標籤預設大小61px、行高1.2(73.2px)、字重400</h1>
+    <h2>h2標籤預設大小49px、行高1.2(58.8px)、字重400、字距0.12em(5.88px)</h2>
+    <h3>h3標籤預設大小39px、行高1.2(46.8px)、字重400</h3>
+    <h4>h4標籤預設大小31px、行高1.2(37.2px)、字重400</h4>
+    <h5>h5標籤預設大小25px、行高1.5(37.5px)、字重400、字距0.1em(2.5px)</h5>
+    <h6>h6標籤預設大小20px、行高1.5(30px)、字重400</h6>
+
+    <hr>
+
+    <!-- 測試字體大小的rwd斷點有沒有作用 -->
+    <p class="fs-lg-4 fs-6">桌面版字體大小31px、手機版字體大小20px</p>
+
+    <hr>
+    <!-- 測試圓角有沒有作用 -->
+    <div class="container py-8">
+      <div class="row mb-8">
+        <!-- rounded-1~rounded-5大小及元件預設大小 -->
+        <div class="col-2">
+          <div class="card rounded-1">
+            <div class="card-body">
+              <h5 class="card-title">rounded-1</h5>
+              <p class="card-text">
+                rounded-1 為 5px
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2">
+          <div class="card rounded-2">
+            <div class="card-body">
+              <h5 class="card-title">rounded-2</h5>
+              <p class="card-text">
+                rounded-2 為 12px
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">預設圓角</h5>
+              <p class="card-text">
+                rounded-2 為 12px，也是 BS 元件預設的圓角大小
+              </p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                按鈕圓角預設12px
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2">
+          <div class="card rounded-3">
+            <div class="card-body">
+              <h5 class="card-title">rounded-3</h5>
+              <p class="card-text">
+                rounded-3 為 10px
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2">
+          <div class="card rounded-4">
+            <div class="card-body">
+              <h5 class="card-title">rounded-4</h5>
+              <p class="card-text">
+                rounded-4 為 50px
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2">
+          <div class="card rounded-5">
+            <div class="card-body">
+              <h5 class="card-title">rounded-5</h5>
+              <p class="card-text">
+                rounded-5 先設定為 64px，之後有需要可以改成需要的大小來用
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="card rounded-top-4 rounded-bottom-end-4">
+            <div class="card-body">
+              <h5 class="card-title">單一圓角調整</h5>
+              <p class="card-text">
+                只調一個圓角可以用 rounded-top-start、rounded-top-end、rounded-bottom-start、rounded-bottom-end 加上數字調整
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card rounded-top-4">
+            <div class="card-body">
+              <h5 class="card-title">兩個圓角調整</h5>
+              <p class="card-text">
+                只調兩個圓角可以用 rounded-top、rounded-end、rounded-bottom、rounded-start，加上數字調整
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card rounded-circle" style="width: 200px; height: 200px;">
+          <div class="card-body d-flex justify-content-center align-items-center">
+            <p class="card-text text-center">
+              要改成圓形可以用 rounded-circle
+            </p>
+          </div>
+        </div>        
+        
+        <div class="col">
+          <div class="card rounded-pill">
+            <div class="card-body">
+              <h5 class="card-title">膠囊狀</h5>
+              <p class="card-text">
+                要改成膠囊狀可以用 rounded-pill
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card rounded-top-circle rounded-bottom-2 overflow-hidden">
+            <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/main/assets/images/cat.jpg?raw=true" class="card-img-top" alt="cat">
+            <div class="card-body rounded-bottom-2">
+              <h5 class="card-title">有圖卡片</h5>
+              <p class="card-text">
+                img 父層要加上 overflow-hidden ，圖片才會依照父層圓角改變
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
