@@ -1,3 +1,21 @@
-.index-title {
-  font-size: 100px;
+.index{
+  .banner-image{
+    display: inline-block;
+    height: 624px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .banner-title{
+    color: #ffffff;
+    margin-top: 184px;
+    font-size: 64px;
+    line-height: 1.39;
+    text-shadow: 0 4px 4px rgba(0,0,0,0.25);
+  }
+  .banner-subtitle{
+    color: #444444;
+    letter-spacing: 0.16em;
+  }
 }
