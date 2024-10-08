@@ -34,9 +34,69 @@ img{
     background-color: #FFFCF8;
 }
 
-.card_img{
+//搜尋框
+
+.main{
+    position: relative;
+}
+
+.search-bar{
+  position: absolute;
+  left: 50%;
+  top: 100%; /* 將搜尋框定位到上方區塊的底部 */
+  transform: translate(-50%, -50%); /* 居中對齊 */
+  z-index: 1000; /* 確保搜尋框在其他元素之上 */
+  /* 搜尋框的其他樣式 */
+  background-color: black;
+  border-radius: 5px;
+}
+
+
+
+ .form-select,.search-btn{
+     border: 2px solid black; /* 添加黑色邊框 */
+ }
+
+
+//卡片
+
+.card-img-box{
     width: 100%; /* 設定容器寬度 */
-    height: 298px; /* 設定容器高度 */
+    height: 100%; /* 設定容器高度 */
+    max-height: 300px;
+    
+}
+
+.col-md-5{
+    position: relative;
+}
+
+.heart{
+    position: absolute;
+    top: 10px; /* 距離上方 10px */
+    right: 10px; /* 距離右側 10px */
+
+}
+
+.card-img{
+    width: 100%; /* 設定容器寬度 */
+    height: 100%; /* 設定容器高度 */
     position: relative; /* 確保內部元素可相對定位 */
     overflow: hidden; /* 隱藏超出容器範圍的圖片部分 */
+    object-fit: cover; /* 確保圖片填滿容器，若比例不一致則裁切 */
 }
+
+.buttons .btn {
+    flex-grow: 1; /* 讓每個按鈕按比例撐開 */
+    flex-basis: 0; /* 初始寬度設為 0，使用 flex-grow 來調整 */
+    max-width: 355px; /* 設定按鈕的最大寬度為 355px */
+    min-width: 144px; /* 設定按鈕的最小寬度為 144px */
+    box-sizing: border-box; /* 包括內邊距和邊框在內計算寬度 */
+  }
+
+
+  @media (max-width:700px) {
+    .pagnation{
+        display: none;
+    }
+  }
