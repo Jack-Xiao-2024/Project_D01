@@ -17,6 +17,14 @@
   }
 }
 
+@media (min-width: 768px) {
+  .index{
+    .banner-image{
+      background-position: top 50% right 35%;
+    }
+  }
+}
+
 @media (min-width: 992px) {
   .index{
     .banner-image{
