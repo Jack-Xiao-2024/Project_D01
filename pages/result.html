@@ -8,6 +8,8 @@
 </head>
 <body>
 
+    <%- include('./layout/header'); -%>
+
     <div class="main">
             <!-- banner -->
         <div class="banner">
@@ -26,8 +28,8 @@
 
         <div class="container search-bar">
             <form class="search">
-                <div class="row justify-content-between">
-                <div class="col px-0">
+                <div class="row justify-content-between d-flex flex-wrap">
+                <div class="col  px-0">
                     <select class="form-select p-3 rounded-1 rounded-1" aria-label="Default select example">
                     <option selected>機構類型</option>
                     <option value="1">長期照顧中心</option>
@@ -387,18 +389,7 @@
         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+        <%- include('./layout/footer'); -%>
 
 
     </div>
