@@ -41,6 +41,13 @@
   }
 }
 
+.index-reviews{
+  background-color: #FFFCF8;
+  .reviews-number{
+    letter-spacing: 0.12em;
+  }
+}
+
 @media (min-width: 768px) {
   .index{
     .banner-image{
