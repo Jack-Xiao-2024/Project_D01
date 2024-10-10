@@ -48,6 +48,55 @@
   }
 }
 
+.index-faq{
+  .faq-content{
+    margin: 0 110px;
+  }
+  .accordion{
+    --bs-accordion-bg: transparent;
+    --bs-accordion-border-color: rgba(0,0,0,0);
+    --bs-accordion-btn-icon-width: 2.25rem;
+    --bs-accordion-btn-focus-box-shadow: 0;
+    --bs-accordion-active-bg: #ffffff;
+  }
+  .accordion-button{
+    border: 2px solid rgba(0,0,0,0);
+    padding: 24px 16px;
+    border-radius: 12px;
+    &:after{
+      background-image: url("/assets/images/Icon/IconBlack/CaretDown-B.svg");
+      background-size: cover;
+    }
+    &:hover{
+      background-color: #fff;
+      border: 2px solid #693F26;
+      color: #C83F00;
+      border-radius: 12px;
+      &:after{
+        background-image: url("/assets/images/Icon/IconSecondary/CaretDown-S-40.svg");
+      }
+    }
+  }
+  .accordion-button:not(.collapsed){
+    padding: 24px 16px 4px 16px;
+    color: #C83F00;
+    border-radius: 12px 12px 0 0;
+    &:after{
+      background-image: url("/assets/images/Icon/IconSecondary/CaretDown-S-40.svg");
+    }
+    &:hover{
+      border: 2px solid rgba(0,0,0,0);
+      border-radius: 12px 12px 0 0;
+      &:after{
+        background-image: url("/assets/images/Icon/IconSecondary/CaretDown-S-40.svg");
+      }
+    }
+  }
+  .accordion-body{
+    border-radius: 0 0 12px 12px;
+  }
+}
+
 @media (min-width: 768px) {
   .index{
     .banner-image{
