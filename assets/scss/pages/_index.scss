@@ -1,4 +1,4 @@
-.index{
+.index-banner{
   .banner-image{
     width: 100%;
     background-repeat: repeat;
@@ -14,6 +14,30 @@
   .banner-subtitle{
     color: #ffffff;
     text-shadow: 0 4px 4px rgba(0,0,0,0.25);
+  }
+}
+.index-hots{
+  background-color: #FFFCF8;
+  .nav-item{
+    background-color: #ffffff;
+  }
+  .nav-link{
+    color: #000000;
+    border: 1px solid #000000;
+    &:hover{
+      background-color: rgba(180, 57, 0, 0.2);
+      border: 1.5px solid #000000;
+    }
+  }
+
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: var(--bs-secondary-40);
+    background-color: rgba(200, 63, 0, 0.08);
+    border: 2px solid var(--bs-secondary-40);
+  }
+
+  .card-body{
+    padding: 32px 24px 48px 24px;
   }
 }
 
