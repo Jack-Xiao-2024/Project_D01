@@ -41,6 +41,17 @@
     background-color: rgba(200, 63, 0, 0.08);
     border: 2px solid var(--bs-secondary-40);
   }
+  .heart-icon{
+    width: 62.8px;
+    height: 62.8px;
+    margin: 8px;
+    background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/5a854ec2c364c80e9f5cd08aadab09967823eea1/assets/images/Interact%20Icon/Heard-01.svg");
+    background-size: cover;
+    background-position: center;
+  }
+  .heartOn{
+    background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/5a854ec2c364c80e9f5cd08aadab09967823eea1/assets/images/Interact%20Icon/Heard-02.svg");
+  }
   .card-body{
     padding: 32px 24px 48px 24px;
   }

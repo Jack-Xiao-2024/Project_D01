@@ -26,7 +26,7 @@
           <h4 class="text-center fs-lg-2 mb-10">人氣機構精選</h4>
           <ul class="hots-content row row-cols-4 nav nav-pills flex-nowrap justify-content-lg-center justify-content-start align-items-center mb-13 fs-6 px-1" id="pills-tab" role="tablist">
             <li class="col nav-item px-lg-5 px-2" role="presentation" style="width: 180px;">
-              <button class="nav-link active" style="width: 156px;" id="pills-longTermCareCenter-tab" data-bs-toggle="pill" data-bs-target="#pills-longTermCareCenter" type="button" role="tab" aria-controls="pills-longTermCareCenter" aria-selected="true">長期照顧中心</button>
+              <button class="nav-link active" style="width: 156px;" id="pills-longTermCareCenter-tab" data-bs-toggle="pill" data-bs-target="#pills-longTermCareCenter" type="button" role="tab" aria-controls="pills-longTermCareCenter" aria-selected="false">長期照顧中心</button>
             </li>
             <li class="col nav-item px-lg-5 px-2" role="presentation" style="width: 180px;">
               <button class="nav-link" style="width: 156px;" id="pills-restHome-tab" data-bs-toggle="pill" data-bs-target="#pills-restHome" type="button" role="tab" aria-controls="pills-restHome" aria-selected="false">安養中心</button>
@@ -39,23 +39,26 @@
             </li>
           </ul>
           <div class="tab-content" id="pills-tabContent">
+            <!-- 長期照顧中心 -->
             <div class="tab-pane fade show active" id="pills-longTermCareCenter" role="tabpanel" aria-labelledby="pills-longTermCareCenter-tab" tabindex="0">
               <div class="hots-content row row-cols-3 flex-nowrap justify-content-lg-center justify-content-start gap-xl-11 gap-0 pb-lg-0 pb-13">
                 <div class="col" style="width: 336px;">
-                  <div class="card border-0 card-shadow" style="width: 312px;">
-                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-01.png?raw=true" class="card-img-top" style="height: 211px;" alt="Kang Le Long Term Care Center">
+                  <div class="card border-0 card-shadow position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-04.png?raw=true" class="card-img-top" style="height: 211px;" alt="Kang Le Long Term Care Center">
                     <div class="card-body">
                       <h5 class="card-title mb-2">康樂長照中心</h5>
                       <p class="card-text mb-5">
                         <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
                         台北市中正區中正路
                       </p>
-                      <p class="card-text card-para-truncate" style="height: 72px;">本長照機構設有無障礙設施、專業護理室、康復治療室、活動娛樂區及24小時緊急呼叫系統,提供全方位的照護服務。</p>
+                      <p class="card-text card-para-truncate" style="height: 72px;">本長照機構設有無障礙設施、專業護理室、康復治療室、活動娛樂區及24小時緊急呼叫系統，提供全方位的照護服務。</p>
                     </div>
                   </div>
                 </div>
                 <div class="col" style="width: 336px;">
-                  <div class="card border-0 card-shadow" style="width: 312px;">
+                  <div class="card border-0 card-shadow position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
                     <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-02.png?raw=true" class="card-img-top" style="height: 211px;" alt="Sing Fu Long Term Care Center">
                     <div class="card-body">
                       <h5 class="card-title mb-2">幸福頤養園</h5>
@@ -63,12 +66,13 @@
                         <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
                         台北市中正區中正路
                       </p>
-                      <p class="card-text card-para-truncate" style="height: 72px;">幸福頤養園致力於提供長者溫馨舒適的生活環境。我們的設施包括專業護理病房,確保長者健康;康復訓練區,幫助長者維持和提升體能。</p>
+                      <p class="card-text card-para-truncate" style="height: 72px;">幸福頤養園致力於提供長者溫馨舒適的生活環境。我們的設施包括專業護理病房，確保長者健康；康復訓練區，幫助長者維持和提升體能。</p>
                     </div>
                   </div>
                 </div>
                 <div class="col" style="width: 336px;">
-                  <div class="card border-0 card-shadow" style="width: 312px;">
+                  <div class="card border-0 card-shadow position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
                     <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-03.png?raw=true" class="card-img-top" style="height: 211px;" alt="An Kang Long Term Care Center">
                     <div class="card-body">
                       <h5 class="card-title mb-2">安康長青之家</h5>
@@ -76,15 +80,154 @@
                         <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
                         台北市中正區中正路
                       </p>
-                      <p class="card-text card-para-truncate" style="height: 72px;">安康長青之家提供全面的長期照護服務,專為長者設計。我們擁有全天候護理中心,確保長者隨時能獲得專業照顧;健康膳食區,提供營養均衡的餐點。</p>
+                      <p class="card-text card-para-truncate" style="height: 72px;">安康長青之家提供全面的長期照護服務，專為長者設計。我們擁有全天候護理中心，確保長者隨時能獲得專業照顧；健康膳食區，提供營養均衡的餐點。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 安養中心 -->
+            <div class="tab-pane fade" id="pills-restHome" role="tabpanel" aria-labelledby="pills-restHome-tab" tabindex="0">
+              <div class="hots-content row row-cols-3 flex-nowrap justify-content-lg-center justify-content-start gap-xl-11 gap-0 pb-lg-0 pb-13">
+                <div class="col" style="width: 336px;">
+                  <div class="card border-0 card-shadow position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-01.png?raw=true" class="card-img-top" style="height: 211px;" alt="Kang Le Long Term Care Center">
+                    <div class="card-body">
+                      <h5 class="card-title mb-2">樂康頤和園</h5>
+                      <p class="card-text mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-text card-para-truncate" style="height: 72px;">樂康頤和園專為銀髮族打造，提供溫馨的安養服務。我們設有舒適的居住空間，讓長者享受如家般的溫暖。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col" style="width: 336px;">
+                  <div class="card border-0 card-shadow position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-08.png?raw=true" class="card-img-top" style="height: 211px;" alt="Sing Fu Long Term Care Center">
+                    <div class="card-body">
+                      <h5 class="card-title mb-2">怡然頤養居</h5>
+                      <p class="card-text mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-text card-para-truncate" style="height: 72px;">怡然頤養居提供全方位的安養服務，讓長者安心養老。我們設有專業的護理單位，確保每位住民的健康需求得到滿足。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col" style="width: 336px;">
+                  <div class="card border-0 card-shadow position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-05.png?raw=true" class="card-img-top" style="height: 211px;" alt="An Kang Long Term Care Center">
+                    <div class="card-body">
+                      <h5 class="card-title mb-2">祥和樂年苑</h5>
+                      <p class="card-text mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-text card-para-truncate" style="height: 72px;">祥和樂年苑致力於營造一個舒適、健康、快樂的安養環境。我們提供先進的護理設施，全天候照護長者的身體健康。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 護理之家 -->
+            <div class="tab-pane fade" id="pills-nursingHome" role="tabpanel" aria-labelledby="pills-nursingHome-tab" tabindex="0">
+              <div class="hots-content row row-cols-3 flex-nowrap justify-content-lg-center justify-content-start gap-xl-11 gap-0 pb-lg-0 pb-13">
+                <div class="col" style="width: 336px;">
+                  <div class="card border-0 card-shadow position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-07.png?raw=true" class="card-img-top" style="height: 211px;" alt="Kang Le Long Term Care Center">
+                    <div class="card-body">
+                      <h5 class="card-title mb-2">康福護理苑</h5>
+                      <p class="card-text mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-text card-para-truncate" style="height: 72px;">康福護理苑提供專業的長期護理服務，致力於守護長者的健康與生活質量。我們設有高規格的醫護照護室，全天候提供專業的醫療支援。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col" style="width: 336px;">
+                  <div class="card border-0 card-shadow position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-10.png?raw=true" class="card-img-top" style="height: 211px;" alt="Sing Fu Long Term Care Center">
+                    <div class="card-body">
+                      <h5 class="card-title mb-2">靜怡護理家園</h5>
+                      <p class="card-text mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-text card-para-truncate" style="height: 72px;">靜怡護理家園為長者提供安寧舒適的護理服務。我們擁有設備完善的病房，讓長者在安全舒適的環境中休養。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col" style="width: 336px;">
+                  <div class="card border-0 card-shadow position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-06.png?raw=true" class="card-img-top" style="height: 211px;" alt="An Kang Long Term Care Center">
+                    <div class="card-body">
+                      <h5 class="card-title mb-2">頤康護理居</h5>
+                      <p class="card-text mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-text card-para-truncate" style="height: 72px;">頤康護理居致力於提供全方位的護理服務，讓長者享受高品質的生活。我們設有先進的醫療護理站，隨時守護長者的健康。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 日間照顧中心 -->
+            <div class="tab-pane fade" id="pills-dayCareCenter" role="tabpanel" aria-labelledby="pills-dayCareCenter-tab" tabindex="0">
+              <div class="hots-content row row-cols-3 flex-nowrap justify-content-lg-center justify-content-start gap-xl-11 gap-0 pb-lg-0 pb-13">
+                <div class="col" style="width: 336px;">
+                  <div class="card border-0 card-shadow position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-09.png?raw=true" class="card-img-top" style="height: 211px;" alt="Kang Le Long Term Care Center">
+                    <div class="card-body">
+                      <h5 class="card-title mb-2">晴朗日間照護中心</h5>
+                      <p class="card-text mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-text card-para-truncate" style="height: 72px;">晴朗日間照護中心為長者提供安心的日間照護服務。我們設有溫馨的休息區，讓長者在日間舒適放鬆。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col" style="width: 336px;">
+                  <div class="card border-0 card-shadow position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-11.png?raw=true" class="card-img-top" style="height: 211px;" alt="Sing Fu Long Term Care Center">
+                    <div class="card-body">
+                      <h5 class="card-title mb-2">晨曦安養日間中心</h5>
+                      <p class="card-text mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-text card-para-truncate" style="height: 72px;">晨曦安養日間中心提供長者溫馨的日間照護環境。我們擁有設備齊全的護理站，隨時提供健康護理。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col" style="width: 336px;">
+                  <div class="card border-0 card-shadow position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-12.png?raw=true" class="card-img-top" style="height: 211px;" alt="An Kang Long Term Care Center">
+                    <div class="card-body">
+                      <h5 class="card-title mb-2">暖陽日間關懷中心</h5>
+                      <p class="card-text mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-text card-para-truncate" style="height: 72px;">暖陽日間關懷中心致力於為長者提供全方位的日間照護服務。我們設有專業護理區，確保每位長者的健康得到悉心照顧。</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          
-          
         </div>
       </section>
       <section class="index-why pt-lg-14 pb-lg-11 py-12 bg-primary-20">
@@ -281,8 +424,17 @@
 
     <%- include('./layout/footer'); -%>
 
-    <script type="module" src="../main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="../main.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".heart-icon").click(function(){
+          $(".heart-icon").toggleClass("heartOn");
+        });
+      });
+
+
+    </script>
   </body>
 </html>
