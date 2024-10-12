@@ -49,8 +49,9 @@
 }
 
 .index-faq{
+  padding: 80px 0 56px 0;
   .faq-content{
-    margin: 0 110px;
+    margin: 0;
   }
   .accordion{
     --bs-accordion-bg: transparent;
@@ -61,8 +62,9 @@
   }
   .accordion-button{
     border: 2px solid rgba(0,0,0,0);
-    padding: 24px 16px;
+    padding: 10px 16px;
     border-radius: 12px;
+    line-height: 1.2;
     &:after{
       background-image: url("/assets/images/Icon/IconBlack/CaretDown-B.svg");
       background-size: cover;
@@ -78,7 +80,6 @@
     }
   }
   .accordion-button:not(.collapsed){
-    padding: 24px 16px 4px 16px;
     color: #C83F00;
     border-radius: 12px 12px 0 0;
     &:after{
@@ -94,6 +95,7 @@
   }
   .accordion-body{
     border-radius: 0 0 12px 12px;
+    padding: 0 44px 16px 44px;
   }
 }
 
@@ -119,6 +121,18 @@
       color: #444444;
       letter-spacing: 0.16em;
       text-shadow: none;
+    }
+  }
+  .index-faq{
+    padding: 110px 0 48px 0;
+    .faq-content{
+      margin: 0 110px;
+    }
+    .accordion-button{
+      padding: 22px 16px;
+    }
+    .accordion-body{
+      padding: 0 96px 28px 60px;
     }
   }
 }
