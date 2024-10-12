@@ -62,6 +62,27 @@
   .reviews-number{
     letter-spacing: 0.12em;
   }
+  .swiper-wrapper{
+    height: auto;
+    margin-left: 38px;
+    padding-bottom: 97px;
+  }
+  .swiper-button-next, .swiper-button-prev{
+    top: 100%;
+    transform: translateY(-50%);
+  }
+  .swiper-button-next{
+    right: 504px;
+    &:after{
+      content: '';
+    }
+  }
+  .swiper-button-prev{
+    left: 504px;
+    &:after{
+      content: '';
+    }
+  }
 }
 
 .index-faq{
