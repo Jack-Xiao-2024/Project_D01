@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>首頁</title>
+    <title>長照好厝邊 | 長照不煩惱，好厝邊陪你找</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   </head>
   <body>
     <%- include('./layout/header'); -%>
@@ -20,29 +21,29 @@
           </div>
         </div>
       </section>
-      <section class="index-hots pt-14 pb-11">
-        <div class="container">
-          <h2 class="text-center mb-9">人氣機構精選</h2>
-          <ul class="row nav nav-pills d-flex justify-content-center align-items-center mb-13 fs-6" id="pills-tab" role="tablist">
-            <li class="col nav-item" role="presentation" style="max-width: 180px;">
-              <button class="nav-link active w-100" id="pills-longTermCareCenter-tab" data-bs-toggle="pill" data-bs-target="#pills-longTermCareCenter" type="button" role="tab" aria-controls="pills-longTermCareCenter" aria-selected="true">長期照顧中心</button>
+      <section class="index-hots pt-lg-14 pb-lg-11 pt-12 pb-0">
+        <div class="container-lg container-fluid">
+          <h4 class="text-center fs-lg-2 mb-10">人氣機構精選</h4>
+          <ul class="hots-content row row-cols-4 nav nav-pills flex-nowrap justify-content-lg-center justify-content-start align-items-center mb-13 fs-6 px-1" id="pills-tab" role="tablist">
+            <li class="col nav-item px-lg-5 px-2" role="presentation" style="width: 180px;">
+              <button class="nav-link active" style="width: 156px;" id="pills-longTermCareCenter-tab" data-bs-toggle="pill" data-bs-target="#pills-longTermCareCenter" type="button" role="tab" aria-controls="pills-longTermCareCenter" aria-selected="true">長期照顧中心</button>
             </li>
-            <li class="col nav-item" role="presentation" style="max-width: 180px;">
-              <button class="nav-link w-100" id="pills-restHome-tab" data-bs-toggle="pill" data-bs-target="#pills-restHome" type="button" role="tab" aria-controls="pills-restHome" aria-selected="false">安養中心</button>
+            <li class="col nav-item px-lg-5 px-2" role="presentation" style="width: 180px;">
+              <button class="nav-link" style="width: 156px;" id="pills-restHome-tab" data-bs-toggle="pill" data-bs-target="#pills-restHome" type="button" role="tab" aria-controls="pills-restHome" aria-selected="false">安養中心</button>
             </li>
-            <li class="col nav-item" role="presentation" style="max-width: 180px;">
-              <button class="nav-link w-100" id="pills-nursingHome-tab" data-bs-toggle="pill" data-bs-target="#pills-nursingHome" type="button" role="tab" aria-controls="pills-nursingHome" aria-selected="false">護理之家</button>
+            <li class="col nav-item px-lg-5 px-2" role="presentation" style="width: 180px;">
+              <button class="nav-link" style="width: 156px;" id="pills-nursingHome-tab" data-bs-toggle="pill" data-bs-target="#pills-nursingHome" type="button" role="tab" aria-controls="pills-nursingHome" aria-selected="false">護理之家</button>
             </li>
-            <li class="col nav-item" role="presentation" style="max-width: 180px;">
-              <button class="nav-link w-100" id="pills-dayCareCenter-tab" data-bs-toggle="pill" data-bs-target="#pills-dayCareCenter" type="button" role="tab" aria-controls="pills-dayCareCenter" aria-selected="false">日間照顧中心</button>
+            <li class="col nav-item px-lg-5 px-2" role="presentation" style="width: 180px;">
+              <button class="nav-link" style="width: 156px;" id="pills-dayCareCenter-tab" data-bs-toggle="pill" data-bs-target="#pills-dayCareCenter" type="button" role="tab" aria-controls="pills-dayCareCenter" aria-selected="false">日間照顧中心</button>
             </li>
           </ul>
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-longTermCareCenter" role="tabpanel" aria-labelledby="pills-longTermCareCenter-tab" tabindex="0">
-              <div class="row justify-content-center gap-11">
-                <div class="col" style="max-width: 336px;">
-                  <div class="card border-0 card-shadow">
-                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-01.png?raw=true" class="card-img-top w-100" style="height: 211px;" alt="Kang Le Long Term Care Center">
+              <div class="hots-content row row-cols-3 flex-nowrap justify-content-lg-center justify-content-start gap-xl-11 gap-0 pb-lg-0 pb-13">
+                <div class="col" style="width: 336px;">
+                  <div class="card border-0 card-shadow" style="width: 312px;">
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-01.png?raw=true" class="card-img-top" style="height: 211px;" alt="Kang Le Long Term Care Center">
                     <div class="card-body">
                       <h5 class="card-title mb-2">康樂長照中心</h5>
                       <p class="card-text mb-5">
@@ -53,9 +54,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="col" style="max-width: 336px;">
-                  <div class="card border-0 card-shadow">
-                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-02.png?raw=true" class="card-img-top w-100" style="height: 211px;" alt="Sing Fu Long Term Care Center">
+                <div class="col" style="width: 336px;">
+                  <div class="card border-0 card-shadow" style="width: 312px;">
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-02.png?raw=true" class="card-img-top" style="height: 211px;" alt="Sing Fu Long Term Care Center">
                     <div class="card-body">
                       <h5 class="card-title mb-2">幸福頤養園</h5>
                       <p class="card-text mb-5">
@@ -66,9 +67,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="col" style="max-width: 336px;">
-                  <div class="card border-0 card-shadow">
-                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-03.png?raw=true" class="card-img-top w-100" style="height: 211px;" alt="An Kang Long Term Care Center">
+                <div class="col" style="width: 336px;">
+                  <div class="card border-0 card-shadow" style="width: 312px;">
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-03.png?raw=true" class="card-img-top" style="height: 211px;" alt="An Kang Long Term Care Center">
                     <div class="card-body">
                       <h5 class="card-title mb-2">安康長青之家</h5>
                       <p class="card-text mb-5">
@@ -82,6 +83,7 @@
               </div>
             </div>
           </div>
+          
           
         </div>
       </section>
@@ -280,5 +282,7 @@
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>

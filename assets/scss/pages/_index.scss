@@ -16,8 +16,15 @@
     text-shadow: 0 4px 4px rgba(0,0,0,0.25);
   }
 }
+
 .index-hots{
   background-color: #FFFCF8;
+  .hots-content{
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
   .nav-item{
     background-color: #ffffff;
   }
@@ -29,13 +36,11 @@
       border: 1.5px solid #000000;
     }
   }
-
   .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: var(--bs-secondary-40);
     background-color: rgba(200, 63, 0, 0.08);
     border: 2px solid var(--bs-secondary-40);
   }
-
   .card-body{
     padding: 32px 24px 48px 24px;
   }
@@ -105,6 +110,7 @@
       background-position: top 50% right 35%;
     }
   }
+
 }
 
 @media (min-width: 992px) {
@@ -121,6 +127,11 @@
       color: #444444;
       letter-spacing: 0.16em;
       text-shadow: none;
+    }
+  }
+  .index-hots{
+    .hots-content{
+      overflow-x: visible;
     }
   }
   .index-faq{
