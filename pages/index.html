@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>長照好厝邊 | 長照不煩惱，好厝邊陪你找</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
     <%- include('./layout/header'); -%>
@@ -265,110 +265,103 @@
           </div>
         </div>
       </section>
-      <section class="index-reviews pt-lg-14 pb-lg-11 pt-12">
+      <section class="index-reviews pt-lg-14 pb-lg-11 py-12">
         <div class="container">
-          <h2 class="text-center mb-8">聽聽大家怎麼說</h2>
-          <h4 class="text-center mb-13">超過<span class="reviews-number fs-2 px-5 text-secondary-40">5000+</span>使用長照好厝邊</h4>
-          <div class="swiper d-flex justify-content-start align-items-stretch">
-            <div class="row justify-content-start flex-nowrap swiper-wrapper">
-              <div class="col px-0 swiper-slide">
-                <div class="card border-black border-2 h-100" style="width: 364px;">
-                  <div class="card-body d-flex flex-column justify-content-between pt-7 pb-9 px-7">
-                    <div class="mb-auto">
-                      <h5 class="card-title mb-0 mx-2">便捷預約機構</h5>
-                      <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/19c23c1b994297dcbc6a7f56e4cacc5b315f9c40/assets/images/Icon/Stars.svg" class="mb-6"  alt="Convenient reservation">
-                      <p class="card-text text-start fs-6 mb-7">長照預約服務網讓我能輕鬆找到適合的長照機構，省去了繁瑣的現場詢問。網站操作簡單，預約流程流暢，非常方便！</p>
-                    </div>
-                    <div class="users d-flex justify-content-end align-items-center">
-                      <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-04.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
-                      <p class="card-text me-4">郭先生</p>
-                    </div>
+          <h4 class="text-center fs-lg-2 mb-lg-8 mb-5">聽聽大家怎麼說</h4>
+          <h6 class="text-center fs-lg-3 mb-lg-13 mb-10">超過<span class="reviews-number fs-lg-2 fs-4 px-lg-5 px-2 text-secondary-40">5000+</span>使用長照好厝邊</h6>
+        </div>
+        <!-- Swiper 用戶評價卡片 -->
+        <div class="reviewSwiper-container">
+          <div class="swiper indexReviewSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card reviews-card d-flex flex-column justify-content-between">
+                  <div>
+                    <h5 class="card-title mb-1 mx-2">便捷預約機構</h5>
+                    <div class="stars-icon mb-7"></div>
+                    <p class="card-text text-start fs-6">長照預約服務網讓我能輕鬆找到適合的長照機構，省去了繁瑣的現場詢問。網站操作簡單，預約流程流暢，非常方便！</p>
+                  </div>
+                  <div class="users d-flex justify-content-end align-items-center mt-auto">
+                    <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-04.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
+                    <p class="card-text me-4">郭先生</p>
                   </div>
                 </div>
               </div>
-              <div class="col px-0 swiper-slide">
-                <div class="card border-black border-2 h-100" style="width: 364px;">
-                  <div class="card-body d-flex flex-column justify-content-between pt-7 pb-9 px-7">
-                    <div class="mb-auto">
-                      <h5 class="card-title mb-0 mx-2">資訊透明</h5>
-                      <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/19c23c1b994297dcbc6a7f56e4cacc5b315f9c40/assets/images/Icon/Stars.svg" class="mb-6"  alt="Convenient reservation">
-                      <p class="card-text text-start fs-6 mb-7">使用這個預約網後，我發現各機構的服務詳情和評價都很清楚，讓我能夠仔細比較，選擇最適合的長照服務，感覺很安心。</p>
-                    </div>
-                    <div class="users d-flex justify-content-end align-items-center">
-                      <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-05.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
-                      <p class="card-text me-4">李小姐</p>
-                    </div>
+              <div class="swiper-slide">
+                <div class="card reviews-card d-flex flex-column justify-content-between">
+                  <div>
+                    <h5 class="card-title mb-0 mx-2">資訊透明</h5>
+                    <div class="stars-icon mb-7"></div>
+                    <p class="card-text text-start fs-6">使用這個預約網後，我發現各機構的服務詳情和評價都很清楚，讓我能夠仔細比較，選擇最適合的長照服務，感覺很安心。</p>
+                  </div>
+                  <div class="users d-flex justify-content-end align-items-center mt-auto">
+                    <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-05.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
+                    <p class="card-text me-4">李小姐</p>
                   </div>
                 </div>
               </div>
-              <div class="col px-0 swiper-slide">
-                <div class="card border-black border-2 h-100" style="width: 364px;">
-                  <div class="card-body d-flex flex-column justify-content-between pt-7 pb-9 px-7">
-                    <div class="mb-auto">
-                      <h5 class="card-title mb-0 mx-2">即時更新</h5>
-                      <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/19c23c1b994297dcbc6a7f56e4cacc5b315f9c40/assets/images/Icon/Stars.svg" class="mb-6"  alt="Convenient reservation">
-                      <p class="card-text text-start fs-6 mb-7">預約服務網的即時更新功能非常好，讓我隨時能夠掌握各機構的最新服務和床位情況。這樣的靈活性讓我感到很放心！</p>
-                    </div>
-                    <div class="users d-flex justify-content-end align-items-center">
-                      <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-03.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
-                      <p class="card-text me-4">王先生</p>
-                    </div>
+              <div class="swiper-slide">
+                <div class="card reviews-card d-flex flex-column justify-content-between">
+                  <div>
+                    <h5 class="card-title mb-0 mx-2">即時更新</h5>
+                    <div class="stars-icon mb-7"></div>
+                    <p class="card-text text-start fs-6">預約服務網的即時更新功能非常好，讓我隨時能夠掌握各機構的最新服務和床位情況。這樣的靈活性讓我感到很放心！</p>
+                  </div>
+                  <div class="users d-flex justify-content-end align-items-center mt-auto">
+                    <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-03.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
+                    <p class="card-text me-4">王先生</p>
                   </div>
                 </div>
               </div>
-              <div class="col px-0 swiper-slide">
-                <div class="card border-black border-2 h-100" style="width: 364px;">
-                  <div class="card-body d-flex flex-column justify-content-between pt-7 pb-9 px-7">
-                    <div class="mb-auto">
-                      <h5 class="card-title mb-0 mx-2">貼心解答 安心選擇</h5>
-                      <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/19c23c1b994297dcbc6a7f56e4cacc5b315f9c40/assets/images/Icon/Stars.svg" class="mb-6"  alt="Convenient reservation">
-                      <p class="card-text text-start fs-6 mb-7">客服非常耐心，回答了我很多疑問，最終選擇的長照機構也非常滿意，感謝這個平台！</p>
-                    </div>
-                    <div class="users d-flex justify-content-end align-items-center mt-auto">
-                      <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-01.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
-                      <p class="card-text me-4">張先生</p>
-                    </div>
+              <div class="swiper-slide">
+                <div class="card reviews-card d-flex flex-column justify-content-between">
+                  <div>
+                    <h5 class="card-title mb-0 mx-2">貼心解答 安心選擇</h5>
+                    <div class="stars-icon mb-7"></div>
+                    <p class="card-text text-start fs-6">客服非常耐心，回答了我很多疑問，最終選擇的長照機構也非常滿意，感謝這個平台！</p>
+                  </div>
+                  <div class="users d-flex justify-content-end align-items-center mt-auto">
+                    <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-01.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
+                    <p class="card-text me-4">張先生</p>
                   </div>
                 </div>
               </div>
-              <div class="col px-0 swiper-slide">
-                <div class="card border-black border-2 h-100" style="width: 364px;">
-                  <div class="card-body d-flex flex-column justify-content-between pt-7 pb-9 px-7">
-                    <div class="mb-auto">
-                      <h5 class="card-title mb-0 mx-2">快速確認</h5>
-                      <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/19c23c1b994297dcbc6a7f56e4cacc5b315f9c40/assets/images/Icon/Stars.svg" class="mb-6"  alt="Convenient reservation">
-                      <p class="card-text text-start fs-6 mb-7">整個預約過程很順利，選擇多樣,，約後很快就收到確認通知，家人都覺得很安心。</p>
-                    </div>
-                    <div class="users d-flex justify-content-end align-items-center">
-                      <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-02.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
-                      <p class="card-text me-4">林小姐</p>
-                    </div>
+              <div class="swiper-slide">
+                <div class="card reviews-card d-flex flex-column justify-content-between">
+                  <div>
+                    <h5 class="card-title mb-0 mx-2">快速確認</h5>
+                    <div class="stars-icon mb-7"></div>
+                    <p class="card-text text-start fs-6">整個預約過程很順利，選擇多樣,，約後很快就收到確認通知，家人都覺得很安心。</p>
+                  </div>
+                  <div class="users d-flex justify-content-end align-items-center mt-auto">
+                    <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-02.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
+                    <p class="card-text me-4">林小姐</p>
                   </div>
                 </div>
               </div>
-              <div class="col px-0 swiper-slide">
-                <div class="card border-black border-2 h-100" style="width: 364px;">
-                  <div class="card-body d-flex flex-column justify-content-between pt-7 pb-9 px-7">
-                    <div class="mb-auto">
-                      <h5 class="card-title mb-0 mx-2">找到理想護理之家</h5>
-                      <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/19c23c1b994297dcbc6a7f56e4cacc5b315f9c40/assets/images/Icon/Stars.svg" class="mb-6"  alt="Convenient reservation">
-                      <p class="card-text text-start fs-6 mb-7">這個預約網讓我找到了一家非常適合的護理之家，服務周到，網站使用也非常方便。</p>
-                    </div>
-                    <div class="users d-flex justify-content-end align-items-center">
-                      <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-07.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
-                      <p class="card-text me-4">黃太太</p>
-                    </div>
+              <div class="swiper-slide">
+                <div class="card reviews-card d-flex flex-column justify-content-between">
+                  <div>
+                    <h5 class="card-title mb-0 mx-2">找到理想護理之家</h5>
+                    <div class="stars-icon mb-7"></div>
+                    <p class="card-text text-start fs-6">這個預約網讓我找到了一家非常適合的護理之家，服務周到，網站使用也非常方便。</p>
+                  </div>
+                  <div class="users d-flex justify-content-end align-items-center mt-auto">
+                    <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-07.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
+                    <p class="card-text me-4">黃太太</p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="swiper-nav">
-              <div class="swiper-button-next"></div>
-              <div class="swiper-pagination"></div>
-              <div class="swiper-button-prev"></div>
             </div>
           </div>
-          
+        </div>
+        <!-- Swiper next、prev、pagination 底下頁面控制按鈕 -->
+        <div class="container d-none d-lg-block">
+          <div class="d-flex justify-content-center gap-6" style="width: 100%;height: 30px;">
+            <div class="swiper-prev ms-auto"></div>
+            <div class="swiper-pagination mx-0 d-flex justify-content-center align-items-center gap-6"></div>
+            <div class="swiper-next me-auto"></div>
+          </div>
         </div>
       </section>
       <section class="index-faq bg-primary-30" id="faq">
@@ -444,36 +437,54 @@
         });
       });
 
-      // Swiper
-      const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        // loop: true,
-
-        // If we need pagination
+      // Swiper：聽聽大家怎麼說區段的卡片輪播
+      var swiper = new Swiper(".indexReviewSwiper", {
+        loop: false,
+        spaceBetween: 0,
+        cssMode: true,
+        navigation: {
+          nextEl: ".swiper-next",
+          prevEl: ".swiper-prev",
+        },
         pagination: {
-          el: '.swiper-pagination',
+          el: ".swiper-pagination",
           clickable: true,
         },
-
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-
         grid: {
           rows: 3,
         },
         breakpoints: {
-          768: {      
+
+          768: {
+            direction: 'horizontal',
+            loop: true,
+            grid: {
+              rows: 1,
+            },
+            slidesPerView: 2,
+            spaceBetween: 12,
+          },
+
+          1200: {
+            direction: 'horizontal',
+            loop: true,
             grid: {
               rows: 1,
             },
             slidesPerView: 3,
             spaceBetween: 64,
+          },
+
+          1400: {
+            direction: 'horizontal',
+            loop: true,
+            grid: {
+              rows: 1,
+            },
+            slidesPerView: 4,
+            spaceBetween: 64,
           }
         }
-
       });
 
     </script>
