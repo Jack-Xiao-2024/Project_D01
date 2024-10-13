@@ -1,3 +1,4 @@
+// index banner和搜尋框區段
 .index-banner{
   .banner-image{
     width: 100%;
@@ -17,14 +18,32 @@
   }
 }
 
+// index 人氣機構精選區段
 .index-hots{
   background-color: #FFFCF8;
+  .hots-container{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .hots-card-image{
+    width: 312px;
+    height: 211px;
+    background-position: center;
+    background-size: cover;
+  }
   .hots-content{
     overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
     &::-webkit-scrollbar {
       display: none;
     }
   }
+  .hots-cards{
+    display: flex;
+    justify-content: start;
+    gap: 24px;
+  }
+
   .nav-item{
     background-color: #ffffff;
   }
@@ -48,6 +67,7 @@
     background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/5a854ec2c364c80e9f5cd08aadab09967823eea1/assets/images/Interact%20Icon/Heard-01.svg");
     background-size: cover;
     background-position: center;
+    cursor: pointer;
   }
   .heartOn{
     background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/5a854ec2c364c80e9f5cd08aadab09967823eea1/assets/images/Interact%20Icon/Heard-02.svg");
@@ -57,7 +77,7 @@
   }
 }
 
-
+// index 聽聽大家怎麼說區段
 .index-reviews{
   background-color: #FFFCF8;
   position: relative;
@@ -152,6 +172,7 @@
   
 }
 
+// index 常見問題 Ｑ＆Ａ 區段
 .index-faq{
   padding: 80px 0 56px 0;
   .faq-content{
@@ -203,6 +224,7 @@
   }
 }
 
+// index 各區段 RWD 調整(768px以上)
 @media (min-width: 768px) {
   .index{
     .banner-image{
@@ -221,6 +243,7 @@
 
 }
 
+// index 各區段 RWD 調整(992px以上)
 @media (min-width: 992px) {
   .index{
     .banner-image{
@@ -237,11 +260,20 @@
       text-shadow: none;
     }
   }
+
   .index-hots{
+    .hots-container{
+      padding: 0 12px;
+    }
     .hots-content{
       overflow-x: visible;
     }
+    .hots-cards{
+      justify-content: center;
+      gap: 12px;
+    }
   }
+
   .index-faq{
     padding: 110px 0 48px 0;
     .faq-content{
@@ -271,4 +303,13 @@
     }
   }
 
+}
+
+// index 各區段 RWD 調整(1200px以上)
+@media (min-width: 1200px) {
+  .index-hots{
+    .hots-cards{
+      gap: 72px;
+    }
+  }
 }
