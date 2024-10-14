@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>首頁</title>
+    <title>長照好厝邊 | 長照不煩惱，好厝邊陪你找</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
     <%- include('./layout/header'); -%>
 
     <main class="index">
+      <!-- index banner和搜尋框區段 -->
       <section class="index-banner">
         <div class="card border-0 rounded-0">
           <div class="banner-image d-md-inline-block d-none" style="background-image: url('/assets/images/Cover-lg.png');height: 624px;"></div>
@@ -20,10 +22,459 @@
           </div>
         </div>
       </section>
+      <!-- index 人氣機構精選區段 -->
+      <section class="index-hots pt-lg-14 pb-lg-11 pt-12 pb-0">
+        <div class="hots-container">
+          <!-- 上方分頁按鈕 -->
+          <div class="px-lg-0 px-4">
+            <h4 class="text-center fs-lg-2 mb-10">人氣機構精選</h4>
+            <ul class="hots-content row row-cols-4 nav nav-pills flex-nowrap justify-content-md-center justify-content-start align-items-center mb-13 fs-6 px-1" id="pills-tab" role="tablist">
+              <li class="col nav-item px-lg-5 px-2" role="presentation" style="width: 180px;">
+                <button class="nav-link active" style="width: 156px;" id="pills-longTermCareCenter-tab" data-bs-toggle="pill" data-bs-target="#pills-longTermCareCenter" type="button" role="tab" aria-controls="pills-longTermCareCenter" aria-selected="false">長期照顧中心</button>
+              </li>
+              <li class="col nav-item px-lg-5 px-2" role="presentation" style="width: 180px;">
+                <button class="nav-link" style="width: 156px;" id="pills-restHome-tab" data-bs-toggle="pill" data-bs-target="#pills-restHome" type="button" role="tab" aria-controls="pills-restHome" aria-selected="false">安養中心</button>
+              </li>
+              <li class="col nav-item px-lg-5 px-2" role="presentation" style="width: 180px;">
+                <button class="nav-link" style="width: 156px;" id="pills-nursingHome-tab" data-bs-toggle="pill" data-bs-target="#pills-nursingHome" type="button" role="tab" aria-controls="pills-nursingHome" aria-selected="false">護理之家</button>
+              </li>
+              <li class="col nav-item px-lg-5 px-2" role="presentation" style="width: 180px;">
+                <button class="nav-link" style="width: 156px;" id="pills-dayCareCenter-tab" data-bs-toggle="pill" data-bs-target="#pills-dayCareCenter" type="button" role="tab" aria-controls="pills-dayCareCenter" aria-selected="false">日間照顧中心</button>
+              </li>
+            </ul>
+          </div>
+          <!-- 下方卡片區段 -->
+          <div>
+            <div class="tab-content hots-content" id="pills-tabContent">
+              <!-- 長期照顧中心 -->
+              <div class="tab-pane fade show active" id="pills-longTermCareCenter" role="tabpanel" aria-labelledby="pills-longTermCareCenter-tab" tabindex="0">
+                <div class="hots-cards px-4 pb-lg-0 pb-13">
+                  <div class="card-shadow rounded-2 position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <div class="hots-card-image rounded-top-2" style="background-image: url(https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-04.png?raw=true);"></div>
+                    <div class="px-7 pt-9 pb-11">
+                      <h5 class="mb-2">康樂長照中心</h5>
+                      <p class="mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-para-truncate" style="height: 72px;">本長照機構設有無障礙設施、專業護理室、康復治療室、活動娛樂區及24小時緊急呼叫系統，提供全方位的照護服務。</p>
+                    </div>
+                  </div>
+                  <div class="card-shadow rounded-2 position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <div class="hots-card-image rounded-top-2" style="background-image: url(https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-02.png?raw=true);"></div>
+                    <div class="px-7 pt-9 pb-11">
+                      <h5 class="mb-2">幸福頤養園</h5>
+                      <p class="mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-para-truncate" style="height: 72px;">幸福頤養園致力於提供長者溫馨舒適的生活環境。我們的設施包括專業護理病房，確保長者健康；康復訓練區，幫助長者維持和提升體能。</p>
+                    </div>
+                  </div>
+                  <div class="card-shadow rounded-2 position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <div class="hots-card-image rounded-top-2" style="background-image: url(https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-03.png?raw=true);"></div>
+                    <div class="px-7 pt-9 pb-11">
+                      <h5 class="mb-2">安康長青之家</h5>
+                      <p class="mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-para-truncate" style="height: 72px;">安康長青之家提供全面的長期照護服務，專為長者設計。我們擁有全天候護理中心，確保長者隨時能獲得專業照顧；健康膳食區，提供營養均衡的餐點。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 安養中心 -->
+              <div class="tab-pane fade" id="pills-restHome" role="tabpanel" aria-labelledby="pills-restHome-tab" tabindex="0">
+                <div class="hots-cards px-4 pb-lg-0 pb-13">
+                  <div class="card-shadow rounded-2 position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <div class="hots-card-image rounded-top-2" style="background-image: url(https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-01.png?raw=true);"></div>
+                    <div class="px-7 pt-9 pb-11">
+                      <h5 class="mb-2">樂康頤和園</h5>
+                      <p class="mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-para-truncate" style="height: 72px;">樂康頤和園專為銀髮族打造，提供溫馨的安養服務。我們設有舒適的居住空間，讓長者享受如家般的溫暖。</p>
+                    </div>
+                  </div>
+                  <div class="card-shadow rounded-2 position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <div class="hots-card-image rounded-top-2" style="background-image: url(https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-08.png?raw=true);"></div>
+                    <div class="px-7 pt-9 pb-11">
+                      <h5 class="mb-2">怡然頤養居</h5>
+                      <p class="mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-para-truncate" style="height: 72px;">怡然頤養居提供全方位的安養服務，讓長者安心養老。我們設有專業的護理單位，確保每位住民的健康需求得到滿足。</p>
+                    </div>
+                  </div>
+                  <div class="card-shadow rounded-2 position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <div class="hots-card-image rounded-top-2" style="background-image: url(https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-05.png?raw=true);"></div>
+                    <div class="px-7 pt-9 pb-11">
+                      <h5 class="mb-2">祥和樂年苑</h5>
+                      <p class="mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-para-truncate" style="height: 72px;">祥和樂年苑致力於營造一個舒適、健康、快樂的安養環境。我們提供先進的護理設施，全天候照護長者的身體健康。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 護理之家 -->
+              <div class="tab-pane fade" id="pills-nursingHome" role="tabpanel" aria-labelledby="pills-nursingHome-tab" tabindex="0">
+                <div class="hots-cards px-4 pb-lg-0 pb-13">
+                  <div class="card-shadow rounded-2 position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <div class="hots-card-image rounded-top-2" style="background-image: url(https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-07.png?raw=true);"></div>
+                    <div class="px-7 pt-9 pb-11">
+                      <h5 class="mb-2">康福護理苑</h5>
+                      <p class="mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-para-truncate" style="height: 72px;">康福護理苑提供專業的長期護理服務，致力於守護長者的健康與生活質量。我們設有高規格的醫護照護室，全天候提供專業的醫療支援。</p>
+                    </div>
+                  </div>
+                  <div class="card-shadow rounded-2 position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <div class="hots-card-image rounded-top-2" style="background-image: url(https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-10.png?raw=true);"></div>
+                    <div class="px-7 pt-9 pb-11">
+                      <h5 class="mb-2">靜怡護理家園</h5>
+                      <p class="mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-para-truncate" style="height: 72px;">靜怡護理家園為長者提供安寧舒適的護理服務。我們擁有設備完善的病房，讓長者在安全舒適的環境中休養。</p>
+                    </div>
+                  </div>
+                  <div class="card-shadow rounded-2 position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <div class="hots-card-image rounded-top-2" style="background-image: url(https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-06.png?raw=true);"></div>
+                    <div class="px-7 pt-9 pb-11">
+                      <h5 class="mb-2">頤康護理居</h5>
+                      <p class="mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-para-truncate" style="height: 72px;">頤康護理居致力於提供全方位的護理服務，讓長者享受高品質的生活。我們設有先進的醫療護理站，隨時守護長者的健康。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 日間照顧中心 -->
+              <div class="tab-pane fade" id="pills-dayCareCenter" role="tabpanel" aria-labelledby="pills-dayCareCenter-tab" tabindex="0">
+                <div class="hots-cards px-4 pb-lg-0 pb-13">
+                  <div class="card-shadow rounded-2 position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <div class="hots-card-image rounded-top-2" style="background-image: url(https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-09.png?raw=true);"></div>
+                    <div class="px-7 pt-9 pb-11">
+                      <h5 class="mb-2">晴朗日間照護中心</h5>
+                      <p class="mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-para-truncate" style="height: 72px;">晴朗日間照護中心為長者提供安心的日間照護服務。我們設有溫馨的休息區，讓長者在日間舒適放鬆。</p>
+                    </div>
+                  </div>
+                  <div class="card-shadow rounded-2 position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <div class="hots-card-image rounded-top-2" style="background-image: url(https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-11.png?raw=true);"></div>
+                    <div class="px-7 pt-9 pb-11">
+                      <h5 class="mb-2">晨曦安養日間中心</h5>
+                      <p class="mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-para-truncate" style="height: 72px;">晨曦安養日間中心提供長者溫馨的日間照護環境。我們擁有設備齊全的護理站，隨時提供健康護理。</p>
+                    </div>
+                  </div>
+                  <div class="card-shadow rounded-2 position-relative" style="width: 312px;">
+                    <div class="heart-icon position-absolute end-0 top-0"></div>
+                    <div class="hots-card-image rounded-top-2" style="background-image: url(https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-12.png?raw=true);"></div>
+                    <div class="px-7 pt-9 pb-11">
+                      <h5 class="mb-2">暖陽日間關懷中心</h5>
+                      <p class="mb-5">
+                        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c686e8ab8f54332bdd0d43ab1421309a7ffb91e6/assets/images/Icon/Map.svg" alt="map icon">
+                        台北市中正區中正路
+                      </p>
+                      <p class="card-para-truncate" style="height: 72px;">暖陽日間關懷中心致力於為長者提供全方位的日間照護服務。我們設有專業護理區，確保每位長者的健康得到悉心照顧。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+      <!-- index 為何選擇長照好厝邊區段 -->
+      <section class="index-why pt-lg-14 pb-lg-11 py-12 bg-primary-20">
+        <div class="container">
+          <h4 class="text-center fs-lg-2 mb-lg-8 mb-5">為何選擇長照好厝邊？</h4>
+          <h5 class="text-center fs-lg-4 mb-lg-13 mb-10">更便捷的搜尋，更合適的機構</h5>
+          <div class="row row-cols-lg-3 row-cols-1 justify-content-center align-items-stretch gap-lg-0 gap-7">
+            <div class="col px-lg-2" style="max-width: 368px;">
+              <div class="card border-0 text-center h-100">
+                <div class="card-body pt-9 pb-10 px-9">
+                  <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c05cfb3173696d6d96ec4b0ff35ae09339d41735/assets/images/Vector%20Icon/VI-03.svg" class="w-100 mb-5" style="height: 80px;" alt="Convenient reservation">
+                  <h5 class="card-title mb-5 text-secondary-60">便捷預約機構</h5>
+                  <p class="card-text text-start fs-6">您還在一間一間打電話尋找長照機構嗎？長照好厝邊幫您快速搜尋合適機構、找到直接線上預約省時又方便！</p>
+                </div>
+              </div>
+            </div>
+            <div class="col px-lg-2" style="max-width: 368px;">
+              <div class="card border-0 text-center h-100">
+                <div class="card-body pt-9 pb-10 px-9">
+                  <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c05cfb3173696d6d96ec4b0ff35ae09339d41735/assets/images/Vector%20Icon/VI-02.svg" class="w-100 mb-5" style="height: 80px;" alt="Compare various choices">
+                  <h5 class="card-title mb-5 text-secondary-60">多樣選擇比較</h5>
+                  <p class="card-text text-start fs-6">長照好厝邊提供多家長照機構的詳細資訊及用戶評價，讓用戶透過比較服務內容、評價及價格，選擇最適合的機構。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col px-lg-2" style="max-width: 368px;">
+              <div class="card border-0 text-center h-100">
+                <div class="card-body pt-9 pb-10 px-9">
+                  <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/c05cfb3173696d6d96ec4b0ff35ae09339d41735/assets/images/Vector%20Icon/VI-01.svg" class="w-100 mb-5" style="height: 80px;" alt="Instant renewing information">
+                  <h5 class="card-title mb-5 text-secondary-60">即時資訊更新</h5>
+                  <p class="card-text text-start fs-6">長照好厝邊平台會即時更新各長照機構目前的可用服務和床位資訊，讓用戶隨時掌握最新情況，安排入住參訪更靈活。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- index 聽聽大家怎麼說區段 -->
+      <section class="index-reviews pt-lg-14 pb-lg-11 py-12">
+        <div class="container">
+          <h4 class="text-center fs-lg-2 mb-lg-8 mb-5">聽聽大家怎麼說</h4>
+          <h6 class="text-center fs-lg-3 mb-lg-13 mb-10">超過<span class="reviews-number fs-lg-2 fs-4 px-lg-5 px-2 text-secondary-40">5000+</span>使用長照好厝邊</h6>
+        </div>
+        <!-- Swiper 用戶評價卡片 -->
+        <div class="reviewSwiper-container">
+          <div class="swiper indexReviewSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card reviews-card d-flex flex-column justify-content-between">
+                  <div>
+                    <h5 class="card-title mb-1 mx-2">便捷預約機構</h5>
+                    <div class="stars-icon mb-7"></div>
+                    <p class="card-text text-start fs-6">長照預約服務網讓我能輕鬆找到適合的長照機構，省去了繁瑣的現場詢問。網站操作簡單，預約流程流暢，非常方便！</p>
+                  </div>
+                  <div class="users d-flex justify-content-end align-items-center mt-auto">
+                    <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-04.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
+                    <p class="card-text me-4">郭先生</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card reviews-card d-flex flex-column justify-content-between">
+                  <div>
+                    <h5 class="card-title mb-0 mx-2">資訊透明</h5>
+                    <div class="stars-icon mb-7"></div>
+                    <p class="card-text text-start fs-6">使用這個預約網後，我發現各機構的服務詳情和評價都很清楚，讓我能夠仔細比較，選擇最適合的長照服務，感覺很安心。</p>
+                  </div>
+                  <div class="users d-flex justify-content-end align-items-center mt-auto">
+                    <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-05.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
+                    <p class="card-text me-4">李小姐</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card reviews-card d-flex flex-column justify-content-between">
+                  <div>
+                    <h5 class="card-title mb-0 mx-2">即時更新</h5>
+                    <div class="stars-icon mb-7"></div>
+                    <p class="card-text text-start fs-6">預約服務網的即時更新功能非常好，讓我隨時能夠掌握各機構的最新服務和床位情況。這樣的靈活性讓我感到很放心！</p>
+                  </div>
+                  <div class="users d-flex justify-content-end align-items-center mt-auto">
+                    <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-03.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
+                    <p class="card-text me-4">王先生</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card reviews-card d-flex flex-column justify-content-between">
+                  <div>
+                    <h5 class="card-title mb-0 mx-2">貼心解答 安心選擇</h5>
+                    <div class="stars-icon mb-7"></div>
+                    <p class="card-text text-start fs-6">客服非常耐心，回答了我很多疑問，最終選擇的長照機構也非常滿意，感謝這個平台！</p>
+                  </div>
+                  <div class="users d-flex justify-content-end align-items-center mt-auto">
+                    <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-01.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
+                    <p class="card-text me-4">張先生</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card reviews-card d-flex flex-column justify-content-between">
+                  <div>
+                    <h5 class="card-title mb-0 mx-2">快速確認</h5>
+                    <div class="stars-icon mb-7"></div>
+                    <p class="card-text text-start fs-6">整個預約過程很順利，選擇多樣,，約後很快就收到確認通知，家人都覺得很安心。</p>
+                  </div>
+                  <div class="users d-flex justify-content-end align-items-center mt-auto">
+                    <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-02.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
+                    <p class="card-text me-4">林小姐</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card reviews-card d-flex flex-column justify-content-between">
+                  <div>
+                    <h5 class="card-title mb-0 mx-2">找到理想護理之家</h5>
+                    <div class="stars-icon mb-7"></div>
+                    <p class="card-text text-start fs-6">這個預約網讓我找到了一家非常適合的護理之家，服務周到，網站使用也非常方便。</p>
+                  </div>
+                  <div class="users d-flex justify-content-end align-items-center mt-auto">
+                    <img class="d-block me-2" src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-07.png?raw=true" style="width: 44px;height: 44px;" alt="user picture">
+                    <p class="card-text me-4">黃太太</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Swiper next、prev、pagination 底下頁面控制按鈕 -->
+        <div class="container d-none d-lg-block">
+          <div class="d-flex justify-content-center gap-6" style="width: 100%;height: 30px;">
+            <div class="swiper-prev ms-auto"></div>
+            <div class="swiper-pagination mx-0 d-flex justify-content-center align-items-center gap-6"></div>
+            <div class="swiper-next me-auto"></div>
+          </div>
+        </div>
+      </section>
+      <!-- index 常見問題 Ｑ＆Ａ 區段 -->
+      <section class="index-faq bg-primary-30" id="faq">
+        <div class="container">
+          <h4 class="text-center fs-lg-2 mb-lg-9 mb-10">常見問題 Ｑ＆Ａ</h4>
+          <div class="faq-content accordion d-flex flex-column gap-2" id="accordionIndexFaq">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button fs-lg-4 fs-7" type="button" data-bs-toggle="collapse" data-bs-target="#IndexFaq-collapseOne" aria-expanded="true" aria-controls="IndexFaq-collapseOne">
+                  1. 如何註冊預約長照服務網的帳號？
+                </button>
+              </h2>
+              <div id="IndexFaq-collapseOne" class="accordion-collapse collapse show">
+                <p class="accordion-body fs-lg-5 bg-white">訪問網站首頁，點擊「註冊｜登入」按鈕，填寫必要的個人資訊，包括姓名、電話和電子信箱，然後按照提示完成註冊程序即可。</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fs-lg-4 fs-7" type="button" data-bs-toggle="collapse" data-bs-target="#IndexFaq-collapseTwo" aria-expanded="false" aria-controls="IndexFaq-collapseTwo">
+                  2. 如何查看點愛心收藏的長照機構？
+                </button>
+              </h2>
+              <div id="IndexFaq-collapseTwo" class="accordion-collapse collapse">
+                <p class="accordion-body fs-lg-5 bg-white">您可以在點愛心收藏喜歡的長照機構後，進入會員中心頁面，選擇「收藏機構」，查看收藏的長照機構，若想取消也可以在此取消收藏。</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fs-lg-4 fs-7" type="button" data-bs-toggle="collapse" data-bs-target="#IndexFaq-collapseThree" aria-expanded="false" aria-controls="IndexFaq-collapseThree">
+                  3. 如何找到適合的長照機構？
+                </button>
+              </h2>
+              <div id="IndexFaq-collapseThree" class="accordion-collapse collapse">
+                <p class="accordion-body fs-lg-5 bg-white">您可以利用網站的搜尋功能，根據地區、醫療或照護需求篩選長照機構，查看詳細資訊和用戶評價，以便做出最佳選擇。</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fs-lg-4 fs-7" type="button" data-bs-toggle="collapse" data-bs-target="#IndexFaq-collapseFour" aria-expanded="false" aria-controls="IndexFaq-collapseFour">
+                  4. 預約參訪機構需要支付費用嗎？
+                </button>
+              </h2>
+              <div id="IndexFaq-collapseFour" class="accordion-collapse collapse">
+                <p class="accordion-body fs-lg-5 bg-white">預約參訪不會收取預約費用，但具體長照機構的各項服務收費標準可能會有所不同，建議在參訪前確認清楚。</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fs-lg-4 fs-7" type="button" data-bs-toggle="collapse" data-bs-target="#IndexFaq-collapseFive" aria-expanded="false" aria-controls="IndexFaq-collapseFive">
+                  5. 如果遇到技術問題，如何聯繫客服？
+                </button>
+              </h2>
+              <div id="IndexFaq-collapseFive" class="accordion-collapse collapse">
+                <p class="accordion-body fs-lg-5 bg-white">在網站最底下有提供客服社群聯繫方式。您可以通過這些方式聯繫客服，並描述您遇到的問題，客服將協助您解決。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <%- include('./layout/footer'); -%>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="../main.js"></script>
+    <script>
+      // jQuery
+      $(document).ready(function(){
+        // 人氣機構愛心互動按鈕
+        $(".heart-icon").click(function(){
+          $(".heart-icon").toggleClass("heartOn");
+        });
+      });
+
+      // Swiper：聽聽大家怎麼說區段的卡片輪播
+      var swiper = new Swiper(".indexReviewSwiper", {
+        loop: false,
+        spaceBetween: 0,
+        cssMode: true,
+        navigation: {
+          nextEl: ".swiper-next",
+          prevEl: ".swiper-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        grid: {
+          rows: 3,
+        },
+        breakpoints: {
+
+          768: {
+            direction: 'horizontal',
+            loop: true,
+            grid: {
+              rows: 1,
+            },
+            slidesPerView: 2,
+            spaceBetween: 12,
+          },
+
+          1200: {
+            direction: 'horizontal',
+            loop: true,
+            grid: {
+              rows: 1,
+            },
+            slidesPerView: 3,
+            spaceBetween: 64,
+          },
+
+          1400: {
+            direction: 'horizontal',
+            loop: true,
+            grid: {
+              rows: 1,
+            },
+            slidesPerView: 4,
+            spaceBetween: 64,
+          }
+        }
+      });
+
+    </script>
   </body>
 </html>
