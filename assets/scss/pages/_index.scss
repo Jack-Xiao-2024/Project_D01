@@ -17,6 +17,33 @@
     text-shadow: 0 4px 4px rgba(0,0,0,0.25);
   }
 }
+// 搜尋框
+.index-search{
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  .search-wrapper{
+    padding: 2px;
+    border-radius: 7px;
+    background-color: #000000;
+    gap: 2px;
+  }
+  .search-wrapper-sm{
+    gap: 2px;
+  }
+  .btn-width{
+    width: auto;
+  }
+  .form-select{
+    border-radius: 5px;
+    padding: 20px;
+    color: #444444;
+    --bs-form-select-bg-img: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/366789c203647fae0d1d85480b842094e9431e74/assets/images/Icon/IconBlack/CaretDown-B.svg");
+    background-size: 24px 24px;
+    cursor: pointer;
+  }
+}
 
 // index 人氣機構精選區段
 .index-hots{
@@ -191,7 +218,7 @@
     border-radius: 12px;
     line-height: 1.2;
     &:after{
-      background-image: url("/assets/images/Icon/IconBlack/CaretDown-B.svg");
+      background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/366789c203647fae0d1d85480b842094e9431e74/assets/images/Icon/IconBlack/CaretDown-B.svg");
       background-size: cover;
     }
     &:hover{
@@ -200,7 +227,7 @@
       color: #C83F00;
       border-radius: 12px;
       &:after{
-        background-image: url("/assets/images/Icon/IconSecondary/CaretDown-S-40.svg");
+        background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/366789c203647fae0d1d85480b842094e9431e74/assets/images/Icon/IconSecondary/CaretDown-S-40.svg");
       }
     }
   }
@@ -208,13 +235,13 @@
     color: #C83F00;
     border-radius: 12px 12px 0 0;
     &:after{
-      background-image: url("/assets/images/Icon/IconSecondary/CaretDown-S-40.svg");
+      background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/366789c203647fae0d1d85480b842094e9431e74/assets/images/Icon/IconSecondary/CaretDown-S-40.svg");
     }
     &:hover{
       border: 2px solid rgba(0,0,0,0);
       border-radius: 12px 12px 0 0;
       &:after{
-        background-image: url("/assets/images/Icon/IconSecondary/CaretDown-S-40.svg");
+        background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/366789c203647fae0d1d85480b842094e9431e74/assets/images/Icon/IconSecondary/CaretDown-S-40.svg");
       }
     }
   }
@@ -226,12 +253,25 @@
 
 // index 各區段 RWD 調整(768px以上)
 @media (min-width: 768px) {
-  .index{
+  // index banner和搜尋框區段
+  .index-banner{
     .banner-image{
       background-position: top 50% right 35%;
     }
   }
+  // 搜尋框
+  .index-search{
+    bottom: 0;
+    transform: translate(-50%,50%);
+    .form-select{
+      padding: 0 10px;
+    }
+    .btn-width{
+      width: 188px;
+    }
+  }
 
+  // index 聽聽大家怎麼說區段
   .index-reviews{
     .swiper-slide {
       margin-bottom: 0;
@@ -245,7 +285,8 @@
 
 // index 各區段 RWD 調整(992px以上)
 @media (min-width: 992px) {
-  .index{
+  // index banner和搜尋框區段
+  .index-banner{
     .banner-image{
       background-position: center;
     }
@@ -260,7 +301,17 @@
       text-shadow: none;
     }
   }
+  // 搜尋框
+  .index-search{
+    .form-select{
+      padding: 0 20px;
+    }
+    .btn-width{
+      width: 231px;
+    }
+  }
 
+  // index 人氣機構精選區段
   .index-hots{
     .hots-container{
       padding: 0 12px;
@@ -274,6 +325,7 @@
     }
   }
 
+  // index 常見問題 Ｑ＆Ａ 區段
   .index-faq{
     padding: 110px 0 48px 0;
     .faq-content{
@@ -287,6 +339,7 @@
     }
   }
 
+  // index 聽聽大家怎麼說區段
   .index-reviews{
     .reviewSwiper-container{
       padding: 0;
@@ -307,6 +360,7 @@
 
 // index 各區段 RWD 調整(1200px以上)
 @media (min-width: 1200px) {
+  // index 人氣機構精選區段
   .index-hots{
     .hots-cards{
       gap: 72px;
