@@ -51,7 +51,25 @@ img{
   border-radius: 5px;
 }
 
+.phone-search-bar{
+    display: none;
+}
 
+//手機模式下切換搜尋框
+
+@media (max-width:768px) {
+    .search-bar{
+        display: none;
+    }
+
+    .phone-search-bar{
+        display: block;
+    }
+    
+    .search-btn {
+        width: 100%;
+    }
+}
 
  .form-select,.search-btn{
      border: 2px solid black; /* 添加黑色邊框 */

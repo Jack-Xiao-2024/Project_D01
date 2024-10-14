@@ -14,6 +14,23 @@
         border: 3px solid #aa792f;
     }
 }
+.intro {
+    &-rounded {
+        border-top-left-radius: 50% 106px;
+        border-top-right-radius: 50% 106px;
+        img {
+            max-height: 222px;
+        }
+    }
+    &-service {
+        width: 80px;
+        height: 80px;
+    }
+    &-user {
+        width: 28px;
+        height: 28px;
+    }
+}
 .swiper-intro-container {
     width: 100%;
     overflow: hidden;
