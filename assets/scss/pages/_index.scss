@@ -47,6 +47,7 @@
 
 // index 人氣機構精選區段
 .index-hots{
+  padding-top: 56px;
   background-color: #FFFCF8;
   .hots-container{
     width: 100%;
@@ -279,6 +280,11 @@
         display: block;
       }
     }
+  }
+
+  // index 人氣機構精選區段
+  .index-hots{
+    padding-top: 180px;
   }
 
 }
