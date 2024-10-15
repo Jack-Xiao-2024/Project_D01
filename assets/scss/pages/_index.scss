@@ -54,12 +54,6 @@
     width: 100%;
     margin: 0 auto;
   }
-  .hots-card-image{
-    width: 312px;
-    height: 211px;
-    background-position: center;
-    background-size: cover;
-  }
   .hots-content{
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
@@ -67,29 +61,38 @@
       display: none;
     }
   }
+  .hots-card-image{
+    width: 312px;
+    height: 211px;
+    background-position: center;
+    background-size: cover;
+  }
   .hots-cards{
     display: flex;
     justify-content: start;
     gap: 24px;
   }
 
-  .nav-item{
-    background-color: #ffffff;
+  .nav-item:has(.nav-link:hover){
+    background-color: #FFFCF8;
   }
   .nav-link{
-    color: #000000;
-    border: 1px solid #000000;
+    color: var(--bs-secondary-40);
+    border: 2px solid var(--bs-secondary-40);
     &:hover{
-      background-color: rgba(180, 57, 0, 0.2);
-      border: 1.5px solid #000000;
+      background-color: rgba(200,63,0,0.2);
+      border: 2px solid var(--bs-secondary-40);
+      box-shadow: 3px 3px 6px 0 rgba(0,0,0,0.1),10px 10px 10px 0 rgba(0,0,0,0.05);
     }
   }
   .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    color: var(--bs-secondary-40);
-    background-color: rgba(200, 63, 0, 0.08);
+    color: #ffffff;
+    background-color: var(--bs-secondary-40);
     border: 2px solid var(--bs-secondary-40);
   }
   .heart-icon{
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
     width: 62.8px;
     height: 62.8px;
     margin: 8px;
@@ -97,12 +100,12 @@
     background-size: cover;
     background-position: center;
     cursor: pointer;
+    &:hover{
+      transform: scale(1.03);
+    }
   }
   .heartOn{
     background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/5a854ec2c364c80e9f5cd08aadab09967823eea1/assets/images/Interact%20Icon/Heard-02.svg");
-  }
-  .card-body{
-    padding: 32px 24px 48px 24px;
   }
 }
 
