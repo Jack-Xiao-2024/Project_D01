@@ -123,7 +123,7 @@
     letter-spacing: 0.12em;
   }
   .stars-icon{
-    background-image: url('https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/19c23c1b994297dcbc6a7f56e4cacc5b315f9c40/assets/images/Icon/Stars.svg');
+    background-image: url('/assets/images/Icon/Stars-Change.svg');
     width: 168px;
     height: 24px;
     background-position: center;
@@ -152,7 +152,7 @@
     justify-content: start;
     align-items: start;
     padding: 24px 24px 32px 24px;
-    border: 2px solid #000000;
+    border: 1.5px solid var(--bs-neutral-40);
     margin-bottom: 24px;
     &:nth-child(n + 4) {
       display: none;
@@ -285,6 +285,7 @@
   .index-reviews{
     .swiper-slide {
       margin-bottom: 0;
+      box-shadow: 2px 0 4px rgba(0,0,0,0.2);
       &:nth-child(n + 4) {
         display: block;
       }
