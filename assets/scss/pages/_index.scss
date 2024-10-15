@@ -54,12 +54,6 @@
     width: 100%;
     margin: 0 auto;
   }
-  .hots-card-image{
-    width: 312px;
-    height: 211px;
-    background-position: center;
-    background-size: cover;
-  }
   .hots-content{
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
@@ -67,26 +61,33 @@
       display: none;
     }
   }
+  .hots-card-image{
+    width: 312px;
+    height: 211px;
+    background-position: center;
+    background-size: cover;
+  }
   .hots-cards{
     display: flex;
     justify-content: start;
     gap: 24px;
   }
 
-  .nav-item{
-    background-color: #ffffff;
+  .nav-item:has(.nav-link:hover){
+    background-color: #FFFCF8;
   }
   .nav-link{
-    color: #000000;
-    border: 1px solid #000000;
+    color: var(--bs-secondary-40);
+    border: 2px solid var(--bs-secondary-40);
     &:hover{
-      background-color: rgba(180, 57, 0, 0.2);
-      border: 1.5px solid #000000;
+      background-color: rgba(200,63,0,0.2);
+      border: 2px solid var(--bs-secondary-40);
+      box-shadow: 3px 3px 6px 0 rgba(0,0,0,0.1),10px 10px 10px 0 rgba(0,0,0,0.05);
     }
   }
   .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    color: var(--bs-secondary-40);
-    background-color: rgba(200, 63, 0, 0.08);
+    color: #ffffff;
+    background-color: var(--bs-secondary-40);
     border: 2px solid var(--bs-secondary-40);
   }
   .heart-icon{
@@ -97,13 +98,18 @@
     background-size: cover;
     background-position: center;
     cursor: pointer;
+    &:hover{
+      opacity: 0.9;
+    }
   }
   .heartOn{
     background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/5a854ec2c364c80e9f5cd08aadab09967823eea1/assets/images/Interact%20Icon/Heard-02.svg");
   }
-  .card-body{
-    padding: 32px 24px 48px 24px;
-  }
+}
+
+// index 為何選擇長照好厝邊區段
+.index-why{
+  background-color: #FFDAA3;
 }
 
 // index 聽聽大家怎麼說區段
@@ -115,7 +121,7 @@
     letter-spacing: 0.12em;
   }
   .stars-icon{
-    background-image: url('https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/19c23c1b994297dcbc6a7f56e4cacc5b315f9c40/assets/images/Icon/Stars.svg');
+    background-image: url('/assets/images/Icon/Stars-Change.svg');
     width: 168px;
     height: 24px;
     background-position: center;
@@ -144,7 +150,7 @@
     justify-content: start;
     align-items: start;
     padding: 24px 24px 32px 24px;
-    border: 2px solid #000000;
+    border: 1.5px solid var(--bs-neutral-40);
     margin-bottom: 24px;
     &:nth-child(n + 4) {
       display: none;
@@ -225,7 +231,7 @@
     }
     &:hover{
       background-color: #fff;
-      border: 2px solid #693F26;
+      border: 2px solid var(--bs-secondary-80);
       color: #C83F00;
       border-radius: 12px;
       &:after{
@@ -277,6 +283,7 @@
   .index-reviews{
     .swiper-slide {
       margin-bottom: 0;
+      box-shadow: 2px 0 4px rgba(0,0,0,0.2);
       &:nth-child(n + 4) {
         display: block;
       }
@@ -305,7 +312,7 @@
     .banner-subtitle{
       color: #444444;
       letter-spacing: 0.16em;
-      text-shadow: none;
+      text-shadow: 0px 4px 4px rgba(255,255,255,0.5);
     }
   }
   // 搜尋框

@@ -1,0 +1,31 @@
+.custom-primary-btn {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+  border: 3px solid transparent;
+  &:hover {
+      background-color: #ffdaa3;
+      border: 3px solid #fcf1e0;
+      transform: scale(1.03);
+      box-shadow: 0px 4px 9px 0px #0000001a;
+  }
+  &:focus {
+      outline: none;
+      background-color: #ffdaa3;
+      border: 3px solid #aa792f;
+  }
+}
+
+// 針對搜尋框調整移除放大效果避免超出搜尋框框線
+.search-primary-btn {
+  border: 3px solid transparent;
+  &:hover {
+      background-color: #ffdaa3;
+      border: 3px solid #fcf1e0;
+      box-shadow: 0px 4px 9px 0px #0000001a;
+  }
+  &:focus {
+      outline: none;
+      background-color: #ffdaa3;
+      border: 3px solid #aa792f;
+  }
+}
