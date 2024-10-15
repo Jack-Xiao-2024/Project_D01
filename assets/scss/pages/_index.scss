@@ -231,7 +231,7 @@
     }
     &:hover{
       background-color: #fff;
-      border: 2px solid #693F26;
+      border: 2px solid var(--bs-secondary-80);
       color: #C83F00;
       border-radius: 12px;
       &:after{
