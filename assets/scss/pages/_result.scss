@@ -93,6 +93,10 @@ img{
 
 .phone-search-bar{
     display: none;
+    position: absolute;
+    top: calc(50% + 90px); /* 在原有的 50% 基礎上再向下移動 */   //手機版的搜尋框目前無法往下移動
+    left: 50%; /* 水平位置在容器的 50% */
+    transform: translate(-50%, -50%); /* 水平和垂直居中 */
 }
 
 //手機模式下切換搜尋框
@@ -114,6 +118,7 @@ img{
  .form-select,.search-btn{
      border: 2px solid black; /* 添加黑色邊框 */
  }
+
 
 
 //卡片
@@ -152,9 +157,20 @@ img{
     box-sizing: border-box; /* 包括內邊距和邊框在內計算寬度 */
   }
 
+  //按鈕hover樣式
 
-  @media (max-width:700px){
-    .pagnation{
-        display: none;
+  .book-btn {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+        background-color: #ffdaa3;
+        border: 1px solid #fcf1e0;
+        transform: scale(1.03);
+        box-shadow: 0px 4px 9px 0px #0000001a;
+    }
+    &:focus {
+        outline: none;
+        background-color: #ffdaa3;
+        border: 3px solid #aa792f;
     }
 }
