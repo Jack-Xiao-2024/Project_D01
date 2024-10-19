@@ -42,12 +42,12 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-xl-5 px-lg-0" href="#">
+              <button class="nav-link px-xl-5 px-lg-0 w-100 text-start" data-bs-target="#logInModal" data-bs-toggle="modal">
                 <svg class="d-inline edit-icon me-xl-4 me-lg-0 me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path class="edit-icon-stroke" d="M12 15L15 12M15 12L12 9M15 12H4M9 7.24859V7.2002C9 6.08009 9 5.51962 9.21799 5.0918C9.40973 4.71547 9.71547 4.40973 10.0918 4.21799C10.5196 4 11.0801 4 12.2002 4H16.8002C17.9203 4 18.4796 4 18.9074 4.21799C19.2837 4.40973 19.5905 4.71547 19.7822 5.0918C20 5.5192 20 6.07899 20 7.19691V16.8036C20 17.9215 20 18.4805 19.7822 18.9079C19.5905 19.2842 19.2837 19.5905 18.9074 19.7822C18.48 20 17.921 20 16.8031 20H12.1969C11.079 20 10.5192 20 10.0918 19.7822C9.71547 19.5905 9.40973 19.2839 9.21799 18.9076C9 18.4798 9 17.9201 9 16.8V16.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <h5 class="d-inline align-middle">註冊｜登入</h5>
-              </a>
+              </button>
             </li>
           </div>
         </ul>
@@ -55,3 +55,88 @@
     </div>
   </nav>
 </header>
+
+<!-- 註冊｜登入的彈出視窗 -->
+<div class="modal fade" id="logInModal" aria-hidden="true" aria-labelledby="logInModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body py-0 px-14">
+        <h5 class="modal-title text-center mb-4" id="logInModalToggleLabel">帳號登入</h5>
+        <form action="" class="d-flex flex-column justify-content-center">
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="account" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">帳號：</label>
+            <input type="email" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="account" placeholder="您的電子信箱" aria-label="Account">
+          </div>
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="password" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">密碼：</label>
+            <input type="password" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="password" placeholder="請輸入密碼" aria-label="Password">
+          </div>
+          <a href="#" class="ms-auto mt-4 link-secondary-40">忘記密碼</a>
+          <button type="submit" class="mt-4 btn btn-primary-40 custom-primary-btn fs-6 p-4">登入</button>
+        </form>
+      </div>
+      <div class="modal-footer d-flex justify-content-center border-top-0 px-5 pt-5 pb-9">
+        <p class="d-inline">還沒有帳號？</p>
+        <button class="btn p-0 link-secondary-40 border-0" data-bs-target="#signUpModal" data-bs-toggle="modal">註冊</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="signUpModal" aria-hidden="true" aria-labelledby="signUpModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body py-0 px-14">
+        <h5 class="modal-title text-center mb-4" id="logInModalToggleLabel">註冊</h5>
+        <form action="" class="d-flex flex-column justify-content-center">
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="email" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">電子信箱：</label>
+            <input type="email" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="email" placeholder="作為帳號使用" aria-label="Email">
+          </div>
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="password" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">密碼：</label>
+            <input type="password" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="password" placeholder="設定密碼" aria-label="Password">
+          </div>
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="name" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">姓名：</label>
+            <input type="text" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="name" placeholder="陳小明" aria-label="Name">
+          </div>
+          <div class="input-group d-flex align-items-center gap-3 border-1 border-bottom py-6">
+            <span class="input-group-text border-0 fs-6 py-0 px-3 bg-white">性別：</span>
+            <div class="form-check fs-6">
+              <input class="form-check-input" type="radio" name="gender" id="male" checked>
+              <label class="form-check-label" for="male">
+                男
+              </label>
+            </div>
+            <div class="form-check fs-6 ms-2">
+              <input class="form-check-input" type="radio" name="gender" id="female">
+              <label class="form-check-label" for="female">
+                女
+              </label>
+            </div>
+          </div>
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="birth" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">生日：</label>
+            <input type="date" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="birth" aria-label="Birthday">
+          </div>
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="phone" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">電話：</label>
+            <input type="tel" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="phone" placeholder="0912-345-678" aria-label="Phone">
+          </div>
+          <button type="submit" class="mt-12 btn btn-primary-40 custom-primary-btn fs-6 p-4">註冊</button>
+        </form>
+      </div>
+      <div class="modal-footer d-flex justify-content-center border-top-0 px-5 pt-5 pb-9">
+        <p class="text-center">點擊「註冊」即表示你同意我們的使用條款及隱私政策</p>
+        <p class="d-inline">已有註冊？</p>
+        <button class="btn p-0 link-secondary-40 border-0" data-bs-target="#logInModal" data-bs-toggle="modal">登入</button>
+      </div>
+    </div>
+  </div>
+</div>
