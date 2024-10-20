@@ -15,46 +15,26 @@ img{
 }
 
 
-// banner
-
- .index-banner{
-     .banner-image{
-       width: 100%;
-       background-repeat: repeat;
-       background-size: cover;
-       background-position: center;
-     }
-     .banner-title{
-       color: #ffffff;
-       margin-top: 0;
-       font-size: 31px;
-       text-shadow: 0 4px 4px rgba(0,0,0,0.25);
-     }
-     .banner-subtitle{
-       color: #ffffff;
-       text-shadow: 0 4px 4px rgba(0,0,0,0.25);
-     }
-   }
 
    
   
-@media (min-width: 992px) {
-    .index-banner{
-      .banner-image{
-        background-position: center;
-      }
-      .banner-title{
-        margin-top: 184px;
-        font-size: 64px;
-        line-height: 1.39;
-      }
-      .banner-subtitle{
-        color: #444444;
-        letter-spacing: 0.16em;
-        text-shadow: 0px 4px 4px rgba(255,255,255,0.5);
-      }
-    }
-}
+// @media (min-width: 992px) {
+//     .index-banner{
+//       .banner-image{
+//         background-position: center;
+//       }
+//       .banner-title{
+//         margin-top: 184px;
+//         font-size: 64px;
+//         line-height: 1.39;
+//       }
+//       .banner-subtitle{
+//         color: #444444;
+//         letter-spacing: 0.16em;
+//         text-shadow: 0px 4px 4px rgba(255,255,255,0.5);
+//       }
+//     }
+// }
 
 
 // .banner{
