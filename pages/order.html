@@ -3,41 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>預定留床和參訪</title>
+    <title>預定留床和預約參訪</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
 
-    <div class="container">
+  <%- include('./layout/header'); -%>
 
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">預約留床</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">預定參訪</button>
-            </li>
-          </ul>
-
-          <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-          </div>
-
-          <h2>寫完了！</h2>
-
-        <!-- <div class="nav nav-tabs">
-            <button class="nav-link active" data-bs-toggle="tab" data-bs-toggle="tab" data-bs-target="order" aria-selected="true">
-                預定留床
-            </button>
+  <div class="main">
+    <!-- banner -->
+    <section class="index-banner">
+      <div class="card border-0 rounded-0">
+        <div class="banner-image d-md-inline-block d-none" style="background-image: url('/assets/images/Cover-lg.png');height: 624px;"></div>
+        <div class="banner-image d-md-none d-inline-block" style="background-image: url('/assets/images/Cover-sm.png');height: 644px;"></div>
+        <div class="container-lg container-fluid card-img-overlay py-10">
+          <h1 class="banner-title pb-9 px-lg-0 px-md-2 px-0">長照不煩惱，<br>好厝邊陪你找</h1>
+          <p class="banner-subtitle fs-lg-4 fs-md-6 fs-8 px-lg-0 px-md-2 px-0">找機構跟訂飯店<span class="d-xl-inline d-none">，</span><br class="d-xl-none d-block">一樣簡單！</p>
         </div>
+      </div>
+    </section>
 
-        <div class="nav nav-tabs">
-            <button class="nav-link active" data-bs-toggle="tab" data-bs-toggle="tab" data-bs-target="order" aria-selected="true">
-                預約參訪
-            </button>
-        </div> -->
+    <div class="container">
+      <!-- card -->
+      <div class="card overflow-hidden mb-3" style="max-width: 1296px;">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <a class="card-img-box" href="">
+              <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/main/assets/images/Building/B-07.png?raw=true" class="card-img img-fluid rounded-0" alt="building">
+            </a>
+          </div>
+          <div class="col-md-7">
+            <div class="card-body p-4">
+              <!-- infor -->
+               <div class="infor mb-3">
+                <div class="checkbox d-flex justify-content-between mb-2">
+                  <h5 class="card-title">康福護理苑</h5>
+                  <div>
+                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="勾選框">
+                  </div>
+                </div>
+                <div class="address d-flex">
+                  <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" fill="#EA8C55"/>
+                    <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" fill="#EA8C55"/>
+                    <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                  <p class="fs-7">台北市中正區中正路</p>
+                </div>
+               </div>
+              <!-- date -->
+              <div class="date d-flex align-items-center mb-3">
+                <p class="fs-8 me-1">預定入住：</p>
+                <div class="order-calendar">
+                  <p class="fs-6">2024/09/24</p>
+                    <svg class="d-block" width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="0.600006" width="28" height="28" rx="14" fill="#FFE8C6"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.08008 8.48022C6.08008 8.08258 6.40243 7.76022 6.80008 7.76022H21.2001C21.5977 7.76022 21.9201 8.08258 21.9201 8.48022V22.1602C21.9201 22.5579 21.5977 22.8802 21.2001 22.8802H6.80008C6.40243 22.8802 6.08008 22.5579 6.08008 22.1602V8.48022ZM7.52008 9.20022V21.4402H20.4801V9.20022H7.52008Z" fill="#A03200"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4 7.40022V9.56022H8.95996V7.40022H10.4Z" fill="#A03200"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0396 7.40013V9.56013H17.5996V7.40013H19.0396Z" fill="#A03200"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7998 10.6402H21.1998V12.0802H6.7998V10.6402Z" fill="#A03200"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.36 13.8802C12.7695 13.8802 11.48 15.1696 11.48 16.7602C11.48 18.3508 12.7695 19.6402 14.36 19.6402C15.9506 19.6402 17.24 18.3508 17.24 16.7602C17.24 15.1696 15.9506 13.8802 14.36 13.8802ZM10.04 16.7602C10.04 14.3743 11.9742 12.4402 14.36 12.4402C16.7459 12.4402 18.68 14.3743 18.68 16.7602C18.68 19.1461 16.7459 21.0802 14.36 21.0802C11.9742 21.0802 10.04 19.1461 10.04 16.7602Z" fill="#A03200"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.28 17.1202V14.9602H14.72V16.4002H16.16V17.8402H14C13.6024 17.8402 13.28 17.5179 13.28 17.1202Z" fill="#A03200"/>
+                    </svg>
+                </div>
+              </div>
+              <!-- 床位房型 -->
+              <div class="card-text d-flex justify-content-between align-items-end mb-2">
+                <div class="beds fs-7">剩餘床位：3</div>
+                <div class="room-info text-end">
+                  <p class="room-tylie fs-8">單人房型</p>
+                  <p class="romm-price fs-5">NTD 5,000</p>
+                </div>
+              </div>
+
+              <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-secondary-40" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  刪除
+                </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header order-none-border">
+                      <div class="d-flex d-colom">
+                        <svg class="d-block" width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1599_1465)">
+                          <path d="M48.4336 8.96671V53.3C48.4336 53.9189 48.1878 54.5124 47.7502 54.95C47.3126 55.3875 46.7191 55.6334 46.1003 55.6334H11.1003C10.4815 55.6334 9.88797 55.3875 9.45039 54.95C9.0128 54.5124 8.76697 53.9189 8.76697 53.3V8.96671H48.4336Z" fill="#F7E2D9"/>
+                          <path d="M8.76697 8.96671H48.4336V15.9667H8.76697V8.96671Z" fill="#EEC2B0"/>
+                          <path d="M48.4336 8.96671V53.3C48.4336 53.9189 48.1878 54.5124 47.7502 54.95C47.3126 55.3875 46.7191 55.6334 46.1003 55.6334H11.1003C10.4815 55.6334 9.88797 55.3875 9.45039 54.95C9.0128 54.5124 8.76697 53.9189 8.76697 53.3V8.96671H48.4336Z" stroke="#B43900" stroke-width="2.304" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M18.1 8.96668V4.30001C18.1 3.68117 18.3458 3.08768 18.7834 2.65009C19.221 2.21251 19.8145 1.96667 20.4333 1.96667H36.7666C37.3855 1.96667 37.979 2.21251 38.4166 2.65009C38.8541 3.08768 39.1 3.68117 39.1 4.30001V8.96668" stroke="#B43900" stroke-width="2.304" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M1.76685 8.96671H55.4335" stroke="#B43900" stroke-width="2.304" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M18.1 17.1333V45.1333" stroke="#B43900" stroke-width="2.304" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M28.6 17.1333V45.1333" stroke="#B43900" stroke-width="2.304" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M39.1 17.1333V45.1333" stroke="#B43900" stroke-width="2.304" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                          <clipPath id="clip0_1599_1465">
+                          <rect width="56" height="56" fill="white" transform="translate(0.599976 0.799988)"/>
+                          </clipPath>
+                          </defs>
+                          </svg>
+                        <h5 class="modal-title text-secondary-40" id="staticBackdropLabel">刪除機構</h5>
+                      </div>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="fs-6">請問確認刪除勾選的機構嗎？</p>
+                    </div>
+                    <div class="modal-footer order-none-border">
+                      <button type="button" class="btn btn-secondary-40" data-bs-dismiss="modal">刪除</button>
+                      <button type="button" class="btn btn-outline-secondary-40" data-bs-dismiss="modal">保留</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+        
+
+            </div>
+          </div>
+        </div>
+      </div>
+
 
     </div>
-        <script type="module" src="../main.js"></script>
+  </div>
+
+  <%- include('./layout/footer'); -%>
+
+  <!-- JS引入 -->
+  <script type="module" src="../main.js"></script>
+
 </body>
 </html> 

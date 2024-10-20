@@ -15,46 +15,26 @@ img{
 }
 
 
-// banner
-
- .index-banner{
-     .banner-image{
-       width: 100%;
-       background-repeat: repeat;
-       background-size: cover;
-       background-position: center;
-     }
-     .banner-title{
-       color: #ffffff;
-       margin-top: 0;
-       font-size: 31px;
-       text-shadow: 0 4px 4px rgba(0,0,0,0.25);
-     }
-     .banner-subtitle{
-       color: #ffffff;
-       text-shadow: 0 4px 4px rgba(0,0,0,0.25);
-     }
-   }
 
    
   
-@media (min-width: 992px) {
-    .index-banner{
-      .banner-image{
-        background-position: center;
-      }
-      .banner-title{
-        margin-top: 184px;
-        font-size: 64px;
-        line-height: 1.39;
-      }
-      .banner-subtitle{
-        color: #444444;
-        letter-spacing: 0.16em;
-        text-shadow: 0px 4px 4px rgba(255,255,255,0.5);
-      }
-    }
-}
+// @media (min-width: 992px) {
+//     .index-banner{
+//       .banner-image{
+//         background-position: center;
+//       }
+//       .banner-title{
+//         margin-top: 184px;
+//         font-size: 64px;
+//         line-height: 1.39;
+//       }
+//       .banner-subtitle{
+//         color: #444444;
+//         letter-spacing: 0.16em;
+//         text-shadow: 0px 4px 4px rgba(255,255,255,0.5);
+//       }
+//     }
+// }
 
 
 // .banner{
@@ -76,7 +56,7 @@ img{
 
 //搜尋框
 
-.main{
+.result-main{
     position: relative;
 }
 
@@ -93,10 +73,6 @@ img{
 
 .phone-search-bar{
     display: none;
-    position: absolute;
-    top: calc(50% + 90px); /* 在原有的 50% 基礎上再向下移動 */   //手機版的搜尋框目前無法往下移動
-    left: 50%; /* 水平位置在容器的 50% */
-    transform: translate(-50%, -50%); /* 水平和垂直居中 */
 }
 
 //手機模式下切換搜尋框
@@ -108,6 +84,10 @@ img{
 
     .phone-search-bar{
         display: block;
+        position: absolute;
+        top: calc(50% + 100px); 
+        left: 50%; /* 水平位置在容器的 50% */
+        transform: translate(-50%, -50%); /* 水平和垂直居中 */
     }
     
     .search-btn {
@@ -123,39 +103,43 @@ img{
 
 //卡片
 
-.card-img-box{
-    width: 100%; /* 設定容器寬度 */
-    height: 100%; /* 設定容器高度 */
-    max-height: 300px;
+.result-content{
+    .card-img-box{
+        width: 100%; /* 設定容器寬度 */
+        height: 100%; /* 設定容器高度 */
+        max-height: 300px;
+        
+    }
     
+    .col-md-5{
+        position: relative;
+    }
+    
+    .heart{
+        position: absolute;
+        top: 10px; /* 距離上方 10px */
+        right: 10px; /* 距離右側 10px */
+    
+    }
+    
+    .card-img{
+        width: 100%; /* 設定容器寬度 */
+        height: 100%; /* 設定容器高度 */
+        position: relative; /* 確保內部元素可相對定位 */
+        overflow: hidden; /* 隱藏超出容器範圍的圖片部分 */
+        object-fit: cover; /* 確保圖片填滿容器，若比例不一致則裁切 */
+    }
+    
+    .buttons .btn {
+        flex-grow: 1; /* 讓每個按鈕按比例撐開 */
+        flex-basis: 0; /* 初始寬度設為 0，使用 flex-grow 來調整 */
+        max-width: 355px; /* 設定按鈕的最大寬度為 355px */
+        min-width: 144px; /* 設定按鈕的最小寬度為 144px */
+        box-sizing: border-box; /* 包括內邊距和邊框在內計算寬度 */
+      }
 }
 
-.col-md-5{
-    position: relative;
-}
 
-.heart{
-    position: absolute;
-    top: 10px; /* 距離上方 10px */
-    right: 10px; /* 距離右側 10px */
-
-}
-
-.card-img{
-    width: 100%; /* 設定容器寬度 */
-    height: 100%; /* 設定容器高度 */
-    position: relative; /* 確保內部元素可相對定位 */
-    overflow: hidden; /* 隱藏超出容器範圍的圖片部分 */
-    object-fit: cover; /* 確保圖片填滿容器，若比例不一致則裁切 */
-}
-
-.buttons .btn {
-    flex-grow: 1; /* 讓每個按鈕按比例撐開 */
-    flex-basis: 0; /* 初始寬度設為 0，使用 flex-grow 來調整 */
-    max-width: 355px; /* 設定按鈕的最大寬度為 355px */
-    min-width: 144px; /* 設定按鈕的最小寬度為 144px */
-    box-sizing: border-box; /* 包括內邊距和邊框在內計算寬度 */
-  }
 
   //按鈕hover樣式
 
