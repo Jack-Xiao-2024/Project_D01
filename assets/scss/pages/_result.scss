@@ -93,10 +93,6 @@ img{
 
 .phone-search-bar{
     display: none;
-    position: absolute;
-    top: calc(50% + 90px); /* 在原有的 50% 基礎上再向下移動 */   //手機版的搜尋框目前無法往下移動
-    left: 50%; /* 水平位置在容器的 50% */
-    transform: translate(-50%, -50%); /* 水平和垂直居中 */
 }
 
 //手機模式下切換搜尋框
@@ -108,6 +104,10 @@ img{
 
     .phone-search-bar{
         display: block;
+        position: absolute;
+        top: calc(50% + 100px); 
+        left: 50%; /* 水平位置在容器的 50% */
+        transform: translate(-50%, -50%); /* 水平和垂直居中 */
     }
     
     .search-btn {
