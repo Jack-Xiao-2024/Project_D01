@@ -12,9 +12,55 @@ img{
     max-width: 100%;
 }
 
-// calendar
+.order-content{
+    background-color: #FFFCF8;
+    padding-top: 56px;
+    padding-bottom: 48px;
+    margin: 0 auto;
+}
 
-.order-calendar{
+// checkbox-desk
+.checkbox-desk{
+    display:block;
+    }
+    
+@media(max-width:768px){
+        .checkbox-desk{
+            display: none;
+        }
+    }
+
+// checkbox-moble
+.checkbox-moble{
+    display:none;
+    }
+    
+@media(max-width:768px){
+        .checkbox-moble{
+            display: block;
+        }
+    }
+
+// checkbox重設方塊大小
+.custom-checkbox{
+    width: 24px;
+    height: 24px;
+    }
+
+// checkbox-relative
+.checkbox-relative{
+    position: relative;
+}
+
+// checkbox-absolute
+.checkbox-absolute{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+// calendar
+.calendar{
     display: flex;
     width: 256px;
     justify-content: space-between;
@@ -23,7 +69,166 @@ img{
     padding: 4px 8px;
 }
 
-// 去除modal框線
-.order-none-border{
+// calendar手機版大小
+@media(max-width:768px){
+    .calendar{
+        display: flex;
+        width: 202px;
+        justify-content: space-between;
+        border: black solid 1px;
+        border-radius: 5px;
+        padding: 4px 8px;
+    }
+}
+
+// modal彈出視窗的按鈕padding
+.modal-btn{
+    padding: 13.8px 64.2px;
+    border-radius: 14.4px;
+}
+
+// modal彈出視窗的按鈕me-14.4px
+.modal-me{
+    margin-right: 14.4px;
+}
+
+// 去除modal彈出視窗的框線
+.none-border{
     border: none;
 }
+
+// tab-content-style
+.tab-style{
+    border: #B0B0B0 solid 1px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 24px 24px;
+}
+
+@media(max-width:768px){
+    .tab-style{
+        padding: 12px 32px 12px 56px;
+    }
+}
+
+// nav-pills-style
+.nav-pills-style{
+    border: #CC9239 solid 1px;
+    border-radius: 24px;
+}
+
+
+.custom-nav-pills .nav-link {
+    border-radius: 24px; // 圓角按鈕
+    color: #757575;; // 預設文字色
+    background-color: white;; // 預設背景色
+    padding: 8px 230px; // 調整按鈕內間距
+    transition: all 0.3s ease-in-outt; // 動態效果
+    white-space: nowrap; // 防止文字換行
+    // display: flex; /* 使用 flex 布局 */
+    // justify-content: center; /* 水平置中 */
+    // align-items: center; /* 垂直置中 */
+  }
+
+  @media(max-width:992px){
+    .custom-nav-pills .nav-link{
+        padding: 8px 100px; // 調整按鈕內間距
+    }
+}
+
+  @media(max-width:768px){
+    .custom-nav-pills .nav-link{
+        padding: 8px 40px; // 調整按鈕內間距
+    }
+}
+
+ .custom-nav-pills .nav-link.active {
+    background-color: #FFC700; //  啟用按鈕的背景色
+    color: black; //  啟用按鈕的文字色
+  }
+  
+.custom-nav-pills .nav-link:hover {
+    background-color: #ffe8c6; // 滑滑鼠懸停時的背景色
+    color: black; // 滑滑鼠懸停時的文字色
+  }
+  
+.custom-nav-pills {
+    border-radius: 24px; // 確保保整組按鈕也有圓角
+    overflow: hidden;  // 防止內容溢出
+    border: 1px solid  #FFC700; // 整個區塊的邊框
+  }
+
+
+// next-btn
+.next-btn{
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+        background-color: #ffdaa3;
+        border: 1px solid #fcf1e0;
+        transform: scale(1.03);
+        box-shadow: 0px 4px 9px 0px #0000001a;
+    }
+    &:focus {
+        outline: none;
+        background-color: #ffdaa3;
+        border: 3px solid #aa792f;
+    }
+}
+
+.next-btn-size{
+    padding: 12px 101px;
+}
+
+.all-font{
+    font-size: 19.2px;
+    font-weight: 400;
+    line-height: 28.8px;
+}
+// 線條容器
+.line-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; // 根據需要調整寬度
+    height: 20px; // 線條和圓點的高度
+    padding:  0px 88px;
+  }
+// 左右圓點
+  .circle {
+    width: 15px;
+    height: 15px;
+    background-color: #FFB647;
+    border-radius: 50%;
+  }
+  
+// 左側線條
+  .left-line {
+    flex-grow: 1;
+    height: 5px;
+    background-color: #FFB647;
+  }
+  
+// 中間圓點
+  .middle-circle {
+    width: 15px;
+    height: 15px;
+    background-color: #FFB647;
+    border-radius: 50%;
+  }
+  
+//  右側線條
+  .right-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #FFB647;
+  }
+// 空心圓點
+  .hollow-circle {
+    background-color: transparent;
+    border: 1px solid #FFB647;
+  }
+// 凸顯床位數字
+  .last-bed{
+    color: #c83f00;
+  }
