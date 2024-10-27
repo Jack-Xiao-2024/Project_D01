@@ -25,6 +25,18 @@
       border-bottom: 3px solid var(--bs-secondary-40);
     }
   }
+  // 控制漢堡icon顏色
+  .hamColorToggler{
+    color: #000000;
+  }
+  .hamColorSecondary40{
+    color: var(--bs-secondary-40);
+  }
+}
+// 手機版navbar選單打開時禁止背景滾動
+.noScroll {
+  position: fixed;
+  width: 100%;
 }
 
 .header .nav-link:active,
