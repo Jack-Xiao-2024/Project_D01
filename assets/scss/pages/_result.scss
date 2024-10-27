@@ -50,7 +50,7 @@ img{
     .phone-search-bar{
         display: block;
         position: absolute;
-        top: calc(50% + 100px); 
+        top: 500px;
         left: 50%; /* 水平位置在容器的 50% */
         transform: translate(-50%, -50%); /* 水平和垂直居中 */
     }
