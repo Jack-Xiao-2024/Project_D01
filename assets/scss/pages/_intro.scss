@@ -31,11 +31,13 @@
         height: 28px;
     }
 }
-.swiper-intro-container {
+//card
+.swiper-intro-card {
     width: 100%;
     overflow: hidden;
 }
-.swiper-intro-banner {
+//手機版banner
+.swiper-mobile-banner {
     width: 100%;
     height: 100%;
     .swiper-slide {
@@ -89,5 +91,41 @@
     /* active放下面,蓋掉背景空白 */
     .swiper-pagination-bullet-active {
         background: #ffffffcc;
+    }
+}
+//banner
+.container.swiper-banner {
+    height: 535px;
+}
+.swiper-banner {
+    .swiper-container {
+        display: flex;
+        height: 100%;
+        gap: 8px;
+    }
+
+    .swiper-banner-main {
+        width: calc((100% - 8px) * 0.84);
+    }
+
+    .swiper-banner-thubms {
+        width: calc((100% - 8px) * 0.16);
+    }
+
+    .swiper-banner-thubms .swiper-slide {
+        width: 100%;
+        opacity: 0.5;
+    }
+
+    .swiper-banner-thubms .swiper-slide-thumb-active {
+        opacity: 1;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        user-select: none; /* 避免選取圖片上的文字或圖片 */
     }
 }
