@@ -1,11 +1,11 @@
-<header class="header sticky-top">
+<header class="header sticky-top fixedTopControl">
   <nav class="navbar navbar-expand-lg py-0 bg-primary-110">
     <div class="container-lg container-fluid px-lg-4 px-0">
       <a class="navbar-brand py-lg-2 py-0 ms-6" href="index.html">
-        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/399576c7c8ec60e611e2d35218b94d8f6a92a78b/assets/images/Logo/LB-Black.svg" alt="logo" class="d-inline-block w-100" style="width: 196px;height: 70px;">
+        <img src="/assets/images/Logo/LB-Color.svg" alt="logo" class="d-inline-block w-100" style="width: 196px;height: 70px;">
       </a>
-      <button class="navbar-toggler me-6 border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#headerNavbar" aria-controls="headerNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="bi bi-list"></i>
+      <button class="navbar-toggler me-6 border-0 p-0 scrollControl" type="button" data-bs-toggle="collapse" data-bs-target="#headerNavbar" aria-controls="headerNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list hamColorToggler"></i>
       </button>
       <div class="collapse navbar-collapse bg-lg-primary-110 bg-white" id="headerNavbar">
         <ul class="navbar-nav ms-auto gap-lg-5 gap-0 flex-lg-row flex-column-reverse">
@@ -34,7 +34,7 @@
           </div>
           <div class="d-lg-flex gap-lg-5 gap-0">
             <li class="nav-item">
-              <a class="nav-link px-xl-5 px-lg-0" href="booking.html">
+              <a class="nav-link px-xl-5 px-lg-0" href="order.html">
                 <svg class="d-inline edit-icon me-xl-4 me-lg-0 me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path class="edit-icon-stroke" d="M12 16.0001V13.0001M12 13.0001V10.0001M12 13.0001H9M12 13.0001H15M4 16.8002V11.4522C4 10.9179 4 10.6506 4.06497 10.4019C4.12255 10.1816 4.2173 9.97307 4.34521 9.78464C4.48955 9.57201 4.69064 9.39569 5.09277 9.04383L9.89436 4.84244C10.6398 4.19014 11.0126 3.86397 11.4324 3.73982C11.8026 3.63035 12.1972 3.63035 12.5674 3.73982C12.9875 3.86406 13.3608 4.19054 14.1074 4.84383L18.9074 9.04383C19.3096 9.39569 19.5102 9.57201 19.6546 9.78464C19.7825 9.97307 19.8775 10.1816 19.9351 10.4019C20 10.6505 20 10.9184 20 11.4522V16.8037C20 17.9216 20 18.4811 19.7822 18.9086C19.5905 19.2849 19.2842 19.5906 18.9079 19.7823C18.4805 20.0001 17.9215 20.0001 16.8036 20.0001H7.19691C6.07899 20.0001 5.5192 20.0001 5.0918 19.7823C4.71547 19.5906 4.40973 19.2849 4.21799 18.9086C4 18.4807 4 17.9203 4 16.8002Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -42,12 +42,12 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-xl-5 px-lg-0" href="#">
+              <button class="nav-link px-xl-5 px-lg-0 w-100 text-start" data-bs-target="#logInModal" data-bs-toggle="modal">
                 <svg class="d-inline edit-icon me-xl-4 me-lg-0 me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path class="edit-icon-stroke" d="M12 15L15 12M15 12L12 9M15 12H4M9 7.24859V7.2002C9 6.08009 9 5.51962 9.21799 5.0918C9.40973 4.71547 9.71547 4.40973 10.0918 4.21799C10.5196 4 11.0801 4 12.2002 4H16.8002C17.9203 4 18.4796 4 18.9074 4.21799C19.2837 4.40973 19.5905 4.71547 19.7822 5.0918C20 5.5192 20 6.07899 20 7.19691V16.8036C20 17.9215 20 18.4805 19.7822 18.9079C19.5905 19.2842 19.2837 19.5905 18.9074 19.7822C18.48 20 17.921 20 16.8031 20H12.1969C11.079 20 10.5192 20 10.0918 19.7822C9.71547 19.5905 9.40973 19.2839 9.21799 18.9076C9 18.4798 9 17.9201 9 16.8V16.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <h5 class="d-inline align-middle">註冊｜登入</h5>
-              </a>
+              </button>
             </li>
           </div>
         </ul>
@@ -55,3 +55,88 @@
     </div>
   </nav>
 </header>
+
+<!-- 註冊｜登入的彈出視窗 -->
+<div class="modal fade" id="logInModal" aria-hidden="true" aria-labelledby="logInModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body py-0 px-14">
+        <h5 class="modal-title text-center mb-4" id="logInModalToggleLabel">帳號登入</h5>
+        <form action="" class="d-flex flex-column justify-content-center">
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="account" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">帳號：</label>
+            <input type="email" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="account" placeholder="您的電子信箱" aria-label="Account">
+          </div>
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="password" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">密碼：</label>
+            <input type="password" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="password" placeholder="請輸入密碼" aria-label="Password">
+          </div>
+          <a href="#" class="ms-auto mt-4 link-secondary-40">忘記密碼</a>
+          <button type="submit" class="mt-4 btn btn-primary-40 custom-primary-btn fs-6 p-4">登入</button>
+        </form>
+      </div>
+      <div class="modal-footer d-flex justify-content-center border-top-0 px-5 pt-5 pb-9">
+        <p class="d-inline">還沒有帳號？</p>
+        <button class="btn p-0 link-secondary-40 border-0" data-bs-target="#signUpModal" data-bs-toggle="modal">註冊</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="signUpModal" aria-hidden="true" aria-labelledby="signUpModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body py-0 px-14">
+        <h5 class="modal-title text-center mb-4" id="logInModalToggleLabel">註冊</h5>
+        <form action="" class="d-flex flex-column justify-content-center">
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="email" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">電子信箱：</label>
+            <input type="email" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="email" placeholder="作為帳號使用" aria-label="Email">
+          </div>
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="password" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">密碼：</label>
+            <input type="password" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="password" placeholder="設定密碼" aria-label="Password">
+          </div>
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="name" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">姓名：</label>
+            <input type="text" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="name" placeholder="陳小明" aria-label="Name">
+          </div>
+          <div class="input-group d-flex align-items-center gap-3 border-1 border-bottom py-6">
+            <span class="input-group-text border-0 fs-6 py-0 px-3 bg-white">性別：</span>
+            <div class="form-check fs-6">
+              <input class="form-check-input" type="radio" name="gender" id="male" checked>
+              <label class="form-check-label" for="male">
+                男
+              </label>
+            </div>
+            <div class="form-check fs-6 ms-2">
+              <input class="form-check-input" type="radio" name="gender" id="female">
+              <label class="form-check-label" for="female">
+                女
+              </label>
+            </div>
+          </div>
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="birth" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">生日：</label>
+            <input type="date" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="birth" aria-label="Birthday">
+          </div>
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="phone" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">電話：</label>
+            <input type="tel" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="phone" placeholder="0912-345-678" aria-label="Phone">
+          </div>
+          <button type="submit" class="mt-12 btn btn-primary-40 custom-primary-btn fs-6 p-4">註冊</button>
+        </form>
+      </div>
+      <div class="modal-footer d-flex justify-content-center border-top-0 px-5 pt-5 pb-9">
+        <p class="text-center">點擊「註冊」即表示你同意我們的使用條款及隱私政策</p>
+        <p class="d-inline">已有註冊？</p>
+        <button class="btn p-0 link-secondary-40 border-0" data-bs-target="#logInModal" data-bs-toggle="modal">登入</button>
+      </div>
+    </div>
+  </div>
+</div>

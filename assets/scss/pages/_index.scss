@@ -1,4 +1,5 @@
-.index{
+// index banner和搜尋框區段
+.index-banner{
   .banner-image{
     width: 100%;
     background-repeat: repeat;
@@ -16,9 +17,290 @@
     text-shadow: 0 4px 4px rgba(0,0,0,0.25);
   }
 }
+// 搜尋框
+.index-search{
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  .search-wrapper{
+    padding: 2px;
+    border-radius: 7px;
+    background-color: #000000;
+    gap: 2px;
+  }
+  .search-wrapper-sm{
+    gap: 2px;
+  }
+  .btn-width{
+    width: auto;
+  }
+  .form-select{
+    border-radius: 5px;
+    padding: 20px;
+    color: #444444;
+    --bs-form-select-bg-img: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/366789c203647fae0d1d85480b842094e9431e74/assets/images/Icon/IconBlack/CaretDown-B.svg");
+    background-size: 24px 24px;
+    cursor: pointer;
+    border: 0;
+  }
+}
 
+// index 人氣機構精選區段
+.index-hots{
+  padding-top: 56px;
+  background-color: #FFFCF8;
+  .hots-container{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .hots-content{
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .hots-card-image{
+    width: 312px;
+    height: 211px;
+    background-position: center;
+    background-size: cover;
+  }
+  .hots-cards{
+    display: flex;
+    justify-content: start;
+    gap: 24px;
+  }
+
+  .nav-item:has(.nav-link:hover){
+    background-color: #FFFCF8;
+  }
+  .nav-link{
+    color: var(--bs-secondary-40);
+    border: 2px solid var(--bs-secondary-40);
+    &:hover{
+      background-color: rgba(200,63,0,0.2);
+      border: 2px solid var(--bs-secondary-40);
+      box-shadow: 3px 3px 6px 0 rgba(0,0,0,0.1),10px 10px 10px 0 rgba(0,0,0,0.05);
+    }
+  }
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #ffffff;
+    background-color: var(--bs-secondary-40);
+    border: 2px solid var(--bs-secondary-40);
+  }
+  .heart-icon{
+    width: 62.8px;
+    height: 62.8px;
+    margin: 8px;
+    background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/5a854ec2c364c80e9f5cd08aadab09967823eea1/assets/images/Interact%20Icon/Heard-01.svg");
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    &:hover{
+      opacity: 0.9;
+    }
+  }
+  .heartOn{
+    background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/5a854ec2c364c80e9f5cd08aadab09967823eea1/assets/images/Interact%20Icon/Heard-02.svg");
+  }
+}
+
+// index 為何選擇長照好厝邊區段
+.index-why{
+  background-color: #FFDAA3;
+}
+
+// index 聽聽大家怎麼說區段
+.index-reviews{
+  background-color: #FFFCF8;
+  position: relative;
+  height: 100%;
+  .reviews-number{
+    letter-spacing: 0.12em;
+  }
+  .stars-icon{
+    background-image: url('/assets/images/Icon/Stars-Change.svg');
+    width: 168px;
+    height: 24px;
+    background-position: center;
+  }
+
+  // Swiper 調整
+  .reviewSwiper-container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+  .swiper {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-wrapper{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .swiper-slide {
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding: 24px 24px 32px 24px;
+    border: 1.5px solid var(--bs-neutral-40);
+    margin-bottom: 24px;
+    &:nth-child(n + 4) {
+      display: none;
+    }
+  }
+  .reviews-card{
+    height: 274px;
+    border: 0;
+  }
+
+  // Swiper next、prev、pagination調整
+  .swiper-next{
+    position: static;
+    background-image: url('https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/31220b079029b96e577a43dc0e5fd57a61343a98/assets/images/Icon/IconSecondary/VectorRight-S-80.svg');
+    width: 12px;
+    height: 21px;
+    margin: 4.5px 9px;
+  }
+
+  .swiper-prev{
+    position: static;
+    background-image: url('https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/31220b079029b96e577a43dc0e5fd57a61343a98/assets/images/Icon/IconSecondary/VectorLeft-S-80.svg');
+    width: 12px;
+    height: 21px;
+    margin: 4.5px 9px;
+  }
+
+  .swiper-pagination{
+    width: 278px;
+    position: static;
+  }
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 12.5px;
+    height: 12.5px;
+    border-radius: 50%;
+    margin: 6.25px;
+    border: 1px solid #C83F00;
+    background: transparent;
+    opacity: 1;
+    &:hover{
+      width: 25px;
+      height: 25px;
+      margin: 0;
+      background: #C83F00;
+    }
+    &.swiper-pagination-bullet-active {
+      width: 53px;
+      height: 25px;
+      border-radius: 20px;
+      margin: 0;
+      background: #C83F00;
+    }
+  }
+  
+}
+
+// index 常見問題 Ｑ＆Ａ 區段
+.index-faq{
+  padding: 80px 0 56px 0;
+  .faq-content{
+    margin: 0;
+  }
+  .accordion{
+    --bs-accordion-bg: transparent;
+    --bs-accordion-border-color: rgba(0,0,0,0);
+    --bs-accordion-btn-icon-width: 2.25rem;
+    --bs-accordion-btn-focus-box-shadow: 0;
+    --bs-accordion-active-bg: #ffffff;
+  }
+  .accordion-button{
+    border: 2px solid rgba(0,0,0,0);
+    padding: 10px 16px;
+    border-radius: 12px;
+    line-height: 1.2;
+    &:after{
+      background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/366789c203647fae0d1d85480b842094e9431e74/assets/images/Icon/IconBlack/CaretDown-B.svg");
+      background-size: cover;
+    }
+    &:hover{
+      background-color: #fff;
+      border: 2px solid var(--bs-secondary-80);
+      color: #C83F00;
+      border-radius: 12px;
+      &:after{
+        background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/366789c203647fae0d1d85480b842094e9431e74/assets/images/Icon/IconSecondary/CaretDown-S-40.svg");
+      }
+    }
+  }
+  .accordion-button:not(.collapsed){
+    color: #C83F00;
+    border-radius: 12px 12px 0 0;
+    &:after{
+      background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/366789c203647fae0d1d85480b842094e9431e74/assets/images/Icon/IconSecondary/CaretDown-S-40.svg");
+    }
+    &:hover{
+      border: 2px solid rgba(0,0,0,0);
+      border-radius: 12px 12px 0 0;
+      &:after{
+        background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/366789c203647fae0d1d85480b842094e9431e74/assets/images/Icon/IconSecondary/CaretDown-S-40.svg");
+      }
+    }
+  }
+  .accordion-body{
+    border-radius: 0 0 12px 12px;
+    padding: 0 44px 16px 44px;
+  }
+}
+
+// index 各區段 RWD 調整(768px以上)
+@media (min-width: 768px) {
+  // index banner和搜尋框區段
+  .index-banner{
+    .banner-image{
+      background-position: top 50% right 35%;
+    }
+  }
+  // 搜尋框
+  .index-search{
+    bottom: 0;
+    transform: translate(-50%,50%);
+    .form-select{
+      padding: 0 10px;
+    }
+    .btn-width{
+      width: 188px;
+    }
+  }
+
+  // index 聽聽大家怎麼說區段
+  .index-reviews{
+    .swiper-slide {
+      margin-bottom: 0;
+      box-shadow: 2px 0 4px rgba(0,0,0,0.2);
+      &:nth-child(n + 4) {
+        display: block;
+      }
+    }
+  }
+
+  // index 人氣機構精選區段
+  .index-hots{
+    padding-top: 180px;
+  }
+
+}
+
+// index 各區段 RWD 調整(992px以上)
 @media (min-width: 992px) {
-  .index{
+  // index banner和搜尋框區段
+  .index-banner{
     .banner-image{
       background-position: center;
     }
@@ -30,7 +312,72 @@
     .banner-subtitle{
       color: #444444;
       letter-spacing: 0.16em;
-      text-shadow: none;
+      text-shadow: 0px 4px 4px rgba(255,255,255,0.5);
+    }
+  }
+  // 搜尋框
+  .index-search{
+    .form-select{
+      padding: 0 20px;
+    }
+    .btn-width{
+      width: 231px;
+    }
+  }
+
+  // index 人氣機構精選區段
+  .index-hots{
+    .hots-container{
+      padding: 0 12px;
+    }
+    .hots-content{
+      overflow-x: visible;
+    }
+    .hots-cards{
+      justify-content: center;
+      gap: 12px;
+    }
+  }
+
+  // index 常見問題 Ｑ＆Ａ 區段
+  .index-faq{
+    padding: 110px 0 48px 0;
+    .faq-content{
+      margin: 0 110px;
+    }
+    .accordion-button{
+      padding: 22px 16px;
+    }
+    .accordion-body{
+      padding: 0 96px 28px 60px;
+    }
+  }
+
+  // index 聽聽大家怎麼說區段
+  .index-reviews{
+    .reviewSwiper-container{
+      padding: 0;
+    }
+    .swiper {
+      display: flex;
+      align-items: stretch;
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-wrapper{
+      margin-left: 18%;
+      margin-bottom: 67px;
+    }
+  }
+
+}
+
+// index 各區段 RWD 調整(1200px以上)
+@media (min-width: 1200px) {
+  // index 人氣機構精選區段
+  .index-hots{
+    .hots-cards{
+      gap: 72px;
     }
   }
 }

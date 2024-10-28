@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>intro</title>
+        <title>機構介紹頁</title>
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -19,7 +19,7 @@
         <main>
             <!-- mobile banner -->
             <div class="container-fluid d-lg-none px-0 mb-7">
-                <div class="swiper swiper-intro-banner d-lg-none">
+                <div class="swiper swiper-mobile-banner d-lg-none">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img
@@ -66,31 +66,89 @@
                 data-aos-duration="1000"
             >
                 <!-- banner -->
-                <div class="d-flex gap-2 d-none d-lg-flex">
-                    <div>
-                        <img
-                            src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Intro-A/IntroA-01.png?raw=true"
-                            class="img-fluid h-100"
-                            alt="Intro-A"
-                        />
-                    </div>
-                    <div class="d-flex flex-column gap-2">
-                        <img
-                            src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Intro-A/IntroA-02.png?raw=true"
-                            alt="IntroA-02"
-                        />
-                        <img
-                            src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Intro-A/IntroA-03.png?raw=true"
-                            alt="IntroA-03"
-                        />
-                        <img
-                            src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Intro-A/IntroA-04.png?raw=true"
-                            alt="IntroA-04"
-                        />
-                        <img
-                            src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Intro-A/IntroA-05.png?raw=true"
-                            alt="IntroA-05"
-                        />
+                <div class="container swiper-banner d-none d-lg-block">
+                    <div class="swiper-container">
+                        <div
+                            style="
+                                --swiper-navigation-color: #fff;
+                                --swiper-pagination-color: #fff;
+                            "
+                            class="swiper swiper-banner-main"
+                        >
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Intro-A/IntroA-01.png?raw=true"
+                                        class="img-fluid h-100"
+                                        alt="IntroA-01"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Intro-B/IntroB-01.png?raw=true"
+                                        alt="IntroB-01"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Intro-C/IntroC-01.png?raw=true"
+                                        alt="IntroC-01"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Intro-D/IntroD-01.png?raw=true"
+                                        alt="IntroD-01"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Intro-E/IntroE-01.png?raw=true"
+                                        alt="IntroE-01"
+                                    />
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div
+                            thumbsSlider=""
+                            class="swiper swiper-banner-thubms"
+                        >
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Intro-A/IntroA-01.png?raw=true"
+                                        class="img-fluid h-100"
+                                        alt="Intro-A"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Intro-A/IntroA-02.png?raw=true"
+                                        alt="IntroA-02"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Intro-A/IntroA-03.png?raw=true"
+                                        alt="IntroA-03"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Intro-A/IntroA-04.png?raw=true"
+                                        alt="IntroA-04"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Intro-A/IntroA-05.png?raw=true"
+                                        alt="IntroA-05"
+                                    />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -101,13 +159,13 @@
                             <div class="fs-7">
                                 15 個評論
                                 <img
-                                    id="like-icon"
+                                    id="intro-like-icon"
                                     src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Interact%20Icon/Like-01.png?raw=true"
                                     alt="praise"
                                     class="align-bottom"
                                     style="cursor: pointer"
                                 />
-                                5
+                                <span id="intro-like">5</span>
                             </div>
                         </div>
                         <h3 class="mb-2">康樂長照中心</h3>
@@ -155,7 +213,7 @@
                     <div class="d-flex align-items-end col-lg-4 col-12">
                         <a
                             href="#"
-                            class="btn btn-primary-40 py-4 w-100 text-white mx-2 mx-lg-0 intro-btn"
+                            class="btn btn-primary-40 py-4 w-100 mx-2 mx-lg-0 intro-btn"
                         >
                             預約參訪
                         </a>
@@ -174,8 +232,8 @@
                         <div
                             class="col-lg-4"
                             data-aos="flip-left"
-                            data-aos-duration="500"
-                            data-aos-offset="500"
+                            data-aos-duration="1000"
+                            data-aos-offset="300"
                         >
                             <div
                                 class="card w-100 pt-9 pb-10 px-7 rounded-2 border-0 h-100"
@@ -200,8 +258,8 @@
                         <div
                             class="col-lg-4"
                             data-aos="flip-left"
-                            data-aos-duration="500"
-                            data-aos-offset="500"
+                            data-aos-duration="1000"
+                            data-aos-offset="300"
                         >
                             <div
                                 class="card w-100 pt-9 pb-10 px-7 rounded-2 border-0 h-100"
@@ -226,8 +284,8 @@
                         <div
                             class="col-lg-4"
                             data-aos="flip-left"
-                            data-aos-duration="500"
-                            data-aos-offset="500"
+                            data-aos-duration="1000"
+                            data-aos-offset="300"
                         >
                             <div
                                 class="card w-100 pt-9 pb-10 px-7 rounded-2 border-0 h-100"
@@ -258,19 +316,17 @@
             <div
                 class="container pt-lg-14 pb-lg-11 pt-12 pb-12"
                 data-aos="fade-right"
-                data-aos-offset="700"
+                data-aos-offset="300"
                 data-aos-easing="ease-in-sine"
             >
                 <h4 class="mb-1">房型費用</h4>
                 <div class="fs-8 text-secondary-90 mb-7">
                     ＊房型費用不含保證金、耗材及其他相關費用。價格以服務契約為準。
                 </div>
-                <div class="swiper-intro-container">
+                <div class="swiper-intro-card">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div
-                                class="card overflow-hidden intro-rounded"
-                            >
+                            <div class="card overflow-hidden intro-rounded">
                                 <img
                                     src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-13.png?raw=true"
                                     class="card-img-top object-fit-cover"
@@ -301,9 +357,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div
-                                class="card overflow-hidden intro-rounded"
-                            >
+                            <div class="card overflow-hidden intro-rounded">
                                 <img
                                     src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-16.png?raw=true"
                                     class="card-img-top object-fit-cover"
@@ -334,9 +388,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div
-                                class="card overflow-hidden intro-rounded"
-                            >
+                            <div class="card overflow-hidden intro-rounded">
                                 <img
                                     src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Building/B-16.png?raw=true"
                                     class="card-img-top object-fit-cover"
@@ -375,7 +427,7 @@
                 <div
                     class="container pt-lg-14 pb-lg-11 pt-12 pb-12"
                     data-aos="fade-left"
-                    data-aos-offset="700"
+                    data-aos-offset="300"
                     data-aos-easing="ease-in-sine"
                     data-aos-duration="500"
                 >
@@ -409,7 +461,7 @@
                                     <img
                                         src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-05.png?raw=true"
                                         alt="user"
-                                    class="intro-user"
+                                        class="intro-user"
                                     />
                                     <div class="fs-7">李小姐</div>
                                 </div>
@@ -426,7 +478,7 @@
                                     <img
                                         src="https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/User/Ellipse-03.png?raw=true"
                                         alt="user"
-                                    class="intro-user"
+                                        class="intro-user"
                                     />
                                     <div class="fs-7">王先生</div>
                                 </div>
@@ -456,61 +508,8 @@
                 </div>
             </div>
         </main>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script>
-            const swiperIntroBanner = new Swiper(".swiper-intro-banner", {
-                cssMode: true,
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                loop: true,
-            });
-            var swiperIntroContainer = new Swiper(".swiper-intro-container", {
-                slidesPerView: 1,
-                spaceBetween: 24,
-                breakpoints: {
-                    992: {
-                        slidesPerView: 3,
-                    },
-                },
-            });
-            //強制加上focus;
-            document.addEventListener("DOMContentLoaded", () => {
-                const links = document.querySelectorAll("a.intro-btn");
-                links.forEach((link) => {
-                    link.addEventListener("click", function (e) {
-                        e.preventDefault(); // 防止默認的導航行為
-                        setTimeout(() => {
-                            this.focus();
-                            // console.log("Forced focus on:", this);
-                        }, 0);
-                    });
-                });
-            });
-            //點讚切換
-            document.addEventListener("DOMContentLoaded", () => {
-                const likeIcon = document.getElementById("like-icon");
-                const initialImage =
-                    "https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Interact%20Icon/Like-01.png?raw=true"; // 初始圖片
-                const likedImage =
-                    "https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Interact%20Icon/Like-02.png?raw=true"; // 按讚後的圖片
-
-                likeIcon.addEventListener("click", () => {
-                    // 切換圖片
-                    if (likeIcon.src.includes(initialImage)) {
-                        likeIcon.src = likedImage; // 切換到按讚後的圖片
-                    } else {
-                        likeIcon.src = initialImage; // 切換回初始圖片
-                    }
-                });
-            });
-        </script>
         <%- include('./layout/footer'); -%>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();

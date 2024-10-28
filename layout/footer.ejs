@@ -60,3 +60,19 @@
     </div>
   </div>
 </footer>
+
+<script>
+  const scrollControl = document.querySelector('.header .navbar-toggler.scrollControl')
+  const fixedTopControl = document.querySelector('.header.fixedTopControl')
+  const hamColorToggler = document.querySelector('.header .hamColorToggler')
+  const body = document.body
+
+
+  scrollControl.addEventListener('click', function() {
+    scrollControl.classList.toggle('scrollHidden');
+    body.classList.toggle('noScroll');
+    fixedTopControl.classList.toggle('sticky-top');
+    fixedTopControl.classList.toggle('fixed-top');
+    hamColorToggler.classList.toggle('hamColorSecondary40');
+  })
+</script>

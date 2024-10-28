@@ -1,12 +1,125 @@
 
-.banner{
-    background-image: url(https://github.com/Jack-Xiao-2024/Project_D01/blob/dev/assets/images/Cover.png?raw=true);
-    background-repeat: no-repeat; /* 避免圖片重複 */
-    background-position: center;  /* 將圖片置中 */
-    background-size: cover;       /* 確保圖片覆蓋整個元素 */
-    height: 427px;
+
+//reset
+
+ol, ul {
+	list-style: none;
 }
 
-.banner_text{
-    max-width: 507px;
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+.content{
+    background-color: #FFFCF8;
+}
+
+//搜尋框
+
+.result-main{
+    position: relative;
+}
+
+.search-bar{
+  position: absolute;
+  left: 50%;
+  top: 100%; /* 將搜尋框定位到上方區塊的底部 */
+  transform: translate(-50%, -50%); /* 居中對齊 */
+  z-index: 1000; /* 確保搜尋框在其他元素之上 */
+  /* 搜尋框的其他樣式 */
+  background-color: black;
+  border-radius: 5px;
+}
+
+.phone-search-bar{
+    display: none;
+}
+
+//手機模式下切換搜尋框
+
+@media (max-width:768px) {
+    .search-bar{
+        display: none;
+    }
+
+    .phone-search-bar{
+        display: block;
+        position: absolute;
+        top: 500px;
+        left: 50%; /* 水平位置在容器的 50% */
+        transform: translate(-50%, -50%); /* 水平和垂直居中 */
+    }
+    
+    .search-btn {
+        width: 100%;
+    }
+}
+
+ .form-select,.search-btn{
+     border: 2px solid black; /* 添加黑色邊框 */
+ }
+
+
+
+//卡片
+
+.result-content{
+    .card-img-box{
+        width: 100%; /* 設定容器寬度 */
+        height: 100%; /* 設定容器高度 */
+        max-height: 300px;
+        
+    }
+    
+    .col-md-5{
+        position: relative;
+    }
+    
+    .heart{
+        position: absolute;
+        top: 10px; /* 距離上方 10px */
+        right: 10px; /* 距離右側 10px */
+    
+    }
+    
+    .card-img{
+        width: 100%; /* 設定容器寬度 */
+        height: 100%; /* 設定容器高度 */
+        position: relative; /* 確保內部元素可相對定位 */
+        overflow: hidden; /* 隱藏超出容器範圍的圖片部分 */
+        object-fit: cover; /* 確保圖片填滿容器，若比例不一致則裁切 */
+    }
+    
+    .buttons .btn {
+        flex-grow: 1; /* 讓每個按鈕按比例撐開 */
+        flex-basis: 0; /* 初始寬度設為 0，使用 flex-grow 來調整 */
+        max-width: 355px; /* 設定按鈕的最大寬度為 355px */
+        min-width: 144px; /* 設定按鈕的最小寬度為 144px */
+        box-sizing: border-box; /* 包括內邊距和邊框在內計算寬度 */
+      }
+}
+
+
+
+  //按鈕hover樣式
+
+  .book-btn {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+        background-color: #ffdaa3;
+        border: 1px solid #fcf1e0;
+        transform: scale(1.03);
+        box-shadow: 0px 4px 9px 0px #0000001a;
+    }
+    &:focus {
+        outline: none;
+        background-color: #ffdaa3;
+        border: 3px solid #aa792f;
+    }
 }

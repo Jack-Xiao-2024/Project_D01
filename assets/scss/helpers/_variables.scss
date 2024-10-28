@@ -531,20 +531,20 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer * .625,
-  4: $spacer * .75,
-  5: $spacer ,
-  6: $spacer * 1.25,
-  7: $spacer * 1.5,
-  8: $spacer * 1.75,
-  9: $spacer * 2,
-  10: $spacer * 2.25,
-  11: $spacer * 3,
-  12: $spacer * 3.5,
-  13: $spacer * 4,
-  14: $spacer * 4.5,
+  1: $spacer * .25, // 4px
+  2: $spacer * .5,  //8px
+  3: $spacer * .625,//10px
+  4: $spacer * .75, //12px
+  5: $spacer ,      //16px
+  6: $spacer * 1.25,//20px
+  7: $spacer * 1.5, //24px
+  8: $spacer * 1.75,//28px
+  9: $spacer * 2,   //32px
+  10: $spacer * 2.25,//36px
+  11: $spacer * 3,   //48px
+  12: $spacer * 3.5, //56px
+  13: $spacer * 4,   //64px
+  14: $spacer * 4.5, //72px
 ) !default;
 
 
@@ -773,14 +773,14 @@ $line-height-lg:              2 !default;
 
 
 // 自訂字體大小
-$h1-font-size:                $font-size-base * 3.8125 !default;
-$h2-font-size:                $font-size-base * 3.0625 !default;
-$h3-font-size:                $font-size-base * 2.4375 !default;
-$h4-font-size:                $font-size-base * 1.9375 !default;
-$h5-font-size:                $font-size-base * 1.5625 !default;
-$h6-font-size:                $font-size-base * 1.25 !default;
-$h7-font-size:                $font-size-base !default;
-$h8-font-size:                $font-size-base * 0.8125 !default;
+$h1-font-size:                $font-size-base * 3.8125 !default; //61px
+$h2-font-size:                $font-size-base * 3.0625 !default; //49px
+$h3-font-size:                $font-size-base * 2.4375 !default; //39px
+$h4-font-size:                $font-size-base * 1.9375 !default; //31px
+$h5-font-size:                $font-size-base * 1.5625 !default; //25px
+$h6-font-size:                $font-size-base * 1.25 !default;   //20px
+$h7-font-size:                $font-size-base !default;          // 16px 
+$h8-font-size:                $font-size-base * 0.8125 !default; //13px
 
  //原本字體大小設定
 // $h1-font-size:                $font-size-base * 2.5 !default;
