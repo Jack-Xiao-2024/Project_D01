@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>預定留床和預約參訪</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script type="module" crossorigin src="/web-layout-training-vite/assets/main-b604ec69.js"></script>
+  <link rel="stylesheet" href="/web-layout-training-vite/assets/main-6a602f27.css">
+</head>
+<body>
+
+  <header class="header sticky-top fixedTopControl">
+  <nav class="navbar navbar-expand-lg py-0 bg-primary-110">
+    <div class="container-lg container-fluid px-lg-4 px-0">
+      <a class="navbar-brand py-lg-2 py-0 ms-6" href="index.html">
+        <img src="/web-layout-training-vite/assets/LB-Color-796d24c4.svg" alt="logo" class="d-inline-block w-100" style="width: 196px;height: 70px;">
+      </a>
+      <button class="navbar-toggler me-6 border-0 p-0 scrollControl" type="button" data-bs-toggle="collapse" data-bs-target="#headerNavbar" aria-controls="headerNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list hamColorToggler"></i>
+      </button>
+      <div class="collapse navbar-collapse bg-lg-primary-110 bg-white" id="headerNavbar">
+        <ul class="navbar-nav ms-auto gap-lg-5 gap-0 flex-lg-row flex-column-reverse">
+          <button class="navbar-toggler close border-0 rouned-0 mt-4 py-9" type="button" data-bs-toggle="collapse" data-bs-target="#headerNavbar" aria-controls="headerNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-x align-middle"></i>
+            <h6 class="d-inline align-middle">關閉此頁</h6>
+          </button>
+          <div class="d-lg-flex gap-lg-5 gap-0">
+            <li class="nav-item">
+              <a class="nav-link px-xl-5 px-lg-0" href="#">
+                <svg class="d-inline edit-icon me-xl-4 me-lg-0 me-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="edit-icon-stroke" d="M15 17V18C15 19.6569 13.6569 21 12 21C10.3431 21 9 19.6569 9 18V17.0001M15 17L9 17.0001M15 17H19C19.5523 17 20 16.5523 20 16V15.4141C20 15.1489 19.8945 14.8946 19.707 14.707L19.1963 14.1963C19.0706 14.0706 19 13.9 19 13.7222V10C19 9.82357 18.9936 9.64855 18.9805 9.4761M9 17.0001L5 17.0001C4.44772 17.0001 4 16.5521 4 15.9998V15.4141C4 15.1489 4.10544 14.8949 4.29297 14.7073L4.80371 14.1958C4.92939 14.0701 5 13.9002 5 13.7224V9.99998C5 6.13401 8.134 3 12 3C12.7116 3 13.3984 3.10618 14.0454 3.30357M18.9805 9.4761C20.1868 8.7873 21 7.48861 21 6C21 3.79086 19.2091 2 17 2C15.8298 2 14.7769 2.50253 14.0454 3.30357M18.9805 9.4761C18.3966 9.80949 17.7205 10 17 10C14.7909 10 13 8.20914 13 6C13 4.9611 13.3961 4.0147 14.0454 3.30357M18.9805 9.4761C18.9805 9.47609 18.9805 9.4761 18.9805 9.4761ZM14.0454 3.30357C14.0459 3.30371 14.0464 3.30385 14.0468 3.304" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h5 class="d-inline align-middle">最新消息</h5>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-xl-5 px-lg-0" href="#">
+                <svg  class="d-inline edit-icon me-xl-4 me-lg-0 me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="edit-icon-stroke" d="M20.3499 8.92293L19.9837 8.7192C19.9269 8.68756 19.8989 8.67169 19.8714 8.65524C19.5983 8.49165 19.3682 8.26564 19.2002 7.99523C19.1833 7.96802 19.1674 7.93949 19.1348 7.8831C19.1023 7.82677 19.0858 7.79823 19.0706 7.76998C18.92 7.48866 18.8385 7.17515 18.8336 6.85606C18.8331 6.82398 18.8332 6.79121 18.8343 6.72604L18.8415 6.30078C18.8529 5.62025 18.8587 5.27894 18.763 4.97262C18.6781 4.70053 18.536 4.44993 18.3462 4.23725C18.1317 3.99685 17.8347 3.82534 17.2402 3.48276L16.7464 3.1982C16.1536 2.85658 15.8571 2.68571 15.5423 2.62057C15.2639 2.56294 14.9765 2.56561 14.6991 2.62789C14.3859 2.69819 14.0931 2.87351 13.5079 3.22396L13.5045 3.22555L13.1507 3.43741C13.0948 3.47091 13.0665 3.48779 13.0384 3.50338C12.7601 3.6581 12.4495 3.74365 12.1312 3.75387C12.0992 3.7549 12.0665 3.7549 12.0013 3.7549C11.9365 3.7549 11.9024 3.7549 11.8704 3.75387C11.5515 3.74361 11.2402 3.65759 10.9615 3.50224C10.9334 3.48658 10.9056 3.46956 10.8496 3.4359L10.4935 3.22213C9.90422 2.86836 9.60915 2.69121 9.29427 2.62057C9.0157 2.55807 8.72737 2.55634 8.44791 2.61471C8.13236 2.68062 7.83577 2.85276 7.24258 3.19703L7.23994 3.1982L6.75228 3.48124L6.74688 3.48454C6.15904 3.82572 5.86441 3.99672 5.6517 4.23614C5.46294 4.4486 5.32185 4.69881 5.2374 4.97018C5.14194 5.27691 5.14703 5.61896 5.15853 6.3027L5.16568 6.72736C5.16676 6.79166 5.16864 6.82362 5.16817 6.85525C5.16343 7.17499 5.08086 7.48914 4.92974 7.77096C4.9148 7.79883 4.8987 7.8267 4.86654 7.88237C4.83436 7.93809 4.81877 7.96579 4.80209 7.99268C4.63336 8.26452 4.40214 8.49186 4.12733 8.65572C4.10015 8.67193 4.0715 8.68752 4.01521 8.71871L3.65365 8.91908C3.05208 9.25245 2.75137 9.41928 2.53256 9.65669C2.33898 9.86672 2.19275 10.1158 2.10349 10.3872C2.00259 10.6939 2.00267 11.0378 2.00424 11.7255L2.00551 12.2877C2.00706 12.9708 2.00919 13.3122 2.11032 13.6168C2.19979 13.8863 2.34495 14.134 2.53744 14.3427C2.75502 14.5787 3.05274 14.7445 3.64974 15.0766L4.00808 15.276C4.06907 15.3099 4.09976 15.3266 4.12917 15.3444C4.40148 15.5083 4.63089 15.735 4.79818 16.0053C4.81625 16.0345 4.8336 16.0648 4.8683 16.1255C4.90256 16.1853 4.92009 16.2152 4.93594 16.2452C5.08261 16.5229 5.16114 16.8315 5.16649 17.1455C5.16707 17.1794 5.16658 17.2137 5.16541 17.2827L5.15853 17.6902C5.14695 18.3763 5.1419 18.7197 5.23792 19.0273C5.32287 19.2994 5.46484 19.55 5.65463 19.7627C5.86915 20.0031 6.16655 20.1745 6.76107 20.5171L7.25478 20.8015C7.84763 21.1432 8.14395 21.3138 8.45869 21.379C8.73714 21.4366 9.02464 21.4344 9.30209 21.3721C9.61567 21.3017 9.90948 21.1258 10.4964 20.7743L10.8502 20.5625C10.9062 20.5289 10.9346 20.5121 10.9626 20.4965C11.2409 20.3418 11.5512 20.2558 11.8695 20.2456C11.9015 20.2446 11.9342 20.2446 11.9994 20.2446C12.0648 20.2446 12.0974 20.2446 12.1295 20.2456C12.4484 20.2559 12.7607 20.3422 13.0394 20.4975C13.0639 20.5112 13.0885 20.526 13.1316 20.5519L13.5078 20.7777C14.0971 21.1315 14.3916 21.3081 14.7065 21.3788C14.985 21.4413 15.2736 21.4438 15.5531 21.3855C15.8685 21.3196 16.1657 21.1471 16.7586 20.803L17.2536 20.5157C17.8418 20.1743 18.1367 20.0031 18.3495 19.7636C18.5383 19.5512 18.6796 19.3011 18.764 19.0297C18.8588 18.7252 18.8531 18.3858 18.8417 17.7119L18.8343 17.2724C18.8332 17.2081 18.8331 17.1761 18.8336 17.1445C18.8383 16.8247 18.9195 16.5104 19.0706 16.2286C19.0856 16.2007 19.1018 16.1726 19.1338 16.1171C19.166 16.0615 19.1827 16.0337 19.1994 16.0068C19.3681 15.7349 19.5995 15.5074 19.8744 15.3435C19.9012 15.3275 19.9289 15.3122 19.9838 15.2818L19.9857 15.2809L20.3472 15.0805C20.9488 14.7472 21.2501 14.5801 21.4689 14.3427C21.6625 14.1327 21.8085 13.8839 21.8978 13.6126C21.9981 13.3077 21.9973 12.9658 21.9958 12.2861L21.9945 11.7119C21.9929 11.0287 21.9921 10.6874 21.891 10.3828C21.8015 10.1133 21.6555 9.86561 21.463 9.65685C21.2457 9.42111 20.9475 9.25526 20.3517 8.92378L20.3499 8.92293Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path class="edit-icon-stroke" d="M8.00033 12C8.00033 14.2091 9.79119 16 12.0003 16C14.2095 16 16.0003 14.2091 16.0003 12C16.0003 9.79082 14.2095 7.99996 12.0003 7.99996C9.79119 7.99996 8.00033 9.79082 8.00033 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h5 class="d-inline align-middle">其他功能</h5>
+              </a>
+            </li>
+          </div>
+          <div class="d-lg-flex gap-lg-5 gap-0">
+            <li class="nav-item">
+              <a class="nav-link px-xl-5 px-lg-0" href="order.html">
+                <svg class="d-inline edit-icon me-xl-4 me-lg-0 me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="edit-icon-stroke" d="M12 16.0001V13.0001M12 13.0001V10.0001M12 13.0001H9M12 13.0001H15M4 16.8002V11.4522C4 10.9179 4 10.6506 4.06497 10.4019C4.12255 10.1816 4.2173 9.97307 4.34521 9.78464C4.48955 9.57201 4.69064 9.39569 5.09277 9.04383L9.89436 4.84244C10.6398 4.19014 11.0126 3.86397 11.4324 3.73982C11.8026 3.63035 12.1972 3.63035 12.5674 3.73982C12.9875 3.86406 13.3608 4.19054 14.1074 4.84383L18.9074 9.04383C19.3096 9.39569 19.5102 9.57201 19.6546 9.78464C19.7825 9.97307 19.8775 10.1816 19.9351 10.4019C20 10.6505 20 10.9184 20 11.4522V16.8037C20 17.9216 20 18.4811 19.7822 18.9086C19.5905 19.2849 19.2842 19.5906 18.9079 19.7823C18.4805 20.0001 17.9215 20.0001 16.8036 20.0001H7.19691C6.07899 20.0001 5.5192 20.0001 5.0918 19.7823C4.71547 19.5906 4.40973 19.2849 4.21799 18.9086C4 18.4807 4 17.9203 4 16.8002Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h5 class="d-inline align-middle">立即預訂</h5>
+              </a>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link px-xl-5 px-lg-0 w-100 text-start" data-bs-target="#logInModal" data-bs-toggle="modal">
+                <svg class="d-inline edit-icon me-xl-4 me-lg-0 me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="edit-icon-stroke" d="M12 15L15 12M15 12L12 9M15 12H4M9 7.24859V7.2002C9 6.08009 9 5.51962 9.21799 5.0918C9.40973 4.71547 9.71547 4.40973 10.0918 4.21799C10.5196 4 11.0801 4 12.2002 4H16.8002C17.9203 4 18.4796 4 18.9074 4.21799C19.2837 4.40973 19.5905 4.71547 19.7822 5.0918C20 5.5192 20 6.07899 20 7.19691V16.8036C20 17.9215 20 18.4805 19.7822 18.9079C19.5905 19.2842 19.2837 19.5905 18.9074 19.7822C18.48 20 17.921 20 16.8031 20H12.1969C11.079 20 10.5192 20 10.0918 19.7822C9.71547 19.5905 9.40973 19.2839 9.21799 18.9076C9 18.4798 9 17.9201 9 16.8V16.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h5 class="d-inline align-middle">註冊｜登入</h5>
+              </button>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- 註冊｜登入的彈出視窗 -->
+<div class="modal fade" id="logInModal" aria-hidden="true" aria-labelledby="logInModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body py-0 px-14">
+        <h5 class="modal-title text-center mb-4" id="logInModalToggleLabel">帳號登入</h5>
+        <form action="" class="d-flex flex-column justify-content-center">
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="account" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">帳號：</label>
+            <input type="email" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="account" placeholder="您的電子信箱" aria-label="Account">
+          </div>
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="password" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">密碼：</label>
+            <input type="password" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="password" placeholder="請輸入密碼" aria-label="Password">
+          </div>
+          <a href="#" class="ms-auto mt-4 link-secondary-40">忘記密碼</a>
+          <button type="submit" class="mt-4 btn btn-primary-40 custom-primary-btn fs-6 p-4">登入</button>
+        </form>
+      </div>
+      <div class="modal-footer d-flex justify-content-center border-top-0 px-5 pt-5 pb-9">
+        <p class="d-inline">還沒有帳號？</p>
+        <button class="btn p-0 link-secondary-40 border-0" data-bs-target="#signUpModal" data-bs-toggle="modal">註冊</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="signUpModal" aria-hidden="true" aria-labelledby="signUpModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body py-0 px-14">
+        <h5 class="modal-title text-center mb-4" id="logInModalToggleLabel">註冊</h5>
+        <form action="" class="d-flex flex-column justify-content-center">
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="email" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">電子信箱：</label>
+            <input type="email" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="email" placeholder="作為帳號使用" aria-label="Email">
+          </div>
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="password" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">密碼：</label>
+            <input type="password" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="password" placeholder="設定密碼" aria-label="Password">
+          </div>
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="name" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">姓名：</label>
+            <input type="text" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="name" placeholder="陳小明" aria-label="Name">
+          </div>
+          <div class="input-group d-flex align-items-center gap-3 border-1 border-bottom py-6">
+            <span class="input-group-text border-0 fs-6 py-0 px-3 bg-white">性別：</span>
+            <div class="form-check fs-6">
+              <input class="form-check-input" type="radio" name="gender" id="male" checked>
+              <label class="form-check-label" for="male">
+                男
+              </label>
+            </div>
+            <div class="form-check fs-6 ms-2">
+              <input class="form-check-input" type="radio" name="gender" id="female">
+              <label class="form-check-label" for="female">
+                女
+              </label>
+            </div>
+          </div>
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="birth" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">生日：</label>
+            <input type="date" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="birth" aria-label="Birthday">
+          </div>
+          <div class="input-group border-1 border-bottom py-6">
+            <label for="phone" class="input-group-text border-0 fs-6 py-0 px-3 bg-white">電話：</label>
+            <input type="tel" class="form-control border-0 rounded-2 fs-6 py-0 px-3" id="phone" placeholder="0912-345-678" aria-label="Phone">
+          </div>
+          <button type="submit" class="mt-12 btn btn-primary-40 custom-primary-btn fs-6 p-4">註冊</button>
+        </form>
+      </div>
+      <div class="modal-footer d-flex justify-content-center border-top-0 px-5 pt-5 pb-9">
+        <p class="text-center">點擊「註冊」即表示你同意我們的使用條款及隱私政策</p>
+        <p class="d-inline">已有註冊？</p>
+        <button class="btn p-0 link-secondary-40 border-0" data-bs-target="#logInModal" data-bs-toggle="modal">登入</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="main">
+    <!-- banner -->
+    <section class="index-banner">
+      <div class="card border-0 rounded-0">
+        <div class="banner-image d-md-inline-block d-none" style="background-image: url('/web-layout-training-vite/assets/Cover-lg-4a3f54f3.png');height: 624px;"></div>
+        <div class="banner-image d-md-none d-inline-block" style="background-image: url('/web-layout-training-vite/assets/Cover-sm-e7283322.png');height: 644px;"></div>
+        <div class="container-lg container-fluid card-img-overlay py-10">
+          <h1 class="banner-title pb-9 px-lg-0 px-md-2 px-0">長照不煩惱，<br>好厝邊陪你找</h1>
+          <p class="banner-subtitle fs-lg-4 fs-md-6 fs-8 px-lg-0 px-md-2 px-0">找機構跟訂飯店<span class="d-xl-inline d-none">，</span><br class="d-xl-none d-block">一樣簡單！</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="order-content">
+      <div class="container">
+        <!-- 頁籤按鈕 -->
+        <div class="d-flex justify-content-center mb-9 mb-md-12">
+          <ul class="nav nav-pills custom-nav-pills d-flex flex-nowrap" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-order-tab" data-bs-toggle="pill" 
+                      data-bs-target="#pills-order" type="button" role="tab" 
+                      aria-controls="pills-order" aria-selected="true">
+                預定留床
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-visit-tab" data-bs-toggle="pill" 
+                      data-bs-target="#pills-visit" type="button" role="tab" 
+                      aria-controls="pills-visit" aria-selected="false">
+                預約參訪
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 頁籤內容 -->
+        <div class="tab-content tab-style" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-order" role="tabpanel" aria-labelledby="pills-order-tab" tabindex="0">
+            <!-- 頁籤首頁 -->
+            <div class="px-2 mb-11">
+              <div class="line-container pt-7 pb-11">
+                <div class="circle left-circle"></div>
+                <div class="line left-line"></div>
+                <div class="circle middle-circle"></div>
+                <div class="line right-line"></div>
+                <div class="circle right-circle hollow-circle"></div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-outline-dark all-font">全選</button>
+              </div>  
+            </div>
+            <!-- order-card-1 -->
+            <div class="card overflow-hidden mb-11" style="max-width: 1296px;">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <div class="checkbox-relative">
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/main/assets/images/Building/B-07.png?raw=true" class="img-fluid card-img rounded-0" alt="building">
+                    <div class="checkbox-moble">
+                      <input class="form-check-input custom-checkbox checkbox-absolute" type="checkbox" id="checkboxNoLabel" value="" aria-label="勾選框">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <!-- infor -->
+                     <div class="infor mb-3">
+                      <div class="checkbox d-flex justify-content-between mb-2">
+                        <h5 class="card-title">康福護理苑</h5>
+                        <div class="checkbox-desk">
+                          <input class="form-check-input custom-checkbox" type="checkbox" id="checkboxNoLabel" value="" aria-label="勾選框">
+                        </div>
+                      </div>
+                      <div class="address d-flex">
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" fill="#EA8C55"/>
+                          <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" fill="#EA8C55"/>
+                          <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                        <p class="fs-7 ps-1">台北市中正區中正路</p>
+                      </div>
+                     </div>
+                    <!-- date -->
+                    <div class="date d-flex align-items-center mb-3">
+                      <p class="fs-8 me-1">預定入住：</p>
+                      <div class="calendar">
+                        <p class="fs-6">2024/09/24</p>
+                          <svg class="d-block" width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect y="0.600006" width="28" height="28" rx="14" fill="#FFE8C6"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.08008 8.48022C6.08008 8.08258 6.40243 7.76022 6.80008 7.76022H21.2001C21.5977 7.76022 21.9201 8.08258 21.9201 8.48022V22.1602C21.9201 22.5579 21.5977 22.8802 21.2001 22.8802H6.80008C6.40243 22.8802 6.08008 22.5579 6.08008 22.1602V8.48022ZM7.52008 9.20022V21.4402H20.4801V9.20022H7.52008Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4 7.40022V9.56022H8.95996V7.40022H10.4Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0396 7.40013V9.56013H17.5996V7.40013H19.0396Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7998 10.6402H21.1998V12.0802H6.7998V10.6402Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.36 13.8802C12.7695 13.8802 11.48 15.1696 11.48 16.7602C11.48 18.3508 12.7695 19.6402 14.36 19.6402C15.9506 19.6402 17.24 18.3508 17.24 16.7602C17.24 15.1696 15.9506 13.8802 14.36 13.8802ZM10.04 16.7602C10.04 14.3743 11.9742 12.4402 14.36 12.4402C16.7459 12.4402 18.68 14.3743 18.68 16.7602C18.68 19.1461 16.7459 21.0802 14.36 21.0802C11.9742 21.0802 10.04 19.1461 10.04 16.7602Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.28 17.1202V14.9602H14.72V16.4002H16.16V17.8402H14C13.6024 17.8402 13.28 17.5179 13.28 17.1202Z" fill="#A03200"/>
+                          </svg>
+                      </div>
+                    </div>
+                    <!-- 床位房型 -->
+                    <div class="card-text d-flex justify-content-between align-items-end mb-2">
+                      <div class="beds fs-7">剩餘床位：<span class="last-bed">3</span></div>
+                      <div class="room-info text-end">
+                        <p class="room-tylie fs-8">單人房型</p>
+                        <p class="romm-price fs-5">NTD 5,000</p>
+                      </div>
+                    </div>
+      
+                    <!-- Button trigger modal -->
+                     <div class="d-flex justify-content-end">
+                      <button type="button" class="btn btn-outline-secondary-40" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="bi bi-x-lg"></i>
+                        <span class="fs-6">刪除</span>
+                      </button>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- order-card-2 -->
+            <div class="card overflow-hidden mb-11" style="max-width: 1296px;">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <div class="checkbox-relative">
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/main/assets/images/Building/B-05.png?raw=true" class="img-fluid card-img rounded-0" alt="building">
+                    <div class="checkbox-moble">
+                      <input class="form-check-input custom-checkbox checkbox-absolute" type="checkbox" id="checkboxNoLabel" value="" aria-label="勾選框">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <!-- infor -->
+                     <div class="infor mb-3">
+                      <div class="checkbox d-flex justify-content-between mb-2">
+                        <h5 class="card-title">祥和樂年苑</h5>
+                        <div class="checkbox-desk">
+                          <input class="form-check-input custom-checkbox" type="checkbox" id="checkboxNoLabel" value="" aria-label="勾選框">
+                        </div>
+                      </div>
+                      <div class="address d-flex">
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" fill="#EA8C55"/>
+                          <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" fill="#EA8C55"/>
+                          <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                        <p class="fs-7 ps-1">新北市中和區中山路</p>
+                      </div>
+                     </div>
+                    <!-- date -->
+                    <div class="date d-flex align-items-center mb-3">
+                      <p class="fs-8 me-1">預定入住：</p>
+                      <div class="calendar">
+                        <p class="fs-6">2024/09/24</p>
+                          <svg class="d-block" width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect y="0.600006" width="28" height="28" rx="14" fill="#FFE8C6"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.08008 8.48022C6.08008 8.08258 6.40243 7.76022 6.80008 7.76022H21.2001C21.5977 7.76022 21.9201 8.08258 21.9201 8.48022V22.1602C21.9201 22.5579 21.5977 22.8802 21.2001 22.8802H6.80008C6.40243 22.8802 6.08008 22.5579 6.08008 22.1602V8.48022ZM7.52008 9.20022V21.4402H20.4801V9.20022H7.52008Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4 7.40022V9.56022H8.95996V7.40022H10.4Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0396 7.40013V9.56013H17.5996V7.40013H19.0396Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7998 10.6402H21.1998V12.0802H6.7998V10.6402Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.36 13.8802C12.7695 13.8802 11.48 15.1696 11.48 16.7602C11.48 18.3508 12.7695 19.6402 14.36 19.6402C15.9506 19.6402 17.24 18.3508 17.24 16.7602C17.24 15.1696 15.9506 13.8802 14.36 13.8802ZM10.04 16.7602C10.04 14.3743 11.9742 12.4402 14.36 12.4402C16.7459 12.4402 18.68 14.3743 18.68 16.7602C18.68 19.1461 16.7459 21.0802 14.36 21.0802C11.9742 21.0802 10.04 19.1461 10.04 16.7602Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.28 17.1202V14.9602H14.72V16.4002H16.16V17.8402H14C13.6024 17.8402 13.28 17.5179 13.28 17.1202Z" fill="#A03200"/>
+                          </svg>
+                      </div>
+                    </div>
+                    <!-- 床位房型 -->
+                    <div class="card-text d-flex justify-content-between align-items-end mb-2">
+                      <div class="beds fs-7">剩餘床位：<span class="last-bed">8</span></div>
+                      <div class="room-info text-end">
+                        <p class="room-tylie fs-8">三人房型</p>
+                        <p class="romm-price fs-5">NTD 5,000</p>
+                      </div>
+                    </div>
+      
+                    <!-- Button trigger modal -->
+                     <div class="d-flex justify-content-end">
+                      <button type="button" class="btn btn-outline-secondary-40" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="bi bi-x-lg"></i>
+                        <span class="fs-6">刪除</span>
+                      </button>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- order-card-3 -->
+            <div class="card overflow-hidden mb-11" style="max-width: 1296px;">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <div class="checkbox-relative">
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/main/assets/images/Building/B-01.png?raw=true" class="img-fluid card-img rounded-0" alt="building">
+                    <div class="checkbox-moble">
+                      <input class="form-check-input custom-checkbox checkbox-absolute" type="checkbox" id="checkboxNoLabel" value="" aria-label="勾選框">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <!-- infor -->
+                     <div class="infor mb-3">
+                      <div class="checkbox d-flex justify-content-between mb-2">
+                        <h5 class="card-title">樂康頤和園</h5>
+                        <div class="checkbox-desk">
+                          <input class="form-check-input custom-checkbox" type="checkbox" id="checkboxNoLabel" value="" aria-label="勾選框">
+                        </div>
+                      </div>
+                      <div class="address d-flex">
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" fill="#EA8C55"/>
+                          <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" fill="#EA8C55"/>
+                          <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                        <p class="fs-7 ps-1">台北市萬華區中華路</p>
+                      </div>
+                     </div>
+                    <!-- date -->
+                    <div class="date d-flex align-items-center mb-3">
+                      <p class="fs-8 me-1">預定入住：</p>
+                      <div class="calendar">
+                        <p class="fs-6">2024/09/24</p>
+                          <svg class="d-block" width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect y="0.600006" width="28" height="28" rx="14" fill="#FFE8C6"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.08008 8.48022C6.08008 8.08258 6.40243 7.76022 6.80008 7.76022H21.2001C21.5977 7.76022 21.9201 8.08258 21.9201 8.48022V22.1602C21.9201 22.5579 21.5977 22.8802 21.2001 22.8802H6.80008C6.40243 22.8802 6.08008 22.5579 6.08008 22.1602V8.48022ZM7.52008 9.20022V21.4402H20.4801V9.20022H7.52008Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4 7.40022V9.56022H8.95996V7.40022H10.4Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0396 7.40013V9.56013H17.5996V7.40013H19.0396Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7998 10.6402H21.1998V12.0802H6.7998V10.6402Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.36 13.8802C12.7695 13.8802 11.48 15.1696 11.48 16.7602C11.48 18.3508 12.7695 19.6402 14.36 19.6402C15.9506 19.6402 17.24 18.3508 17.24 16.7602C17.24 15.1696 15.9506 13.8802 14.36 13.8802ZM10.04 16.7602C10.04 14.3743 11.9742 12.4402 14.36 12.4402C16.7459 12.4402 18.68 14.3743 18.68 16.7602C18.68 19.1461 16.7459 21.0802 14.36 21.0802C11.9742 21.0802 10.04 19.1461 10.04 16.7602Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.28 17.1202V14.9602H14.72V16.4002H16.16V17.8402H14C13.6024 17.8402 13.28 17.5179 13.28 17.1202Z" fill="#A03200"/>
+                          </svg>
+                      </div>
+                    </div>
+                    <!-- 床位房型 -->
+                    <div class="card-text d-flex justify-content-between align-items-end mb-2">
+                      <div class="beds fs-7">剩餘床位：<span class="last-bed">3</span></div>
+                      <div class="room-info text-end">
+                        <p class="room-tylie fs-8">單人房型</p>
+                        <p class="romm-price fs-5">NTD 5,000</p>
+                      </div>
+                    </div>
+      
+                    <!-- Button trigger modal -->
+                     <div class="d-flex justify-content-end">
+                      <button type="button" class="btn btn-outline-secondary-40" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="bi bi-x-lg"></i>
+                        <span class="fs-6">刪除</span>
+                      </button>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- order-card-4 -->
+            <div class="card overflow-hidden mb-11" style="max-width: 1296px;">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <div class="checkbox-relative">
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/main/assets/images/Building/B-10.png?raw=true" class="img-fluid card-img rounded-0" alt="building">
+                    <div class="checkbox-moble">
+                      <input class="form-check-input custom-checkbox checkbox-absolute" type="checkbox" id="checkboxNoLabel" value="" aria-label="勾選框">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <!-- infor -->
+                     <div class="infor mb-3">
+                      <div class="checkbox d-flex justify-content-between mb-2">
+                        <h5 class="card-title">靜宜護理家園</h5>
+                        <div class="checkbox-desk">
+                          <input class="form-check-input custom-checkbox" type="checkbox" id="checkboxNoLabel" value="" aria-label="勾選框">
+                        </div>
+                      </div>
+                      <div class="address d-flex">
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" fill="#EA8C55"/>
+                          <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" fill="#EA8C55"/>
+                          <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                        <p class="fs-7 ps-1">新北市三重區仁愛路</p>
+                      </div>
+                     </div>
+                    <!-- date -->
+                    <div class="date d-flex align-items-center mb-3">
+                      <p class="fs-8 me-1">預定入住：</p>
+                      <div class="calendar">
+                        <p class="fs-6">2024/09/24</p>
+                          <svg class="d-block" width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect y="0.600006" width="28" height="28" rx="14" fill="#FFE8C6"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.08008 8.48022C6.08008 8.08258 6.40243 7.76022 6.80008 7.76022H21.2001C21.5977 7.76022 21.9201 8.08258 21.9201 8.48022V22.1602C21.9201 22.5579 21.5977 22.8802 21.2001 22.8802H6.80008C6.40243 22.8802 6.08008 22.5579 6.08008 22.1602V8.48022ZM7.52008 9.20022V21.4402H20.4801V9.20022H7.52008Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4 7.40022V9.56022H8.95996V7.40022H10.4Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0396 7.40013V9.56013H17.5996V7.40013H19.0396Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7998 10.6402H21.1998V12.0802H6.7998V10.6402Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.36 13.8802C12.7695 13.8802 11.48 15.1696 11.48 16.7602C11.48 18.3508 12.7695 19.6402 14.36 19.6402C15.9506 19.6402 17.24 18.3508 17.24 16.7602C17.24 15.1696 15.9506 13.8802 14.36 13.8802ZM10.04 16.7602C10.04 14.3743 11.9742 12.4402 14.36 12.4402C16.7459 12.4402 18.68 14.3743 18.68 16.7602C18.68 19.1461 16.7459 21.0802 14.36 21.0802C11.9742 21.0802 10.04 19.1461 10.04 16.7602Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.28 17.1202V14.9602H14.72V16.4002H16.16V17.8402H14C13.6024 17.8402 13.28 17.5179 13.28 17.1202Z" fill="#A03200"/>
+                          </svg>
+                      </div>
+                    </div>
+                    <!-- 床位房型 -->
+                    <div class="card-text d-flex justify-content-between align-items-end mb-2">
+                      <div class="beds fs-7">剩餘床位：<span class="last-bed">12</span></div>
+                      <div class="room-info text-end">
+                        <p class="room-tylie fs-8">六人房型</p>
+                        <p class="romm-price fs-5">NTD 5,000</p>
+                      </div>
+                    </div>
+      
+                    <!-- Button trigger modal -->
+                     <div class="d-flex justify-content-end">
+                      <button type="button" class="btn btn-outline-secondary-40" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="bi bi-x-lg"></i>
+                        <span class="fs-6">刪除</span>
+                      </button>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>           
+            <!-- 頁籤尾頁 -->
+            <div class="tab-footer d-flex justify-content-center justify-content-md-end mt-3">
+              <div class="flex-column">
+                <p class="text-end">總金額：<span class="fs-5">10,000</span>元</p>
+                <button type="button" class="btn next-btn next-btn-size fs-5 btn-primary-40">下一步</button>
+              </div>
+           </div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-visit" role="tabpanel" aria-labelledby="pills-visit-tab" tabindex="0">
+            <!-- 頁籤首頁 -->
+            <div class="px-2 mb-11">
+              <div class="line-container pt-7 pb-11">
+                <div class="circle left-circle hollow-circle"></div>
+                <div class="line right-line"></div>
+                <div class="circle middle-circle"></div>
+                <div class="line left-line"></div>
+                <div class="circle right-circle"></div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-outline-dark all-font">全選</button>
+              </div>  
+            </div>
+            <!-- visit-card-1 -->
+            <div class="card overflow-hidden mb-11" style="max-width: 1296px;">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <div class="checkbox-relative">
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/main/assets/images/Building/B-10.png?raw=true" class="img-fluid card-img rounded-0" alt="building">
+                    <div class="checkbox-moble">
+                      <input class="form-check-input custom-checkbox checkbox-absolute" type="checkbox" id="checkboxNoLabel" value="" aria-label="勾選框">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <!-- infor -->
+                     <div class="infor mb-3">
+                      <div class="checkbox d-flex justify-content-between mb-2">
+                        <h5 class="card-title">靜宜護理家園</h5>
+                        <div class="checkbox-desk">
+                          <input class="form-check-input custom-checkbox" type="checkbox" id="checkboxNoLabel" value="" aria-label="勾選框">
+                        </div>
+                      </div>
+                      <div class="address d-flex">
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" fill="#EA8C55"/>
+                          <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" fill="#EA8C55"/>
+                          <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                        <p class="fs-7 ps-1">新北市三重區仁愛路</p>
+                      </div>
+                     </div>
+                    <!-- date -->
+                    <div class="date d-flex align-items-center mb-2">
+                      <p class="fs-8 me-1">預定參訪日期：</p>
+                      <div class="calendar">
+                        <p class="fs-6">2024/09/24</p>
+                          <svg class="d-block" width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect y="0.600006" width="28" height="28" rx="14" fill="#FFE8C6"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.08008 8.48022C6.08008 8.08258 6.40243 7.76022 6.80008 7.76022H21.2001C21.5977 7.76022 21.9201 8.08258 21.9201 8.48022V22.1602C21.9201 22.5579 21.5977 22.8802 21.2001 22.8802H6.80008C6.40243 22.8802 6.08008 22.5579 6.08008 22.1602V8.48022ZM7.52008 9.20022V21.4402H20.4801V9.20022H7.52008Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4 7.40022V9.56022H8.95996V7.40022H10.4Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0396 7.40013V9.56013H17.5996V7.40013H19.0396Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7998 10.6402H21.1998V12.0802H6.7998V10.6402Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.36 13.8802C12.7695 13.8802 11.48 15.1696 11.48 16.7602C11.48 18.3508 12.7695 19.6402 14.36 19.6402C15.9506 19.6402 17.24 18.3508 17.24 16.7602C17.24 15.1696 15.9506 13.8802 14.36 13.8802ZM10.04 16.7602C10.04 14.3743 11.9742 12.4402 14.36 12.4402C16.7459 12.4402 18.68 14.3743 18.68 16.7602C18.68 19.1461 16.7459 21.0802 14.36 21.0802C11.9742 21.0802 10.04 19.1461 10.04 16.7602Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.28 17.1202V14.9602H14.72V16.4002H16.16V17.8402H14C13.6024 17.8402 13.28 17.5179 13.28 17.1202Z" fill="#A03200"/>
+                          </svg>
+                      </div>
+                    </div>
+                    <!-- 床位房型 -->
+                    <div class="card-text d-flex justify-content-between align-items-end mb-2">
+                      <div class="d-flex align-items-center">
+                        <p class="fs-8 me-1">預定參訪時段：</p>
+                        <div class="dropdown">
+                          <button class="btn btn-primary-40 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                            選擇參訪時段
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">上午時段：10:00~12:00</a></li>
+                            <li><a class="dropdown-item" href="#">下午時段：14:00~16:00</a></li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="room-info text-end">
+                        <p class="room-tylie fs-8">剩餘床位</p>
+                        <p class="romm-price fs-5"><i class="bi bi-house-heart me-1"></i><span class="last-bed">12</span>個</p>
+                      </div>
+                    </div>
+      
+                    <!-- Button trigger modal -->
+                     <div class="d-flex justify-content-end mb-10 mb-md-0">
+                      <button type="button" class="btn btn-outline-secondary-40" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="bi bi-x-lg"></i>
+                        <span class="fs-6">刪除</span>
+                      </button>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- visit-card-2 -->
+            <div class="card overflow-hidden mb-11" style="max-width: 1296px;">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <div class="checkbox-relative">
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/main/assets/images/Building/B-05.png?raw=true" class="img-fluid card-img rounded-0" alt="building">
+                    <div class="checkbox-moble">
+                      <input class="form-check-input custom-checkbox checkbox-absolute" type="checkbox" id="checkboxNoLabel" value="" aria-label="勾選框">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <!-- infor -->
+                     <div class="infor mb-3">
+                      <div class="checkbox d-flex justify-content-between mb-2">
+                        <h5 class="card-title">祥和樂年苑</h5>
+                        <div class="checkbox-desk">
+                          <input class="form-check-input custom-checkbox" type="checkbox" id="checkboxNoLabel" value="" aria-label="勾選框">
+                        </div>
+                      </div>
+                      <div class="address d-flex">
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" fill="#EA8C55"/>
+                          <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" fill="#EA8C55"/>
+                          <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                        <p class="fs-7 ps-1">新北市中和區中山路</p>
+                      </div>
+                     </div>
+                    <!-- date -->
+                    <div class="date d-flex align-items-center mb-2">
+                      <p class="fs-8 me-1">預定參訪日期：</p>
+                      <div class="calendar">
+                        <p class="fs-6">2024/09/24</p>
+                          <svg class="d-block" width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect y="0.600006" width="28" height="28" rx="14" fill="#FFE8C6"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.08008 8.48022C6.08008 8.08258 6.40243 7.76022 6.80008 7.76022H21.2001C21.5977 7.76022 21.9201 8.08258 21.9201 8.48022V22.1602C21.9201 22.5579 21.5977 22.8802 21.2001 22.8802H6.80008C6.40243 22.8802 6.08008 22.5579 6.08008 22.1602V8.48022ZM7.52008 9.20022V21.4402H20.4801V9.20022H7.52008Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4 7.40022V9.56022H8.95996V7.40022H10.4Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0396 7.40013V9.56013H17.5996V7.40013H19.0396Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7998 10.6402H21.1998V12.0802H6.7998V10.6402Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.36 13.8802C12.7695 13.8802 11.48 15.1696 11.48 16.7602C11.48 18.3508 12.7695 19.6402 14.36 19.6402C15.9506 19.6402 17.24 18.3508 17.24 16.7602C17.24 15.1696 15.9506 13.8802 14.36 13.8802ZM10.04 16.7602C10.04 14.3743 11.9742 12.4402 14.36 12.4402C16.7459 12.4402 18.68 14.3743 18.68 16.7602C18.68 19.1461 16.7459 21.0802 14.36 21.0802C11.9742 21.0802 10.04 19.1461 10.04 16.7602Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.28 17.1202V14.9602H14.72V16.4002H16.16V17.8402H14C13.6024 17.8402 13.28 17.5179 13.28 17.1202Z" fill="#A03200"/>
+                          </svg>
+                      </div>
+                    </div>
+                    <!-- 床位房型 -->
+                    <div class="card-text d-flex justify-content-between align-items-end mb-2">
+                      <div class="d-flex align-items-center">
+                        <p class="fs-8 me-1">預定參訪時段：</p>
+                        <div class="dropdown">
+                          <button class="btn btn-primary-40 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                            選擇參訪時段
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">上午時段：10:00~12:00</a></li>
+                            <li><a class="dropdown-item" href="#">下午時段：14:00~16:00</a></li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="room-info text-end">
+                        <p class="room-tylie fs-8">剩餘床位</p>
+                        <p class="romm-price fs-5"><i class="bi bi-house-heart me-1"></i><span class="last-bed">8</span>個</p>
+                      </div>
+                    </div>
+      
+                    <!-- Button trigger modal -->
+                     <div class="d-flex justify-content-end mb-10 mb-md-0">
+                      <button type="button" class="btn btn-outline-secondary-40" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="bi bi-x-lg"></i>
+                        <span class="fs-6">刪除</span>
+                      </button>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- visit-card-3 -->
+            <div class="card overflow-hidden mb-11" style="max-width: 1296px;">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <div class="checkbox-relative">
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/main/assets/images/Building/B-07.png?raw=true" class="img-fluid card-img rounded-0" alt="building">
+                    <div class="checkbox-moble">
+                      <input class="form-check-input custom-checkbox checkbox-absolute" type="checkbox" id="checkboxNoLabel" value="" aria-label="勾選框">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <!-- infor -->
+                     <div class="infor mb-3">
+                      <div class="checkbox d-flex justify-content-between mb-2">
+                        <h5 class="card-title">康福護理苑</h5>
+                        <div class="checkbox-desk">
+                          <input class="form-check-input custom-checkbox" type="checkbox" id="checkboxNoLabel" value="" aria-label="勾選框">
+                        </div>
+                      </div>
+                      <div class="address d-flex">
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" fill="#EA8C55"/>
+                          <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" fill="#EA8C55"/>
+                          <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                        <p class="fs-7 ps-1">台北市中正區中正路</p>
+                      </div>
+                     </div>
+                    <!-- date -->
+                    <div class="date d-flex align-items-center mb-2">
+                      <p class="fs-8 me-1">預定參訪日期：</p>
+                      <div class="calendar">
+                        <p class="fs-6">2024/09/24</p>
+                          <svg class="d-block" width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect y="0.600006" width="28" height="28" rx="14" fill="#FFE8C6"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.08008 8.48022C6.08008 8.08258 6.40243 7.76022 6.80008 7.76022H21.2001C21.5977 7.76022 21.9201 8.08258 21.9201 8.48022V22.1602C21.9201 22.5579 21.5977 22.8802 21.2001 22.8802H6.80008C6.40243 22.8802 6.08008 22.5579 6.08008 22.1602V8.48022ZM7.52008 9.20022V21.4402H20.4801V9.20022H7.52008Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4 7.40022V9.56022H8.95996V7.40022H10.4Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0396 7.40013V9.56013H17.5996V7.40013H19.0396Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7998 10.6402H21.1998V12.0802H6.7998V10.6402Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.36 13.8802C12.7695 13.8802 11.48 15.1696 11.48 16.7602C11.48 18.3508 12.7695 19.6402 14.36 19.6402C15.9506 19.6402 17.24 18.3508 17.24 16.7602C17.24 15.1696 15.9506 13.8802 14.36 13.8802ZM10.04 16.7602C10.04 14.3743 11.9742 12.4402 14.36 12.4402C16.7459 12.4402 18.68 14.3743 18.68 16.7602C18.68 19.1461 16.7459 21.0802 14.36 21.0802C11.9742 21.0802 10.04 19.1461 10.04 16.7602Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.28 17.1202V14.9602H14.72V16.4002H16.16V17.8402H14C13.6024 17.8402 13.28 17.5179 13.28 17.1202Z" fill="#A03200"/>
+                          </svg>
+                      </div>
+                    </div>
+                    <!-- 床位房型 -->
+                    <div class="card-text d-flex justify-content-between align-items-end mb-2">
+                      <div class="d-flex align-items-center">
+                        <p class="fs-8 me-1">預定參訪時段：</p>
+                        <div class="dropdown">
+                          <button class="btn btn-primary-40 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                            選擇參訪時段
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">上午時段：10:00~12:00</a></li>
+                            <li><a class="dropdown-item" href="#">下午時段：14:00~16:00</a></li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="room-info text-end">
+                        <p class="room-tylie fs-8">剩餘床位</p>
+                        <p class="romm-price fs-5"><i class="bi bi-house-heart me-1"></i><span class="last-bed">3</span>個</p>
+                      </div>
+                    </div>
+      
+                    <!-- Button trigger modal -->
+                     <div class="d-flex justify-content-end mb-10 mb-md-0">
+                      <button type="button" class="btn btn-outline-secondary-40" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="bi bi-x-lg"></i>
+                        <span class="fs-6">刪除</span>
+                      </button>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- visit-card-4 -->
+            <div class="card overflow-hidden mb-11" style="max-width: 1296px;">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <div class="checkbox-relative">
+                    <img src="https://github.com/Jack-Xiao-2024/Project_D01/blob/main/assets/images/Building/B-01.png?raw=true" class="img-fluid card-img rounded-0" alt="building">
+                    <div class="checkbox-moble">
+                      <input class="form-check-input custom-checkbox checkbox-absolute" type="checkbox" id="checkboxNoLabel" value="" aria-label="勾選框">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <!-- infor -->
+                     <div class="infor mb-3">
+                      <div class="checkbox d-flex justify-content-between mb-2">
+                        <h5 class="card-title">樂康頤和園</h5>
+                        <div class="checkbox-desk">
+                          <input class="form-check-input custom-checkbox" type="checkbox" id="checkboxNoLabel" value="" aria-label="勾選框">
+                        </div>
+                      </div>
+                      <div class="address d-flex">
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" fill="#EA8C55"/>
+                          <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" fill="#EA8C55"/>
+                          <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                        <p class="fs-7 ps-1">台北市萬華區中華路</p>
+                      </div>
+                     </div>
+                    <!-- date -->
+                    <div class="date d-flex align-items-center mb-2">
+                      <p class="fs-8 me-1">預定參訪日期：</p>
+                      <div class="calendar">
+                        <p class="fs-6">2024/09/24</p>
+                          <svg class="d-block" width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect y="0.600006" width="28" height="28" rx="14" fill="#FFE8C6"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.08008 8.48022C6.08008 8.08258 6.40243 7.76022 6.80008 7.76022H21.2001C21.5977 7.76022 21.9201 8.08258 21.9201 8.48022V22.1602C21.9201 22.5579 21.5977 22.8802 21.2001 22.8802H6.80008C6.40243 22.8802 6.08008 22.5579 6.08008 22.1602V8.48022ZM7.52008 9.20022V21.4402H20.4801V9.20022H7.52008Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4 7.40022V9.56022H8.95996V7.40022H10.4Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0396 7.40013V9.56013H17.5996V7.40013H19.0396Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7998 10.6402H21.1998V12.0802H6.7998V10.6402Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.36 13.8802C12.7695 13.8802 11.48 15.1696 11.48 16.7602C11.48 18.3508 12.7695 19.6402 14.36 19.6402C15.9506 19.6402 17.24 18.3508 17.24 16.7602C17.24 15.1696 15.9506 13.8802 14.36 13.8802ZM10.04 16.7602C10.04 14.3743 11.9742 12.4402 14.36 12.4402C16.7459 12.4402 18.68 14.3743 18.68 16.7602C18.68 19.1461 16.7459 21.0802 14.36 21.0802C11.9742 21.0802 10.04 19.1461 10.04 16.7602Z" fill="#A03200"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.28 17.1202V14.9602H14.72V16.4002H16.16V17.8402H14C13.6024 17.8402 13.28 17.5179 13.28 17.1202Z" fill="#A03200"/>
+                          </svg>
+                      </div>
+                    </div>
+                    <!-- 床位房型 -->
+                    <div class="card-text d-flex justify-content-between align-items-end mb-2">
+                      <div class="d-flex align-items-center">
+                        <p class="fs-8 me-1">預定參訪時段：</p>
+                        <div class="dropdown">
+                          <button class="btn btn-primary-40 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                            選擇參訪時段
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">上午時段：10:00~12:00</a></li>
+                            <li><a class="dropdown-item" href="#">下午時段：14:00~16:00</a></li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="room-info text-end">
+                        <p class="room-tylie fs-8">剩餘床位</p>
+                        <p class="romm-price fs-5"><i class="bi bi-house-heart me-1"></i><span class="last-bed">3</span>個</p>
+                      </div>
+                    </div>
+      
+                    <!-- Button trigger modal -->
+                     <div class="d-flex justify-content-end mb-10 mb-md-0">
+                      <button type="button" class="btn btn-outline-secondary-40" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="bi bi-x-lg"></i>
+                        <span class="fs-6">刪除</span>
+                      </button>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>                                                   
+            <!-- 頁籤尾頁 -->
+            <div class="tab-footer d-flex justify-content-center justify-content-md-end mt-3">
+              <div class="flex-column">
+                <button type="button" class="btn next-btn next-btn-size fs-5 btn-primary-40">下一步</button>
+              </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+  <footer class="footer">
+  <nav class="navbar navbar-expand-lg py-xl-5 py-0 px-xl-0 px-9" data-bs-theme="dark">
+    <div class="container flex-xl-row flex-column-reverse align-items-xl-center align-items-start">
+      <a class="navbar-brand py-xl-0 py-1 me-xl-9 me-0 align-self-center" href="index.html">
+        <!-- 桌面版 logo -->
+        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/399576c7c8ec60e611e2d35218b94d8f6a92a78b/assets/images/Logo/LB-White.svg" alt="logo" class="d-xxl-inline-block d-none" style="width: 360px;height: 107px;">
+        <!-- 手機版 logo -->
+        <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/399576c7c8ec60e611e2d35218b94d8f6a92a78b/assets/images/Logo/LB-White.svg" alt="logo" class="d-xxl-none d-inline-block" style="width: 230px;height: 100%;">
+      </a>
+      <ul class="navbar-nav py-xl-0 py-5 me-xl-auto mb-xl-2 mb-0 fs-xl-6 gap-7 align-self-xl-end align-self-start">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">首頁</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">最新消息</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">其他功能</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="booking.html">立即預訂</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#faq">常見問題</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav py-xl-0 pt-11 pb-2 gap-7 d-flex flex-row">
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.facebook.com/">
+            <!-- 桌面版 FB icon -->
+            <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/399576c7c8ec60e611e2d35218b94d8f6a92a78b/assets/images/Icon/IconWhite/Facebook.svg" alt="facebook" class="d-xxl-inline-block d-none" style="width: 64px;height: 64px;">
+            <!-- 手機版 FB icon -->
+            <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/399576c7c8ec60e611e2d35218b94d8f6a92a78b/assets/images/Icon/IconWhite/Facebook.svg" alt="facebook" class="d-xxl-none d-inline-block" style="width: 32px;height: 32px;">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.instagram.com/">
+            <!-- 桌面版 IG icon -->
+            <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/399576c7c8ec60e611e2d35218b94d8f6a92a78b/assets/images/Icon/IconWhite/Instagram.svg" alt="instagram" class="d-xxl-inline-block d-none" style="width: 64px;height: 64px;">
+            <!-- 手機版 IG icon -->
+            <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/399576c7c8ec60e611e2d35218b94d8f6a92a78b/assets/images/Icon/IconWhite/Instagram.svg" alt="instagram" class="d-xxl-none d-inline-block" style="width: 32px;height: 32px;">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://line.me/tw/">
+            <!-- 桌面版 line icon -->
+            <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/399576c7c8ec60e611e2d35218b94d8f6a92a78b/assets/images/Icon/IconWhite/Line.svg" alt="Line" class="d-xxl-inline-block d-none" style="width: 64px;height: 64px;">
+            <!-- 手機版 line icon -->
+            <img src="https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/399576c7c8ec60e611e2d35218b94d8f6a92a78b/assets/images/Icon/IconWhite/Line.svg" alt="Line"  class="d-xxl-none d-inline-block" style="width: 32px;height: 32px;">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="copyright py-xl-9 pt-5 pb-12 fs-xl-7 fs-8 d-flex flex-xl-row flex-column justify-content-xl-between align-items-center border-top border-white text-white opacity-50">
+      <p class="mb-xl-0 mb-4">長照好厝邊 ©2024 Copyrights All Rights Reserved</p>
+      <p>本專題僅為學習用途，不做任何商業使用。圖片來源請見 GitHub Repo.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const scrollControl = document.querySelector('.header .navbar-toggler.scrollControl')
+  const fixedTopControl = document.querySelector('.header.fixedTopControl')
+  const hamColorToggler = document.querySelector('.header .hamColorToggler')
+  const body = document.body
+
+
+  scrollControl.addEventListener('click', function() {
+    scrollControl.classList.toggle('scrollHidden');
+    body.classList.toggle('noScroll');
+    fixedTopControl.classList.toggle('sticky-top');
+    fixedTopControl.classList.toggle('fixed-top');
+    hamColorToggler.classList.toggle('hamColorSecondary40');
+  })
+</script>
+  <!-- JS引入 -->
+  
+
+</body>
+  <!-- 全部卡片的彈出視窗 -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header mx-auto none-border">
+          <div class="d-flex flex-column align-items-center">
+            <svg class="d-black" width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1599_1465)">
+              <path d="M48.4336 8.96671V53.3C48.4336 53.9189 48.1878 54.5124 47.7502 54.95C47.3126 55.3875 46.7191 55.6334 46.1003 55.6334H11.1003C10.4815 55.6334 9.88797 55.3875 9.45039 54.95C9.0128 54.5124 8.76697 53.9189 8.76697 53.3V8.96671H48.4336Z" fill="#F7E2D9"/>
+              <path d="M8.76697 8.96671H48.4336V15.9667H8.76697V8.96671Z" fill="#EEC2B0"/>
+              <path d="M48.4336 8.96671V53.3C48.4336 53.9189 48.1878 54.5124 47.7502 54.95C47.3126 55.3875 46.7191 55.6334 46.1003 55.6334H11.1003C10.4815 55.6334 9.88797 55.3875 9.45039 54.95C9.0128 54.5124 8.76697 53.9189 8.76697 53.3V8.96671H48.4336Z" stroke="#B43900" stroke-width="2.304" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.1 8.96668V4.30001C18.1 3.68117 18.3458 3.08768 18.7834 2.65009C19.221 2.21251 19.8145 1.96667 20.4333 1.96667H36.7666C37.3855 1.96667 37.979 2.21251 38.4166 2.65009C38.8541 3.08768 39.1 3.68117 39.1 4.30001V8.96668" stroke="#B43900" stroke-width="2.304" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M1.76685 8.96671H55.4335" stroke="#B43900" stroke-width="2.304" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.1 17.1333V45.1333" stroke="#B43900" stroke-width="2.304" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M28.6 17.1333V45.1333" stroke="#B43900" stroke-width="2.304" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M39.1 17.1333V45.1333" stroke="#B43900" stroke-width="2.304" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_1599_1465">
+              <rect width="56" height="56" fill="white" transform="translate(0.599976 0.799988)"/>
+              </clipPath>
+              </defs>
+              </svg>
+            <h5 class="modal-title text-secondary-70" id="staticBackdropLabel">刪除機構</h5>
+          </div>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        </div>
+        <div class="modal-body">
+          <p class="text-center fs-6" style="color: #B0B0B0;">請問確認刪除勾選的機構嗎？</p>
+        </div>
+        <div class="modal-footer d-flex justify-content-center none-border">
+          <button type="button" class="btn modal-btn btn-secondary-40 fs-6 modal-me" data-bs-dismiss="modal">刪除</button>
+          <button type="button" class="btn modal-btn btn-outline-secondary-40 fs-6" data-bs-dismiss="modal">保留</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</html> 
