@@ -54,10 +54,10 @@ img{
         left: 50%; /* 水平位置在容器的 50% */
         transform: translate(-50%, -50%); /* 水平和垂直居中 */
     }
-    
     .search-btn {
         width: 100%;
     }
+
 }
 
  .form-select,.search-btn{
@@ -73,7 +73,6 @@ img{
         width: 100%; /* 設定容器寬度 */
         height: 100%; /* 設定容器高度 */
         max-height: 300px;
-        
     }
     
     .col-md-5{
@@ -102,7 +101,24 @@ img{
         min-width: 144px; /* 設定按鈕的最小寬度為 144px */
         box-sizing: border-box; /* 包括內邊距和邊框在內計算寬度 */
       }
+
+    .result-card{
+        border-radius:12px 0px 0px 12px;
+    }
+
 }
+
+    //手機模式下的卡片邊框
+
+    @media (max-width:768px) {
+        .result-content{
+            .result-card{
+                border-radius:12px 12px 0px 0px;
+            }
+        }
+        
+    }
+
 
 
 
