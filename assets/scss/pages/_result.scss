@@ -26,9 +26,10 @@ img{
 }
 
 .search-bar{
+  display: block;
   position: absolute;
   left: 50%;
-  top: 100%; /* 將搜尋框定位到上方區塊的底部 */
+//   top: 100%; /* 將搜尋框定位到上方區塊的底部 */
   transform: translate(-50%, -50%); /* 居中對齊 */
   z-index: 1000; /* 確保搜尋框在其他元素之上 */
   /* 搜尋框的其他樣式 */
@@ -49,10 +50,12 @@ img{
 
     .phone-search-bar{
         display: block;
+    }
+
+    .phone-search-bar{
         position: absolute;
-        top: 500px;
-        left: 50%; /* 水平位置在容器的 50% */
-        transform: translate(-50%, -50%); /* 水平和垂直居中 */
+        top: 260px;
+        width: 90%; // 可根據需求調整寬度
     }
     .search-btn {
         width: 100%;
