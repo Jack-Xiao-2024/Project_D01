@@ -26,9 +26,10 @@ img{
 }
 
 .search-bar{
+  display: block;
   position: absolute;
   left: 50%;
-  top: 100%; /* 將搜尋框定位到上方區塊的底部 */
+//   top: 100%; /* 將搜尋框定位到上方區塊的底部 */
   transform: translate(-50%, -50%); /* 居中對齊 */
   z-index: 1000; /* 確保搜尋框在其他元素之上 */
   /* 搜尋框的其他樣式 */
@@ -49,15 +50,17 @@ img{
 
     .phone-search-bar{
         display: block;
-        position: absolute;
-        top: 500px;
-        left: 50%; /* 水平位置在容器的 50% */
-        transform: translate(-50%, -50%); /* 水平和垂直居中 */
     }
-    
+
+    .phone-search-bar{
+        position: absolute;
+        top: 260px;
+        width: 90%; // 可根據需求調整寬度
+    }
     .search-btn {
         width: 100%;
     }
+
 }
 
  .form-select,.search-btn{
@@ -73,7 +76,6 @@ img{
         width: 100%; /* 設定容器寬度 */
         height: 100%; /* 設定容器高度 */
         max-height: 300px;
-        
     }
     
     .col-md-5{
@@ -102,7 +104,24 @@ img{
         min-width: 144px; /* 設定按鈕的最小寬度為 144px */
         box-sizing: border-box; /* 包括內邊距和邊框在內計算寬度 */
       }
+
+    .result-card{
+        border-radius:12px 0px 0px 12px;
+    }
+
 }
+
+    //手機模式下的卡片邊框
+
+    @media (max-width:768px) {
+        .result-content{
+            .result-card{
+                border-radius:12px 12px 0px 0px;
+            }
+        }
+        
+    }
+
 
 
 
